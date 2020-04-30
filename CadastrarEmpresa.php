@@ -24,7 +24,7 @@
                     </tr>
          
                     <tr>    
-                        <td align="right">Email:</td>
+                        <td align="right">E-mail:</td>
                         <td><input type="text" name="email" size="5" /></td>
                     </tr>
          
