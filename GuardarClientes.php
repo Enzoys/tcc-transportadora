@@ -13,7 +13,7 @@
             $email   = $_POST['email'];
             $endereco   = $_POST['endereco'];
             $sql = "INSERT INTO clientes (nome, cpf, telefone, email, endereco) " .
-            "values('$nome', '$cpf', '$telefone','$email,'$endereco')";
+            "values('$nome', '$cpf', '$telefone','$email','$endereco')";
            
            
             echo $sql;
