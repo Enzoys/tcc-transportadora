@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
+<?php
          //Fecha serviço do BD
-         $result->close();
-         $mysqli->close();
-        ?>
-    </body>
-</html>
+         $result->close(); $mysqli->close(); ?>
