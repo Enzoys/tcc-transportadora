@@ -1,3 +1,6 @@
+<?php
+    include "confere_2.php";
+?>
 <html>
     <head>
         <meta charset="UTF-8">

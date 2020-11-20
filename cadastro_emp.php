@@ -1,6 +1,5 @@
 <?php
-include "conexao.php";
-include 'confere.php';
+include 'confere_2.php';
 $login = $_POST['login'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);

@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <link href="estilo.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <?php
-            //$mysqli = new mysqli("localhost:3306","root","","bd_invictax"); 
-            $mysqli = new mysqli("sql10.freemysqlhosting.net","sql10377245","vzkv1unqDU","sql10377245");        
+<?php
+        //$mysqli = new mysqli("localhost:3306","root","","bd_invictax"); 
+        $mysqli = new mysqli("sql10.freemysqlhosting.net","sql10377245","vzkv1unqDU","sql10377245");        
         
         /*check connection*/
         if (mysqli_connect_errno()){
@@ -18,7 +10,3 @@
             echo "conectado BD...";
         }*/
         ?>
-       
-        
-    </body>
-</html>

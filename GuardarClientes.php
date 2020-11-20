@@ -1,3 +1,6 @@
+<?php
+    include "confere_2.php";
+?>
 <!DOCTYPE html>
 <html>
     <head>

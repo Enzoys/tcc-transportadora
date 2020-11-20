@@ -1,13 +1,14 @@
 <?php
-    include "confere.php";
-?>
+    include "confere_2.php";
+?> 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body><a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
+    <body>            
+        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
         <center div="center"> 
             Escolha o metodo de busca:
 

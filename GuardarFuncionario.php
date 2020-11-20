@@ -1,4 +1,5 @@
 <?php
+include'confere_3';
 include "conexao.php";
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
