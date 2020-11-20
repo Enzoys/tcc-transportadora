@@ -5,7 +5,7 @@ include 'cabecalho.php'; ?>
 
         $id = $_POST['id'];
         $sql = "delete from clientes where id = $id";
-        $mysqli->query($sql); // efetua exclusão
+        $mysqli->query($sql); // efetua exclusão - Editado por Marcos
 
         include 'ListarClientes.php';
         ?>
