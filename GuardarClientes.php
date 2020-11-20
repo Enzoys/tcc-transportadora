@@ -11,13 +11,14 @@
    $cep   = $_POST['cep'];
    $cidade   = $_POST['cidade'];
    $numero   = $_POST['numero'];
-   $sql ="INSERT INTO clientes (nome, cpf, telefone, email) " .
-   "values('$nome', '$cpf', '$telefone','$email');"
-           . " "
-           . "INSERT INTO endereco_cli (numero, rua, bairro, estado, complemento, cep, cpf_cli, cidade)"
-           . "values('$numero', '$rua', '$bairro', '$estado', '$complemento', '$cep','$cpf','$cidade');";
-   echo $sql;
-   $mysqli->query($sql);  // efetua o cadastro
+   $sql ="INSERT INTO clientes (nome, cpf, telefone, email) "
+   . "values('$nome', '$cpf', '$telefone','$email');";
+   $sql2 ="INSERT INTO endereco_cli (numero, rua, bairro, estado, complemento, cep, cpf_cli, cidade)"
+   . "values('$numero', '$rua', '$bairro', '$estado', '$complemento', '$cep','$cpf','$cidade');";
+
+   echo $sql,$sql2;
+   $mysqli->query($sql);// efetua o cadastro
+   $mysqli->query($sql2);// efetua o cadastro do endereco
    if ($mysqli->insert_id == TRUE) {
 ?>
 <script type="text/javascript">

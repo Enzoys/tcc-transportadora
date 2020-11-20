@@ -12,13 +12,14 @@
    $cidade   = $_POST['cidade'];
    $numero   = $_POST['numero'];
    $desc   = $_POST['desc'];
-   $sql = "INSERT INTO empresas(nome, cnpj, telefone, email, descricao)".
-   " values('$nomemp', '$cnpj', '$telefone','$email','$desc');"
-           . "INSERT INTO endereco_emp (rua, bairro, estado, complemento, cep, cnpj_cli, cidade,numero)"
-           . "values('$rua', '$bairro', '$estado', '$complemento', '$cep','$cnpj','$cidade','$numero');";
+   $sql = "INSERT INTO empresas(nome, cnpj, telefone, email, descricao)"
+   . " values('$nomemp', '$cnpj', '$telefone','$email','$desc');";
+   $sql2 ="INSERT INTO endereco_emp (rua, bairro, estado, complemento, cep, cnpj_cli, cidade, numero)"
+   . "values('$rua', '$bairro', '$estado', '$complemento', '$cep', '$cnpj', '$cidade', '$numero');";
 
-   echo $sql;
-   $mysqli->query($sql);  // efetua o cadastro
+   echo $sql,$sql2;
+   $mysqli->query($sql);// efetua o cadastro
+   $mysqli->query($sql2);// efetua o cadastro do endereco
    if ($mysqli->insert_id == TRUE) {
 ?>
 <script type="text/javascript">
