@@ -8,31 +8,26 @@
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
        
     </head>
-    <body style="text-align: center">
-        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
-        <div style="text-align: center">
+    <body>
+        <a href="http://localhost/tcc1/pagFuncionarios.php">MENU ANTERIOR</a>
+        <a href="adm.php">Voltar</a>
         
         <?php
-            //LINK PARA A PAGINA QUE CONECTA AO BANCO
-            include "conexao.php";
-            //CODIGO SELECT TABELA CLIENTES
-            $sql="SELECT * FROM clientes";
-            //SE RECEBER RESULTADO DA QUERY, ENTRA NA ARRAY ASSOCIATIVA 
-            //ENQUANTO HOUVER RESULTADOS E LISTA OS CLIENTES
+            include "conexao.php"; 
+            $sql="SELECT * FROM funcionarios";
             if($result=$mysqli->query($sql)){
+            /* fetch associative array */
                 while($row=$result->fetch_assoc()){
                     echo "Nome do cliente: ".$row["nome"].
                          " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"]."<br/>";                        
+                         " ID: ".$row["cod_fun"]."<br/>";                        
                 }
                
             }
-            //LINK PARA A PAGINA QUE ENCERRA CONEXÃO
             include "desconecta.php";
         ?>
-        </div>
    </body>
       
 </html>

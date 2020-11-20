@@ -16,7 +16,9 @@
         </div>
     </div>
 </div>
-
+<h1>SEJA BEM-VINDO AO INVICTA-X!</h1>
+        <button onclick="window.open('form_login.php')">JÁ POSSUO CADASTRO</button>
+        <button onclick="window.location.href = 'escolha.php'">QUERO ME CADASTRAR</button>
 <script>
     let divElement1 = document.getElementById("tb_div");
     let heightTable = document.defaultView.getComputedStyle(divElement1).height;

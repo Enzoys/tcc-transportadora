@@ -1,30 +1,41 @@
-<?php
-   include "conexao.php";
-   $nome     = $_POST['nome'];
-   $cpf      = $_POST['cpf'];
-   $telefone    = $_POST['telefone'];
-   $email   = $_POST['email'];
-   $rua   = $_POST['rua'];
-   $bairro   = $_POST['bairro'];
-   $estado   = $_POST['estado'];
-   $complemento   = $_POST['complemento'];
-   $cep   = $_POST['cep'];
-   $cidade   = $_POST['cidade'];
-   $numero   = $_POST['numero'];
-   $sql ="INSERT INTO clientes (nome, cpf, telefone, email) "
-   . "values('$nome', '$cpf', '$telefone','$email');";
-   $sql2 ="INSERT INTO endereco_cli (numero, rua, bairro, estado, complemento, cep, cpf_cli, cidade)"
-   . "values('$numero', '$rua', '$bairro', '$estado', '$complemento', '$cep','$cpf','$cidade');";
-
-   echo $sql,$sql2;
-   $mysqli->query($sql);// efetua o cadastro
-   $mysqli->query($sql2);// efetua o cadastro do endereco
-   if ($mysqli->insert_id == TRUE) {
-?>
-<script type="text/javascript">
-   alert("Cadastrado com Sucesso! ");
-</script>
-<?php
-}
-       include "./ListarClientes.php";
-?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+         <?php
+            include "conexao.php";//CONECTA AO BANCO
+            //RECEBE OS VALORES DO FORMULARIO
+            $nome     = $_POST['nome'];
+            $cpf      = $_POST['cpf'];
+            $telefone    = $_POST['telefone'];
+            $email   = $_POST['email'];
+            $estado = $_POST['estado'];
+            $cidade = $_POST['cidade'];
+            $bairro = $_POST['bairro'];
+            $rua = $_POST['rua'];
+            $numero = $_POST['numero'];
+            $complemento = $_POST['complemento'];
+            
+            //CODIGO PARA INSERIR NA TABELA
+            $sql = "INSERT INTO clientes (nome, cpf, telefone, email) " .
+            "values('$nome', '$cpf', '$telefone','$email')";
+            $sql2 = "INSERT INTO endereco (estado, cidade, bairro, rua, numero, complemento, id) ".
+            "values('$estado', '$cidade', '$bairro','$rua','$numero', '$complemento', '$cpf')";
+           //EXECUTA O CÓDIGO
+            $mysqli->query($sql);
+            $mysqli->query($sql2);
+            if ($mysqli->insert_id == TRUE) { //EXECUTA UMA AÇÃO SE O PROCEDIMENTO
+            //TIVER FUNCIONADO
+        ?>
+        <script type="text/javascript">
+            alert("Cadastrado com Sucesso! ");
+            window.location.href='form_cadastrar_cliente.php';
+        </script>
+        <?php
+        }
+        ?>
+    </body>
+</html>
