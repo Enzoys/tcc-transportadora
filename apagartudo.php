@@ -1,12 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Apagar Todos</title>
         <?php
         include 'conexao.php';
          $id = $_POST['id'];
@@ -41,6 +39,6 @@
         href='javascript:window.history.go(-1)'</script>";    
         }
         ?>
-
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

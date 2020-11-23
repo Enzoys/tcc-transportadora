@@ -1,13 +1,10 @@
 <?php
     include "confere_3.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head> 
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Cadastrar Funcionário</title>
         <a href="http://localhost/tcc1/pagFuncionario.php">MENU ANTERIOR</a><br><br>
         <form method="post" action="GuardarFuncionario.php">
         <table width="200" border="3">
@@ -127,6 +124,6 @@
        
         </table>
       </form>
-</body>
-
-</html>
+<?php
+    include ('rodape.php');
+?>

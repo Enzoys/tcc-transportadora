@@ -1,7 +1,7 @@
 <?php
     include ('cabecalho.php')
 ?>
-
+<title>Invicta-X Transportes | Início</title>
 <div id="tb_div" style="display: inline-block; width: 100%; background-color: #fff500;">
     <img style="float: right; width: 50%; object-fit: cover;" src="imagens/caminhao.jpg" alt="" />
     <div id="tbc_div" style="width: 50%; display: table; font-family: Helvetica, Arial, sans-serif;">

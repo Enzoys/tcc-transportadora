@@ -1,13 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Guardar Clientes</title>
          <?php
             include "conexao.php";//CONECTA AO BANCO
             //RECEBE OS VALORES DO FORMULARIO
@@ -40,5 +37,6 @@
         <?php
         }
         ?>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

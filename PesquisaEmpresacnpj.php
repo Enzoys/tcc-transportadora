@@ -1,13 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Empresas por CNPJ</title>
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
@@ -56,6 +53,6 @@
             </tr>
         </table>
         </form>
-        
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

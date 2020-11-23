@@ -19,7 +19,6 @@
         <meta property="og:site_name" content="demo-template-07-contract-02-real-estate-pt-br">-->
         <!-- pesquisar meta tags e indexação-->
 
-        <title>Invicta X Transportes | Início</title>
         <!--<link rel="canonical" href="https://demo-template-07-contract-02-real-estate-pt-br.webnode.com/">-->
         <link rel="icon" href="imagens\icon_invicta.png" />
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />

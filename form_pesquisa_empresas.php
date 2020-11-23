@@ -1,13 +1,11 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body><a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Empresas</title>
+    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
         <center div="center"> 
             Escolha o metodo de busca:
 
@@ -27,5 +25,6 @@
                 <input type="submit" name="Enviar"> 
             </form>
         </center>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

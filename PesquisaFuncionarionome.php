@@ -1,13 +1,10 @@
 <?php
     include "confere_3.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Funcionários por Nome</title>
         <?php
             include "conexao.php";
             $funcionario= $_REQUEST["txtfuncionario"];
@@ -56,6 +53,6 @@
             </tr>
         </table>
         </form>
-        
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

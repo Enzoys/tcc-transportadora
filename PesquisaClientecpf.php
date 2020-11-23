@@ -1,13 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Clientes por CPF</title>
         <?php
             include "conexao.php";// CONECTA AO BANCO
             $cliente= $_REQUEST["txtcliente"];// RETOMA A VARIAVEL DE CONSULTA
@@ -58,6 +55,6 @@
             </tr>
         </table>
         </form>
-        
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

@@ -1,8 +1,7 @@
-<html>
-<head>
-<title> Cadastro de Usuário </title>
-</head>
-<body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Cadastro Cliente Empresa</title>
     <form method="POST" action="cadastro_emp.php">
 
         <table width="200" border="3px">  
@@ -99,6 +98,6 @@
                 </td>
             </tr>
 </form>
-</body>
-</html>
-
+<?php
+    include ('rodape.php');
+?>

@@ -1,13 +1,10 @@
 <?php
     include "confere_3.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Funcionários por CPF</title>
         <?php
             include "conexao.php";// CONECTA AO BANCO
             $cliente= $_REQUEST["txtfuncionario"];// RETOMA A VARIAVEL DE CONSULTA
@@ -59,6 +56,6 @@
             </tr>
         </table>
         </form>
-        
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

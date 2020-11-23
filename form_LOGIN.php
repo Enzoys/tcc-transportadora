@@ -1,16 +1,15 @@
 <?php
 session_start();// INICIA SESSAO
 ?>
-<html>
-<head>
-<title> Login de Usuário </title>
-</head>
-<body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Login</title>
 <form method="POST" action="login.php">
-<label>Login:</label><input type="text" name="login" id="login"><br>
-<label>Senha:</label><input type="password" name="senha" id="senha"><br>
-<input type="submit" value="entrar" id="entrar" name="entrar"><br>
-<a href="escolha.php">Cadastre-se</a>
+    <label>Login:</label><input type="text" name="login" id="login"><br>
+    <label>Senha:</label><input type="password" name="senha" id="senha"><br>
+    <input type="submit" value="entrar" id="entrar" name="entrar"><br>
+    <a href="escolha.php">Cadastre-se</a>
 </form>
         <p>
             <?php // SE HOUVER ERRO, MOSTRA A VARIAVEL GLOBAL	
@@ -28,5 +27,6 @@ session_start();// INICIA SESSAO
             }
             ?>
         </p>
-</body>
-</html>
+<?php
+    include ('rodape.php');
+?>

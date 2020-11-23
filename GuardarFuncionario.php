@@ -1,5 +1,11 @@
 <?php
-include'confere_3';
+    include "confere_3.php";
+?>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Guardar Funcionários</title>
+<?php
 include "conexao.php";
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
@@ -82,4 +88,6 @@ if( $login == ""  || $senha == "" || $senha_conf == "" || $nome == "" || $cpf ==
     }
 }
 ?>
-
+<?php
+    include ('rodape.php');
+?>

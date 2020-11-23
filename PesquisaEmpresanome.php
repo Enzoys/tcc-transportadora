@@ -1,13 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Empresas por Nome</title>
         <?php
             include "conexao.php";
             $empresa= $_REQUEST["txtempresa"];
@@ -57,5 +54,6 @@
             </tr>
         </table>
         </form>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

@@ -1,13 +1,11 @@
 <?php
     include "confere_3.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body><a href="http://localhost/tcc1/pagFuncionario.php">MENU ANTERIOR</a><br><br>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Funcionário</title>
+    <a href="http://localhost/tcc1/pagFuncionario.php">MENU ANTERIOR</a><br><br>
         <center div="center"> 
 
             <form method="post" action="PesquisaFuncionariocpf.php">
@@ -21,5 +19,6 @@
                 <input type="submit" name="Enviar"> 
             </form>
         </center>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

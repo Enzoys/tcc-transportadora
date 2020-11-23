@@ -1,13 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Guardar Empresas</title>
          <?php
             include "conexao.php";
             $nomemp     = $_POST['nomemp'];
@@ -38,5 +35,6 @@
         }
                 include "./ListaEmpresa.php";
         ?>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

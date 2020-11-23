@@ -1,14 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <link href="estilo.css" rel="stylesheet" type="text/css"/>
-       
-    </head>
-    <body style="text-align: center">
+<?php
+    include ('cabecalho.php')
+?>
+<title>Listar Clientes</title>
         <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
         <div style="text-align: center">
         
@@ -33,6 +29,6 @@
             include "desconecta.php";
         ?>
         </div>
-   </body>
-      
-</html>
+<?php
+    include ('rodape.php');
+?>

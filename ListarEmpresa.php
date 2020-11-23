@@ -1,10 +1,10 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Listar Empresas</title>
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
        
     </head>
@@ -27,6 +27,6 @@
             }
             include "desconecta.php";
         ?>
-   </body>
-      
-</html>
+<?php
+    include ('rodape.php');
+?>

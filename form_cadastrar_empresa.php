@@ -1,13 +1,11 @@
 <?php
     include "confere_2.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body><a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Funcionario Cadastrar Cliente Empresa</title>
+    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
         <form method="post" action="GuardarEmpresa.php">
             <table width="200" border="0">
            
@@ -106,5 +104,6 @@
        
             </table>
         </form>
-    </body>
-</html>
+<?php
+    include ('rodape.php');
+?>

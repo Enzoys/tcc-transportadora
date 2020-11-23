@@ -1,14 +1,10 @@
 <?php
     include "confere_3.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <link href="estilo.css" rel="stylesheet" type="text/css"/>
-       
-    </head>
-    <body>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Listar Funcionários</title>
         <a href="http://localhost/tcc1/pagFuncionarios.php">MENU ANTERIOR</a>
         <a href="adm.php">Voltar</a>
         
@@ -28,6 +24,6 @@
             }
             include "desconecta.php";
         ?>
-   </body>
-      
-</html>
+<?php
+    include ('rodape.php');
+?>
