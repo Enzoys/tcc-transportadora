@@ -14,8 +14,8 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
     if (isset($resultado)) {
         //SE O LOGIN E SENHA CONSTAR NO BANCO
         $_SESSION['usuarioId'] = $resultado['id'];
-
         $_SESSION['usuarioNome'] = $resultado['login']; //
+        $_SESSION['usuarioAtest'] = $resultado['atest'];
         $_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
         echo $resultado['niveis_acesso_id'];
         if ($_SESSION['usuarioNiveisAcessoId'] == "1") {
