@@ -32,7 +32,7 @@
             }
 
             #content-wrap {
-                padding-bottom: 600px;
+                padding-bottom: 350px;
                 /*<--padding sobre o footer, deve sempre ser maior que seu tamanho*/
             }
 
@@ -80,6 +80,13 @@
             a {
                 cursor: pointer;
             }
+            
+            #divImg1{
+                background-image: url("imagens/caminhao1.png");
+                background-size: cover;
+                background-position: center;
+            }
+            
         </style>
     </head>
 

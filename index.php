@@ -16,9 +16,32 @@
         </div>
     </div>
 </div>
-<h1>SEJA BEM-VINDO AO INVICTA-X!</h1>
-        <button onclick="window.open('form_login.php')">JÁ POSSUO CADASTRO</button>
-        <button onclick="window.location.href = 'escolha.php'">QUERO ME CADASTRAR</button>
+            <h1>SEJA BEM-VINDO AO INVICTA-X!</h1>
+            <button onclick="window.open('form_login.php')">JÁ POSSUO CADASTRO</button>
+            <button onclick="window.location.href = 'escolha.php'">QUERO ME CADASTRAR</button>
+        
+<div style="background-color: pink;height:100%;min-height:600px; width:100%; margin:0;">
+    <div style="background-color: lightgreen;height:265px; width:100%; margin:0;">
+        <div id="divImg1" style="background-color:aqua;height:100%;width:80%;margin:0 10%;">
+        </div>
+    </div>
+    
+    <div>
+        <div>
+            Contato Esquerda margin:
+            <div>
+                Contate-nos!
+            </div>
+        </div>
+        <div>
+            Contato Direita
+            <div>
+                Conteúdo Contatos
+            </div>
+        </div>
+    </div>
+</div>
+            
 <script>
     let divElement1 = document.getElementById("tb_div");
     let heightTable = document.defaultView.getComputedStyle(divElement1).height;
