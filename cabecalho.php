@@ -3,9 +3,11 @@
     <!--prefix="og: https://ogp.me/ns#" pesquisar prefix e og-->
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="description" content="
+        
     Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
         <meta name="keywords" content="transporte, carga, logistica, caminhao, rj, rio de janeiro, brasil, brazil" />
         <!--<meta name="generator" content="Webnode 2">
@@ -86,11 +88,36 @@
                 background-size: cover;
                 background-position: center;
             }
-            
+            .button {
+                padding-top: 100px;
+                padding-left: 35%;
+                float: left;
+            }
+            .buttons {         
+                padding-top: 0px;
+                padding-left: 40%;
+                float: left;
+            }
+            header {
+                min-height: 60px;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                border-bottom: 1px solid #ccc;
+                background: #ECECEC;
+                z-index: 2;
+            }
+            .branca {
+                color: white;
+            }
         </style>
     </head>
 
     <body>
+    <div>
+        <img style="float: middle; width: 100%; object-fit: cover;" src="imagens/caminhao1.png" alt="" />
+    </div>
         <div id="page-container">
             <div id="content-wrap">
                 <header style="width: 100%; height: 100px; display: block; background-color: #161500; position: sticky;top:0;">
@@ -104,25 +131,30 @@
                         </div>
                         <div style="display: table; height: 100%; width: 62.5%; float: right;">
                             <div style="display: table-cell; height: 100%; vertical-align: middle;">
-                                <ul class="navegacao" style="float: right; height: 100%;">
-                                    <a>
-                                        <li style="color: #d23123;">Inicio</li>
-                                    </a>
-                                    <a>
-                                        <li>Serviços</li>
-                                    </a>
-                                    <a>
-                                        <li>Empresa</li>
-                                    </a>
-                                    <a>
-                                        <li>Contato</li>
-                                    </a>
-                                    <a>
-                                        <li>Login</li>
-                                    </a>
-                                </ul>
+                                <h1 class="fL">
+                                <a href="#" title="Invicta-X"></a>
+                                </h1>
+                                <nav class="fR">
+                                    <ul class="l2" style="">
+                    
+                                    <nav class="fR">
+                                        <ul class="l2" style="float: right; height: 100%;">
+                                        <li style="color: #d23123;">
+                                            <a href="#servicos" title="servicos">Serviços</a>
+                                        </li>
+                                        <li>
+                                            <a href="#area" title="area">Area de atuação</a>
+                                        </li>
+                                        <li>
+                                            <a href="#historia" title="historia">Nossa historia</a>
+                                        </li>
+                                        <li>
+                                            <a href="#contato" title="contato">Login</a>
+                                        </li>
+                                        </nav>
+                                        </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </header>
-
+                
