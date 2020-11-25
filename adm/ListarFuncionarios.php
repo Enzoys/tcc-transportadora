@@ -1,15 +1,15 @@
 <?php
-    include "confere_3.php";
+    include "banco/confere_3.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Listar Funcionários</title>
         <a href="http://localhost/tcc1/pagFuncionarios.php">MENU ANTERIOR</a>
-        <a href="adm.php">Voltar</a>
+        <a href="adm/adm.php">Voltar</a>
         
         <?php
-            include "conexao.php"; 
+            include "banco/conexao.php"; 
             $sql="SELECT * FROM funcionarios";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
@@ -22,8 +22,8 @@
                 }
                
             }
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

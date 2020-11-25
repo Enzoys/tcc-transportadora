@@ -1,16 +1,16 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Página Funcionário</title>
     <CENTER>
-        <a href="PAGCliente.php">CLIENTE</a><br>
-        <a href="PAGEmpresa.php">EMPRESA</a>
+        <a href="funcionario/pagCliente.php">CLIENTE</a><br>
+        <a href="funcionario/pagEmpresa.php">EMPRESA</a>
     </CENTER>
     <br>
-<a href="sair.php">Sair</a>
+<a href="banco/sair.php">Sair</a>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

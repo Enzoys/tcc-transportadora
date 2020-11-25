@@ -2,14 +2,14 @@
 session_start();// INICIA SESSAO
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Login</title>
-<form method="POST" action="login.php">
+<form method="POST" action="banco/login.php">
     <label>Login:</label><input type="text" name="login" id="login"><br>
     <label>Senha:</label><input type="password" name="senha" id="senha"><br>
     <input type="submit" value="entrar" id="entrar" name="entrar"><br>
-    <a href="escolha.php">Cadastre-se</a>
+    <a href="cliente/escolha.php">Cadastre-se</a>
 </form>
         <p>
             <?php // SE HOUVER ERRO, MOSTRA A VARIAVEL GLOBAL	
@@ -28,5 +28,5 @@ session_start();// INICIA SESSAO
             ?>
         </p>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

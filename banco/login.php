@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "conexao.php";
+include "banco/conexao.php";
 if (isset($_POST['login']) && isset($_POST['senha'])) {
     //CONFERE SE OS CAMPOS FORAM ESCRITOS
     $login = $_POST['login'];
@@ -19,19 +19,19 @@ if (isset($_POST['login']) && isset($_POST['senha'])) {
         $_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
         echo $resultado['niveis_acesso_id'];
         if ($_SESSION['usuarioNiveisAcessoId'] == "1") {
-            header("Location: cliemp.php");
+            header("Location: cliente/cliemp.php");
         } elseif ($_SESSION['usuarioNiveisAcessoId'] == "2") {
-            header("Location: func.php");
+            header("Location: funcionario/func.php");
         } elseif ($_SESSION['usuarioNiveisAcessoId'] == "3") {
-            header("Location: adm.php");
+            header("Location: adm/adm.php");
         }
     } else {
         $_SESSION['loginErro'] = '<script language="javascript">alert("Usuário ou senha Inválido")</script>'; // SE NÃO CONSTAR NO BANCO
-        header("Location: form_login.php");
+        header("Location: form_banco/login.php");
     }
 } else {
     // SE OS CAMPOS NAO FOREM PREENCHIDOS
     $_SESSION['loginErro'] = '<script language="javascript">alert("Você deve preencher os campos")</script>';
-    header("window.location.href: 'form_login.php'");
+    header("window.location.href: 'form_banco/login.php'");
 }
 ?> 

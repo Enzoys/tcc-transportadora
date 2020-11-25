@@ -1,5 +1,5 @@
 <?php
-    include "confere.php";
+    include "banco/confere.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,8 +9,8 @@
     </head>
     
     <body>
-        <a href="http://localhost/tcc1/cliemp.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="FazerPedido.php">
+        <a href="http://localhost/tcc1/cliente/cliemp.php">MENU ANTERIOR</a><br><br>
+        <form method="post" action="banco/FazerPedido.php">
             <input type="hidden" id="status" name="status" value="EM ANÁLISE">
         <table width="200" border="0">                  
             <tr>    

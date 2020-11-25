@@ -1,8 +1,8 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
          <?php
-            include "conexao.php";
+            include "banco/conexao.php";
             $nomemp     = $_POST['nomemp'];
             $cnpj    = $_POST['cnpj'];
             $telefone    = $_POST['telefone'];

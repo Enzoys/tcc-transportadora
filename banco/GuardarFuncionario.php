@@ -1,8 +1,8 @@
 <?php
-    include "confere_3.php";
+    include "banco/confere_3.php";
 ?>
 <?php
-include "conexao.php";
+include "banco/conexao.php";
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);

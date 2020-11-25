@@ -1,5 +1,5 @@
 <?php
-    include "confere.php";
+    include "banco/confere.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +9,7 @@
     </head>
     <body>
          <?php
-            include "conexao.php";
+            include "banco/conexao.php";
             $est_origem = $_POST['estado_origem'];
             $cid_origem = $_POST['cidade_origem'];
             $bairro_origem = $_POST['bairro_origem'];
@@ -53,7 +53,7 @@
         ?>
         <script type="text/javascript">
             alert("Cadastrado com Sucesso! ");
-             //window.location.href='form_cadastrar_cliente.php';
+             //window.location.href='funcionario/form_cadastrar_cliente.php';
         </script>
         <?php
         }

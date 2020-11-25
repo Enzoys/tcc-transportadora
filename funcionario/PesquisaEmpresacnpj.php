@@ -1,12 +1,12 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Pesquisar Empresas por CNPJ</title>
         <?php
-            include "conexao.php";
+            include "banco/conexao.php";
             $cliente= $_REQUEST["txtcliente"];
             $sql="SELECT * FROM empresas where cnpj like '%$cliente%'";
             if($result=$mysqli->query($sql)){
@@ -20,10 +20,10 @@
                          " Descrição: ".$row["desc"]."<br/>";
                 }              
             }
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
-        <a href="form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaEmpresacnpj.php">
+        <a href="funcionario/form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
+        <form method="post" action="funcionario/PesquisaEmpresacnpj.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -36,7 +36,7 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php">
+        <form method="post" action="banco/apagartudo.php">
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="empresas">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_emp">
@@ -54,5 +54,5 @@
         </table>
         </form>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

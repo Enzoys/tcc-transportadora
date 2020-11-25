@@ -1,17 +1,17 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Listar Empresas</title>
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
        
     </head>
-    <body><a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a>
+    <body><a href="http://localhost/tcc1/funcionario/pagEmpresa.php">MENU ANTERIOR</a>
         
         <?php
-            include "conexao.php"; 
+            include "banco/conexao.php"; 
             $sql="SELECT * FROM empresas";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
@@ -25,8 +25,8 @@
                 }
                
             }
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

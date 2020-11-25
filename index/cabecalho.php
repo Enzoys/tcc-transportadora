@@ -91,7 +91,7 @@
                         <div style="display: table; height: 100%; width: 35%; float: left;">
                             <div style="display: table-cell; height: 100%; vertical-align: middle;">
                                 <div style="width: 100%; padding-top: 0.75%;">
-                                    <a href="index.php"><img style="max-height: 100%; width: 100%; object-fit: contain;" src="imagens/logo_retangulo.png" alt="" /></a>
+                                    <a href="index/index.php"><img style="max-height: 100%; width: 100%; object-fit: contain;" src="imagens/logo_retangulo.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>

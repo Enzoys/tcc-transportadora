@@ -9,5 +9,5 @@
     );   
     $_SESSION['logindeslogado'] = "Deslogado com sucesso";
     //redirecionar o usuario para a página de login
-    header("Location: form_login.php");
+    header("Location: cliente/form_login.php");
 ?>

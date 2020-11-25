@@ -1,5 +1,5 @@
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Invicta-X Transportes | Início</title>
 <div id="tb_div" style="display: inline-block; width: 100%; background-color: #fff500;">
@@ -17,8 +17,8 @@
     </div>
 </div>
 <h1>SEJA BEM-VINDO AO INVICTA-X!</h1>
-        <button onclick="window.open('form_login.php')">JÁ POSSUO CADASTRO</button>
-        <button onclick="window.location.href = 'escolha.php'">QUERO ME CADASTRAR</button>
+        <button onclick="window.open('cliente/form_login.php')">JÁ POSSUO CADASTRO</button>
+        <button onclick="window.location.href = 'cliente/escolha.php'">QUERO ME CADASTRAR</button>
 <script>
     let divElement1 = document.getElementById("tb_div");
     let heightTable = document.defaultView.getComputedStyle(divElement1).height;
@@ -31,5 +31,5 @@
     }
 </script>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

@@ -1,8 +1,8 @@
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Cadastro Cliente Empresa</title>
-    <form method="POST" action="cadastro_emp.php">
+    <form method="POST" action="banco/cadastro_emp.php">
 
         <table width="200" border="3px">  
             <tr>  
@@ -99,5 +99,5 @@
             </tr>
 </form>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

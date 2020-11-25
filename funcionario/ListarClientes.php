@@ -1,16 +1,16 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Listar Clientes</title>
-        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
+        <a href="http://localhost/tcc1/funcionario/pagCliente.php">MENU ANTERIOR</a><br><br>
         <div style="text-align: center">
         
         <?php
             //LINK PARA A PAGINA QUE CONECTA AO BANCO
-            include "conexao.php";
+            include "banco/conexao.php";
             //CODIGO SELECT TABELA CLIENTES
             $sql="SELECT * FROM clientes";
             //SE RECEBER RESULTADO DA QUERY, ENTRA NA ARRAY ASSOCIATIVA 
@@ -26,9 +26,9 @@
                
             }
             //LINK PARA A PAGINA QUE ENCERRA CONEXÃO
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
         </div>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

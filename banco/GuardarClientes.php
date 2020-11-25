@@ -1,8 +1,8 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
          <?php
-            include "conexao.php";//CONECTA AO BANCO
+            include "banco/conexao.php";//CONECTA AO BANCO
             //RECEBE OS VALORES DO FORMULARIO
             $nome     = $_POST['nome'];
             $cpf      = $_POST['cpf'];
@@ -28,7 +28,7 @@
         ?>
         <script type="text/javascript">
             alert("Cadastrado com Sucesso! ");
-            window.location.href='form_cadastrar_cliente.php';
+            window.location.href='funcionario/form_cadastrar_cliente.php';
         </script>
         <?php
         }

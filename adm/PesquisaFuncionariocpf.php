@@ -1,12 +1,12 @@
 <?php
-    include "confere_3.php";
+    include "banco/confere_3.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Pesquisar Funcionários por CPF</title>
         <?php
-            include "conexao.php";// CONECTA AO BANCO
+            include "banco/conexao.php";// CONECTA AO BANCO
             $cliente= $_REQUEST["txtfuncionario"];// RETOMA A VARIAVEL DE CONSULTA
             $sql="SELECT * FROM funcionarios where cpf like '%$cliente%'";// SELECIONA OS FUNCIONARIOS 
             //DE ACORDO COM O METODO UTILIZADO 
@@ -20,12 +20,12 @@
                          " ID: ".$row["cod_fun"]."<br/>";
                 }              
             }
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
-        <a href="form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaFuncionariocpf.php"><!-- ENVIA NOVAMENTE
+        <a href="adm/form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
+        <form method="post" action="adm/PesquisaFuncionariocpf.php"><!-- ENVIA NOVAMENTE
         PARA A PESQUISA -->
         <table width="200" border="2">
             <tr>
@@ -39,7 +39,7 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php"><!-- ENVIA PARA A EXCLUSÃO --> 
+        <form method="post" action="banco/apagartudo.php"><!-- ENVIA PARA A EXCLUSÃO --> 
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="funcionarios"><!-- INDICA DE QUAL TABELA IRA APAGAR-->
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="cod_fun"><!-- INDICA DE QUAL ATRIBUTO IRA APAGAR-->
@@ -57,5 +57,5 @@
         </table>
         </form>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

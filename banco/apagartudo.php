@@ -1,8 +1,8 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
         <?php
-        include 'conexao.php';
+        include 'banco/conexao.php';
          $id = $_POST['id'];
          $cncpcnt = $_POST['cncpcnt'];
          $tabcliempfun = $_POST['tabcliempfun'];

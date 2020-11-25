@@ -1,12 +1,12 @@
 <?php
-    include "confere_2.php";
+    include "banco/confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Funcionario Cadastrar Cliente Empresa</title>
-    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardarEmpresa.php">
+    <a href="http://localhost/tcc1/funcionario/pagEmpresa.php">MENU ANTERIOR</a><br><br>
+        <form method="post" action="banco/GuardarEmpresa.php">
             <table width="200" border="0">
            
                     <tr>  
@@ -105,5 +105,5 @@
             </table>
         </form>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

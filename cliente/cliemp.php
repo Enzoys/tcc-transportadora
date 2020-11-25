@@ -1,8 +1,8 @@
 <?php
-    include "confere.php";
+    include "banco/confere.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Página Cliente</title>
 <CENTER>
@@ -28,11 +28,11 @@
                 }
             }?>
         </table>
-        <a href="form_fazer_pedido.php">NOVO PEDIDO</a><br>
+        <a href="cliente/form_fazer_pedido.php">NOVO PEDIDO</a><br>
         <a href="AlterarDados.php">ALTERAR MEUS DADOS</a><br>
         </CENTER>
     <br>
-<a href="sair.php">Sair</a>
+<a href="banco/sair.php">Sair</a>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>

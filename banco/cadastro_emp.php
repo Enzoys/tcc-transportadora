@@ -1,5 +1,5 @@
 <?php
-include 'confere_2.php';
+include 'banco/confere_2.php';
 $login = $_POST['login'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -50,7 +50,7 @@ if( $login == ""  || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj =
         if($rowcount == 1){
         echo"<script language='javascript' type='text/javascript'>"
         ."alert('Usuário cadastrado com sucesso!');"
-        ."window.location.href='form_login.php'</script>";
+        ."window.location.href='form_banco/login.php'</script>";
         }else{
         echo"<script language='javascript' type='text/javascript'>"
         ."alert('Não foi possível cadastrar esse usuário');"

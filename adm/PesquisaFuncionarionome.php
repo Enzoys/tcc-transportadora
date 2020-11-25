@@ -1,12 +1,12 @@
 <?php
-    include "confere_3.php";
+    include "banco/confere_3.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('index/cabecalho.php')
 ?>
 <title>Pesquisar Funcionários por Nome</title>
         <?php
-            include "conexao.php";
+            include "banco/conexao.php";
             $funcionario= $_REQUEST["txtfuncionario"];
             $sql="SELECT * FROM funcionarios where nome like '%$funcionario%'";
             if($result=$mysqli->query($sql)){
@@ -20,10 +20,10 @@
                          " ID: ".$row["cod_fun"]."<br/>";
                 }              
             }
-            include "desconecta.php";
+            include "banco/desconecta.php";
         ?>
-        <a href="form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaFuncionarionome.php">
+        <a href="adm/form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
+        <form method="post" action="adm/PesquisaFuncionarionome.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -36,7 +36,7 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php">
+        <form method="post" action="banco/apagartudo.php">
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="funcionarios">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="cod_fun">
@@ -54,5 +54,5 @@
         </table>
         </form>
 <?php
-    include ('rodape.php');
+    include ('index/rodape.php');
 ?>
