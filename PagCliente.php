@@ -32,7 +32,7 @@
         <a href="AlterarDados.php">ALTERAR MEUS DADOS</a><br>
         </CENTER>
     <br>
-<a href="sair.php">Sair</a>
+<a href="sairSessao.php">Sair</a>
 <?php
     include ('rodape.php');
 ?>

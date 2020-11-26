@@ -6,7 +6,7 @@
 ?>
 <title>Funcionario Cadastrar Cliente Empresa</title>
     <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardarEmpresa.php">
+        <form method="post" action="GuardarClienteEmpresa.php">
             <table width="200" border="0">
            
                     <tr>  

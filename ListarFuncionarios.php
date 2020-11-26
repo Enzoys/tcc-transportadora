@@ -6,7 +6,7 @@
 ?>
 <title>Listar Funcionários</title>
         <a href="http://localhost/tcc1/pagFuncionarios.php">MENU ANTERIOR</a>
-        <a href="adm.php">Voltar</a>
+        <a href="PagAdm.php">Voltar</a>
         
         <?php
             include "conexao.php"; 

@@ -4,26 +4,27 @@
 <?php
     include ('cabecalho.php')
 ?>
-<title>Pesquisar Empresas por CNPJ</title>
+<title>Pesquisar Empresas por Nome</title>
         <?php
             include "conexao.php";
-            $cliente= $_REQUEST["txtcliente"];
-            $sql="SELECT * FROM empresas where cnpj like '%$cliente%'";
+            $empresa= $_REQUEST["txtempresa"];
+            $sql="SELECT * FROM empresas where nome like '%$empresa%'";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
-                    echo " Nome do Cliente: ".$row["nome"].
-                         " CPF: ".$row["cpf"].
+                    echo "Nome da Empresa: ".$row["nomemp"].
+                         " CNPJ: ".$row["cnpj"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"].
+                         " Id: ".$row["id_emp"].
                          " Descrição: ".$row["desc"]."<br/>";
-                }              
+                }
+               
             }
             include "desconecta.php";
         ?>
         <a href="form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaEmpresacnpj.php">
+        <form method="post" action="PesquisaCliPessoaNome.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -36,15 +37,15 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php">
+        <form method="post" action="ApagarCompleto.php">
         <table width="200" border="2">
-            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="empresas">
-            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_emp">
-            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cnpj">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli">
+            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cpf">
             <tr>
-                <td align="right">ID da empresa:</td>
+                <td align="right">ID do cliente:</td>
                 <td><input type="text" name="id" size="5"></td>
-                <td align="right">(APAGA TODOS OS DADOS DA EMPRESA!)</td>
+                <td align="right">(APAGA TODOS OS DADOS DO CLIENTE!)</td>
                 
             </tr>
             <tr>

@@ -6,7 +6,7 @@
 ?>
 <title>Funcionario Cadastrar Cliente Pessoa Física</title>
         <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardarClientes.php">
+        <form method="post" action="GuardarClientePessoa.php">
         <table width="200" border="0">
            
             <tr>  

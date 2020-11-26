@@ -4,11 +4,11 @@
 <?php
     include ('cabecalho.php')
 ?>
-<title>Pesquisar Empresas por e-mail</title>
+<title>Pesquisar Empresas por CNPJ</title>
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
-            $sql="SELECT * FROM clientes where email like '%$cliente%'";
+            $sql="SELECT * FROM empresas where cnpj like '%$cliente%'";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
@@ -23,7 +23,7 @@
             include "desconecta.php";
         ?>
         <a href="form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaClienteemail.php">
+        <form method="post" action="PesquisaCliEmpresaCnpj.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -36,15 +36,15 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php">
+        <form method="post" action="ApagarCompleto.php">
         <table width="200" border="2">
-            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes">
-            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli">
-            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cpf">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="empresas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_emp">
+            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cnpj">
             <tr>
-                <td align="right">ID do cliente:</td>
+                <td align="right">ID da empresa:</td>
                 <td><input type="text" name="id" size="5"></td>
-                <td align="right">(APAGA TODOS OS DADOS DO CLIENTE!)</td>
+                <td align="right">(APAGA TODOS OS DADOS DA EMPRESA!)</td>
                 
             </tr>
             <tr>

@@ -9,17 +9,17 @@
         <center div="center"> 
             Escolha o metodo de busca:
 
-            <form method="post" action="PesquisaEmpresanome.php">
+            <form method="post" action="PesquisaCliEmpresaNome.php">
                 NOME:
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
-            <form method="post" action="PesquisaEmpresacnpj.php">
+            <form method="post" action="PesquisaCliEmpresaCnpj.php">
                 CNPJ:
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
-            <form method="post" action="PesquisaEmpresaemail.php">
+            <form method="post" action="PesquisaCliEmpresaEmail.php">
                 EMAIL:
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 

@@ -1,11 +1,12 @@
 <?php
-    include "confere_2.php";
+    include "confere_3.php";
 ?>
 <?php
     include ('cabecalho.php')
 ?>
-<title>Página Funcionário</title>
+<title>Página ADM</title>
     <CENTER>
+        <a href="PagAdmFuncionarios.php">FUNCIONÁRIO</a><br>
         <a href="PagFuncionarioCliPessoas.php">CLIENTE</a><br>
         <a href="PagFuncionarioEmpresas.php">EMPRESA</a>
     </CENTER>

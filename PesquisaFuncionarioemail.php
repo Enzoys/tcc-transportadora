@@ -25,7 +25,7 @@
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
         <a href="form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaFuncionariocpf.php"><!-- ENVIA NOVAMENTE
+        <form method="post" action="PesquisaFuncionarioCpf.php"><!-- ENVIA NOVAMENTE
         PARA A PESQUISA -->
         <table width="200" border="2">
             <tr>
@@ -39,7 +39,7 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php"><!-- ENVIA PARA A EXCLUSÃO --> 
+        <form method="post" action="ApagarCompleto.php"><!-- ENVIA PARA A EXCLUSÃO --> 
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="funcionarios"><!-- INDICA DE QUAL TABELA IRA APAGAR-->
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="cod_fun"><!-- INDICA DE QUAL ATRIBUTO IRA APAGAR-->

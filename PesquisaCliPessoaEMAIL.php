@@ -4,27 +4,25 @@
 <?php
     include ('cabecalho.php')
 ?>
-<title>Pesquisar Empresas por Nome</title>
+<title>Pesquisar Clientes por e-mail</title>
         <?php
             include "conexao.php";
-            $empresa= $_REQUEST["txtempresa"];
-            $sql="SELECT * FROM empresas where nome like '%$empresa%'";
+            $cliente= $_REQUEST["txtcliente"];
+            $sql="SELECT * FROM clientes where email like '%$cliente%'";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
-                    echo "Nome da Empresa: ".$row["nomemp"].
-                         " CNPJ: ".$row["cnpj"].
+                    echo " Nome do Cliente: ".$row["nome"].
+                         " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " Id: ".$row["id_emp"].
-                         " Descrição: ".$row["desc"]."<br/>";
-                }
-               
+                         " ID: ".$row["id_cli"]."<br/>";
+                }              
             }
             include "desconecta.php";
         ?>
-        <a href="form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaClientenome.php">
+        <a href="form_pesquisa_cliente.php">ALTERAR MÉTODO DE BUSCA</a>
+        <form method="post" action="PesquisaCliPessoaEmail.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -37,7 +35,7 @@
         </table>
         </form>
  
-        <form method="post" action="apagartudo.php">
+        <form method="post" action="ApagarCompleto.php">
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli">
