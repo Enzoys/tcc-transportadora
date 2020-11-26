@@ -31,7 +31,7 @@
     </div>
 
     <div>
-        <div>
+        <div id="teste1">
             Contato Esquerda:
             <div>
                 Contate-nos!
@@ -46,7 +46,7 @@
     </div>
 </div>
 <div class="branca" style="background-color: black; height: 100%; min-height: 450px; width: 100%;">
-    <div style="text-align:center;padding-top:70px;">
+    <div style="text-align: center; padding-top: 70px;">
         <h1>NOSSA HISTÓRIA</h1>
         <div style="text-align: left; padding-top: 60px; width: 50%; margin: 0 25%;">
             <h2>
@@ -57,17 +57,17 @@
         </div>
     </div>
 </div>
-    <script>
-        let divElement1 = document.getElementById("tb_div");
-        let heightTable = document.defaultView.getComputedStyle(divElement1).height;
-        let divElement2 = document.getElementById("tbc_div");
-        let heightCell = document.defaultView.getComputedStyle(divElement2).height;
-        if (heightTable > heightCell) {
-            document.getElementById("tbc_div").style.height = heightTable;
-        } else {
-            document.getElementById("tb_div").style.height = heightCell;
-        }
-    </script>
-    <?php
+<script>
+    let divElement1 = document.getElementById("tb_div");
+    let heightTable = document.defaultView.getComputedStyle(divElement1).height;
+    let divElement2 = document.getElementById("tbc_div");
+    let heightCell = document.defaultView.getComputedStyle(divElement2).height;
+    if (heightTable > heightCell) {
+        document.getElementById("tbc_div").style.height = heightTable;
+    } else {
+        document.getElementById("tb_div").style.height = heightCell;
+    }
+</script>
+<?php
     include ('rodape.php');
 ?>

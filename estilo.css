@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+header {
+    min-height: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #ccc;
+    background: #ececec;
+    z-index: 2;
+}
+
+.button {
+    padding-top: 100px;
+    padding-left: 35%;
+    float: left;
+}
+
+.buttons {
+    padding-top: 0px;
+    padding-left: 40%;
+    float: left;
+}
+
+.branca {
+    color: white;
+}
+
+.navegacao a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 30px;
+    padding-top: 30px;
+}
+
+.navegacao a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: #fff500;
+    transition: 0.4s;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navegacao a:hover li {
+    color: #d23123;
+}
+
+.acc-mostrar {
+    display: block !important;
+}
+
+.acc-esconder {
+    display: none !important;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 350px;
+    /*<--padding acima do footer, deve ser sempre maior que seu tamanho*/
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    /*<--tamanho do footer*/
+    background-color: #d23123;
+}
+
+#divImg1 {
+    background-image: url("imagens/caminhao1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#teste1 {
+    font-size: 28px;
+    color: green;
+}
