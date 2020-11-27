@@ -1,5 +1,6 @@
 <?php
-include 'Confere_1.php';
+//include 'Confere_1.php';
+include "conexao.php";
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -43,16 +44,16 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
                 . "window.location.href='javascript:window.history.go(-1)'</script>";
             } else {
                 //CADASTRA OS DADOS
-                $sql1 = "DECLARE @idCliPessoa int";
+                $sql1 = "DECLARE @idCliPessoa [int]";
                 $sql2 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) values('$usuario','$senha','1'); ";
                 $sql3 = "SET @idCliPessoa = SCOPE_IDENTITY()";
                 $sql4 = "INSERT INTO clientes (nome, cpf, telefone, email, id_clientePessoa) values('$nome','$cpf','$telefone','$email',@idCliPessoa);";
                 $sql5 = "INSERT INTO endereco (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$cpf',@idCliPessoa)";
-                echo $sql1;
-                echo $sql2;
-                echo $sql3;
-                echo $sql4;
-                echo $sql5;
+                echo $sql1 . "\n";
+                echo $sql2 . "\n";
+                echo $sql3 . "\n";
+                echo $sql4 . "\n";
+                echo $sql5 . "\n";
                 $mysqli->query($sql1);
                 $mysqli->query($sql2);
                 $mysqli->query($sql3);
@@ -63,7 +64,7 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
                     //SE AGORA, O BANCO RETORNAR 1 LINHA, O CADASTRO FOI EFETUADO
                     echo "<script language='javascript' type='text/javascript'>" 
                     . "alert('Usuário cadastrado com sucesso!');" 
-                    . "//window.location.href='PagLogin.php'</script>";
+                    . "</script>";////window.location.href='PagLogin.php'
                 } else {
                     echo "<script language='javascript' type='text/javascript'>" 
                     . "alert('Não foi possível cadastrar o usuário.');" 

@@ -1,6 +1,6 @@
 <?php
 include "confere.php";
-include 'cabecalho.php';
+include "cabecalho.php";
 ?>
 <title>Página Cliente</title>
 <center>
@@ -33,5 +33,5 @@ include 'cabecalho.php';
 <br />
 <a href="sairSessao.php">Sair</a>
 <?php 
-include 'rodape.php';
+include "rodape.php";
 ?>

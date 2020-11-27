@@ -1,5 +1,5 @@
 <?php
-include "confere_3.php";
+include "Confere_3.php";
 include "conexao.php";
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
