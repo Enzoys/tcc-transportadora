@@ -1,17 +1,16 @@
 <?php
-    include "confere_3.php";
-?>
-<?php
-    include ('cabecalho.php')
+    include "Confere_3.php";
+    include "cabecalho.php";
 ?>
 <title>Adm Página Funcionário</title>
-    <CENTER>
-        <a href="http://localhost/tcc1/form_cadastrar_funcionario.php">CADASTRAR FUNCIONÁRIO</a><br>
-        
-        <a href="http://localhost/tcc1/form_pesquisa_funcionario.php">PESQUISAR FUNCIONÁRIO</a><br><br>
-        
-        <a href="http://localhost/tcc1/adm.php">MENU ANTERIOR</a>
-    </CENTER>
+<center>
+    <a href="PagAdmCadastroFuncionario.php">CADASTRAR FUNCIONÁRIO</a><br />
+
+    <a href="PagAdmPesquisaFuncionario.php">PESQUISAR FUNCIONÁRIO</a><br />
+    <br />
+
+    <a href="PagAdm.php">MENU ANTERIOR</a>
+</center>
 <?php
-    include ('rodape.php');
+    include "rodape.php";
 ?>

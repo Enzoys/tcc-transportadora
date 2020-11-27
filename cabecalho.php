@@ -6,8 +6,11 @@
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
         <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="description" content="        
-    Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
+        <meta
+            name="description"
+            content="        
+    Transportadora confiável para todo território nacional, solicite agora um carregamento!"
+        />
         <meta name="keywords" content="transporte, carga, logistica, caminhao, rj, rio de janeiro, brasil, brazil" />
         <!--<meta name="generator" content="Webnode 2">
         <meta name="apple-mobile-web-app-capable" content="yes">

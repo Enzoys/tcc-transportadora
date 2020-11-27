@@ -1,2 +1,2 @@
 # tcc-transportadora
-Site PHP logística de empresa de transportes.
+Site em PHP para logística de empresa de transportes.

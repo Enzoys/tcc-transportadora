@@ -1,5 +1,5 @@
 <?php
-    include ('cabecalho.php')
+    include "cabecalho.php";
 ?>
 <title>Invicta-X Transportes | Início</title>
 <div id="tb_div" style="display: inline-block; width: 100%; background-color: #fff500;">
@@ -21,8 +21,8 @@
     <h1 style="color: yellow;">SEJA BEM-VINDO AO INVICTA-X!</h1>
 </div>
 <div class="buttons">
-    <button onclick="window.open('form_login.php')">JÁ POSSUO CADASTRO</button>
-    <button onclick="window.location.href = 'escolha.php'">QUERO ME CADASTRAR</button>
+    <button onclick="window.open('PagLogin.php')">JÁ POSSUO CADASTRO</button>
+    <button onclick="window.location.href = 'PagClienteTipoCadastro.php'">QUERO ME CADASTRAR</button>
 </div>
 
 <div style="background-color: pink; height: 100%; min-height: 600px; width: 100%; margin: 0;">
@@ -69,5 +69,5 @@
     }
 </script>
 <?php
-    include ('rodape.php');
+    include "rodape.php";
 ?>
