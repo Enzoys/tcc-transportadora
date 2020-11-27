@@ -1,42 +1,44 @@
 <?php
-    include "confere_2.php";
-?>
-<?php
     include ('cabecalho.php')
 ?>
-<title>Funcionario Cadastrar Cliente Empresa</title>
-    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardarClienteEmpresa.php">
-            <table width="200" border="0">
-           
-                    <tr>  
-                        <td align="right">Nome da Empresa:</td>
-                        <td>  <input type="text" name="nomemp" size="35" /> </td>
-                    </tr>
-                    
-                    <tr>
-                        <td align="right">CNPJ:</td>
-                        <td><input type="text" name="cnpj" size="5" /></td>  
-                    </tr>
-         
-                    <tr>
-                        <td align="right">Telefone:</td>
-                        <td><input type="text" name="telefone" size="5" /></td>  
-                    </tr>
-         
-                    <tr>    
-                        <td align="right">Email:</td>
-                        <td><input type="text" name="email" size="5" /></td>
-                    </tr>
-                    
-                    <tr>    
-                        <td align="right">Descrição:</td>
-                        <td><input type="text" name="desc" size="5" /></td>
-                    </tr>
-                    
-                    <tr>    
-                 <td></td>
-                 <td>ENDEREÇO:</td>
+<title>Cadastro Cliente Empresa</title>
+    <form method="POST" action="CadastraCliEmpresa.php">
+
+        <table width="200" border="3px">  
+            <tr>  
+                <td align="right">Login:</td>
+                <td>  <input type="text" name="login" size="30" /> </td>
+            </tr>
+            <tr>  
+                <td align="right">Senha:</td>
+                <td>  <input type="password" name="senha" size="40" /> </td>
+            </tr>
+            <tr>  
+                <td align="right">Confirme sua senha:</td>
+                <td>  <input type="password" name="senha1" size="40" /> </td>
+            </tr>
+            <tr>  
+                <td align="right">Nome da empresa:</td>
+                <td>  <input type="text" name="nome" size="50" /> </td>
+            </tr>                 
+            <tr>
+                <td align="right">CNPJ:</td>
+                <td><input type="text" name="cnpj" size="18" /></td>  
+            </tr>                 
+            <tr>
+                <td align="right">Telefone:</td>
+                <td><input type="text" name="telefone" size="14" /></td>  
+            </tr>
+            <tr>    
+                 <td align="right">Email:</td>
+                 <td><input type="text" name="email" size="50" /></td>
+            </tr>
+            <tr>    
+                 <td align="right">Descrição:</td>
+                 <td><input type="text" name="descricao" size="50" /></td>
+            </tr>
+            <tr><td></td>    
+            <TD>ENDERECO</TD>
             </tr>
             <tr>    
                  <td align="right">Estado:</td>
@@ -71,39 +73,31 @@
                     </select>
                  </td>
             </tr>
-            
             <tr>    
                  <td align="right">Cidade:</td>
-                 <td><input type="text" name="cidade" size="5" /></td>
+                 <td><input type="text" name="cidade" size="50" /></td>
             </tr>
-            
             <tr>    
                  <td align="right">Bairro:</td>
-                 <td><input type="text" name="bairro" size="5" /></td>
+                 <td><input type="text" name="bairro" size="50" /></td>
             </tr>
-            
             <tr>    
                  <td align="right">Rua:</td>
-                 <td><input type="text" name="rua" size="5" /></td>
+                 <td><input type="text" name="rua" size="50" /></td>
             </tr>
-            
             <tr>    
-                 <td align="right">Numero:</td>
-                 <td><input type="text" name="numero" size="5" /></td>
+                 <td align="right">Número:</td>
+                 <td><input type="text" name="numero" size="50" /></td>
             </tr>
-            
             <tr>    
-                 <td align="right">Complemento:</td>
-                 <td><input type="text" name="complemento" size="5" /></td>
+                 <td align="right">complemento:</td>
+                 <td><input type="text" name="complemento" size="50" /></td>
             </tr>
-                    
-                    <tr>
-                        <td align="right"></td>
-                        <td><input type="submit" value="Cadastrar" /></td>
-                    </tr>
-       
-            </table>
-        </form>
+            <tr><td></td>
+                <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50">
+                </td>
+            </tr>
+</form>
 <?php
     include ('rodape.php');
 ?>

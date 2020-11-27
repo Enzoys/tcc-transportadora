@@ -22,7 +22,7 @@
             }
             include "desconecta.php";
         ?>
-        <a href="form_pesquisa_funcionario.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PagAdmPesquisaFuncionario.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaFuncionarioNome.php">
         <table width="200" border="2">
             <tr>
@@ -36,7 +36,7 @@
         </table>
         </form>
  
-        <form method="post" action="ApagarCompleto.php">
+        <form method="post" action="ApagaCompleto.php">
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="funcionarios">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="cod_fun">

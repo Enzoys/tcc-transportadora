@@ -1,13 +1,6 @@
 <?php
     include "confere.php";
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
          <?php
             include "conexao.php";
             $est_origem = $_POST['estado_origem'];
@@ -58,6 +51,3 @@
         <?php
         }
         ?>
-    </body>
-</html>
-

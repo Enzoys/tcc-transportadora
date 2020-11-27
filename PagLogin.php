@@ -9,7 +9,7 @@ session_start();// INICIA SESSAO
     <label>Login:</label><input type="text" name="login" id="login"><br>
     <label>Senha:</label><input type="password" name="senha" id="senha"><br>
     <input type="submit" value="entrar" id="entrar" name="entrar"><br>
-    <a href="CadastroTIpoCliente.php">Cadastre-se</a>
+    <a href="PagClienteTipoCadastro.php">Cadastre-se</a>
 </form>
         <p>
             <?php // SE HOUVER ERRO, MOSTRA A VARIAVEL GLOBAL	

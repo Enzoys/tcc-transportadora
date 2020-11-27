@@ -23,7 +23,7 @@
         ?>
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
-        <a href="form_pesquisa_cliente.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaCpf.php"><!-- ENVIA NOVAMENTE
         PARA A PESQUISA -->
         <table width="200" border="2">
@@ -38,7 +38,7 @@
         </table>
         </form>
  
-        <form method="post" action="ApagarCompleto.php"><!-- ENVIA PARA A EXCLUSÃO --> 
+        <form method="post" action="ApagaCompleto.php"><!-- ENVIA PARA A EXCLUSÃO --> 
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes"><!-- INDICA DE QUAL TABELA IRA APAGAR-->
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli"><!-- INDICA DE QUAL ATRIBUTO IRA APAGAR-->

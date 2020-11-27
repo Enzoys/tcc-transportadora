@@ -6,7 +6,7 @@
 ?>
 <title>Cadastrar Funcionário</title>
         <a href="http://localhost/tcc1/pagFuncionario.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardarFuncionario.php">
+        <form method="post" action="GuardaFuncionario.php">
         <table width="200" border="3">
             <tr>  
                 <td align="right">Login:</td>

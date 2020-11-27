@@ -7,8 +7,8 @@
 <title>Página ADM</title>
     <CENTER>
         <a href="PagAdmFuncionarios.php">FUNCIONÁRIO</a><br>
-        <a href="PagFuncionarioCliPessoas.php">CLIENTE</a><br>
-        <a href="PagFuncionarioEmpresas.php">EMPRESA</a>
+        <a href="PagFuncCliPessoas.php">CLIENTE</a><br>
+        <a href="PagFuncCliEmpresas.php">EMPRESA</a>
     </CENTER>
     <br>
 <a href="sairSessao.php">Sair</a>

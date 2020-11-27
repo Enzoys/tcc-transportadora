@@ -28,7 +28,7 @@
                 }
             }?>
         </table>
-        <a href="form_fazer_pedido.php">NOVO PEDIDO</a><br>
+        <a href="PagClienteFazerPedido.php">NOVO PEDIDO</a><br>
         <a href="AlterarDados.php">ALTERAR MEUS DADOS</a><br>
         </CENTER>
     <br>

@@ -23,7 +23,7 @@
             }
             include "desconecta.php";
         ?>
-        <a href="form_pesquisa_empresas.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaNome.php">
         <table width="200" border="2">
             <tr>
@@ -37,7 +37,7 @@
         </table>
         </form>
  
-        <form method="post" action="ApagarCompleto.php">
+        <form method="post" action="ApagaCompleto.php">
         <table width="200" border="2">
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli">
