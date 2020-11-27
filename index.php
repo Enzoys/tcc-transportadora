@@ -31,7 +31,7 @@
     </div>
 
     <div>
-        <div id="teste1">
+        <div>
             Contato Esquerda:
             <div>
                 Contate-nos!

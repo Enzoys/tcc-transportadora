@@ -2,7 +2,7 @@
     include ('cabecalho.php')
 ?>
 <title>Cadastro Cliente Empresa</title>
-    <form method="POST" action="CadastraCliEmpresa.php">
+    <form method="POST" action="GuardaCliEmpresa.php">
 
         <table width="200" border="3px">  
             <tr>  

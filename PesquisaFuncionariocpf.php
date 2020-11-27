@@ -1,7 +1,7 @@
 <?php
-    include "confere_3.php";
-    include "cabecalho.php";
-    include "conexao.php"; // CONECTA AO BANCO
+include "confere_3.php";
+include "cabecalho.php";
+include "conexao.php";
 $cpffunc = $_REQUEST["txtfuncionarioCpf"]; // RETOMA A VARIAVEL DE CONSULTA
 $sql = "SELECT * FROM funcionarios where cpf like '%cpffunc%'"; // SELECIONA OS FUNCIONARIOS
 // --> CRIAR JOIN COM ENDERECO <--
@@ -19,13 +19,13 @@ if ($result = $mysqli->query($sql)) {
 }
 include "desconecta.php";
 ?>
+
 <title>Pesquisar Funcionários por CPF</title>
 <!-- SABENDO O ID E OS DADOS DO FUNCIONÁRIO, O ADMINISTRADOR
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
 <a href="PagAdmPesquisaFuncionario.php">ALTERAR MÉTODO DE BUSCA</a>
 <form method="post" action="PesquisaFuncionarioCpf.php">
-    <!-- ENVIA NOVAMENTE
-        PARA A PESQUISA -->
+    <!-- ENVIA NOVAMENTE PARA A PESQUISA -->
     <table width="200" border="2">
         <tr>
             <td align="right">Nova busca:</td>

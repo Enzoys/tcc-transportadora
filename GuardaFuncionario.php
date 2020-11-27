@@ -23,8 +23,8 @@ $sqlcpfcli = "SELECT * FROM clientes WHERE cpf = '$cpf'";
 $rowcountcpfc = mysqli_num_rows($mysqli->query($sqlcpfcli));
 $sqlctps = "SELECT * FROM funcionarios WHERE ctps = '$ctps'";
 $rowcountctps = mysqli_num_rows($mysqli->query($sqlctps));
-if ($login == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == "" || $telefone == "" || $email == "" 
-    || $estado == "" || $cidade == "" || $bairro == "" || $rua == "" || $numero == "" || $complemento == "") {
+if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == "" || $telefone == "" || $email == "" 
+    || $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" || $complemento == "") {
     echo "<script language='javascript' type='text/javascript'>" 
     . "alert('Todos os campos devem ser preenchidos.');" 
     . "window.location.href='javascript:window.history.go(-1)'</script>";
@@ -49,10 +49,10 @@ if ($login == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == 
                     "alert('Já foi cadastrado um usuário com esta Carteira de Trabalho.\nUtilize a opção para alterar ou excluir na página de Adm.');" .
                     "window.location.href='javascript:window.history.go(-1)'</script>";
                 } else {
-                    $sql1 = "INSERT INTO usuarios (usuario,senha,nivel_acesso) VALUES ('$login','$senha','2'); ";
                     $sql2 = "DECLARE @idFunc int";
-                    $sql3 = "INSERT INTO funcionarios (nome, cpf, telefone, email, ctps) values('$nome', '$cpf', '$telefone','$email', '$ctps');";
-                    $sql4 = "SET @ifFunc = SCOPE_IDENTITY()";
+                    $sql1 = "INSERT INTO usuarios (usuario,senha,nivel_acesso) VALUES ('$usuario','$senha','2'); ";
+                    $sql3 = "SET @idFunc = SCOPE_IDENTITY()";
+                    $sql4 = "INSERT INTO funcionarios (nome, cpf, telefone, email, ctps, id_funcionario) values('$nome','$cpf','$telefone','$email','$ctps', @idFunc);";
                     $sql5 = "INSERT INTO endereco (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado', '$cidade', '$bairro','$endereco','$numero', '$complemento', @idFunc)";
                     echo $sql1;
                     echo $sql2;
@@ -72,7 +72,7 @@ if ($login == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == 
                         . "window.location.href='javascript:window.history.go(-2)'</script>";
                     } else {
                         echo "<script language='javascript' type='text/javascript'>" 
-                        . "alert('Não foi possível cadastrar esse usuário.');" 
+                        . "alert('Não foi possível cadastrar o usuário.');" 
                         . "window.location.href='javascript:window.history.go(-1)'</script>";
                     }
                 }
