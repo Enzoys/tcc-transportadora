@@ -1,5 +1,5 @@
 <?php
-//include 'Confere_1.php';
+//include 'Confere_1.php'; excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
@@ -16,7 +16,7 @@ $numero = $_POST['numero'];
 $complemento = $_POST['complemento'];
 $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario'"; // VERIFICA SE O USUARIO COLOCADO JA EXISTE NO SISTEMA
 $rowcount = mysqli_num_rows($mysqli->query($sql)); // SE HOUVER UM USUARIO IGUAL, RETORNA QUANTOS
-$sqlcpf = "SELECT * FROM clientes WHERE cpf = '$cpf'"; // VERIFICA SE O CPF COLOCADO JA FOI CADASTRADO
+$sqlcpf = "SELECT * FROM clientesPessoas WHERE cpf = '$cpf'"; // VERIFICA SE O CPF COLOCADO JA FOI CADASTRADO
 $rowcountcpf = mysqli_num_rows($mysqli->query($sqlcpf)); // SE JÁ HOUVER CPF, RETORNA QUANTOS
 if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == "" || $telefone == "" || $email == "" ||
     $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" || $complemento == "") {
@@ -44,27 +44,19 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
                 . "window.location.href='javascript:window.history.go(-1)'</script>";
             } else {
                 //CADASTRA OS DADOS
-                $sql1 = "DECLARE @idCliPessoa [int]";
-                $sql2 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) values('$usuario','$senha','1'); ";
-                $sql3 = "SET @idCliPessoa = SCOPE_IDENTITY()";
-                $sql4 = "INSERT INTO clientes (nome, cpf, telefone, email, id_clientePessoa) values('$nome','$cpf','$telefone','$email',@idCliPessoa);";
-                $sql5 = "INSERT INTO endereco (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$cpf',@idCliPessoa)";
-                echo $sql1 . "\n";
-                echo $sql2 . "\n";
-                echo $sql3 . "\n";
-                echo $sql4 . "\n";
-                echo $sql5 . "\n";
+                $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) values('$usuario','$senha','1'); ";
                 $mysqli->query($sql1);
+                $idCriado = $mysqli->insert_id;
+                $sql2 = "INSERT INTO clientesPessoas (nome, cpf, telefone, email, id_clientePessoa) values('$nome','$cpf','$telefone','$email','$idCriado');";
+                $sql3 = "INSERT INTO enderecos (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$idCriado');";
                 $mysqli->query($sql2);
                 $mysqli->query($sql3);
-                $mysqli->query($sql4);
-                $mysqli->query($sql5);
                 $rowcount = mysqli_num_rows($mysqli->query($sql)); //NOVA BUSCA POR USUARIO, PARA VERIFICAR SE O USUARIO FOI INSERIDO
                 if ($rowcount == 1) {
                     //SE AGORA, O BANCO RETORNAR 1 LINHA, O CADASTRO FOI EFETUADO
                     echo "<script language='javascript' type='text/javascript'>" 
                     . "alert('Usuário cadastrado com sucesso!');" 
-                    . "</script>";////window.location.href='PagLogin.php'
+                    . "window.location.href='PagLogin.php'</script>";
                 } else {
                     echo "<script language='javascript' type='text/javascript'>" 
                     . "alert('Não foi possível cadastrar o usuário.');" 
