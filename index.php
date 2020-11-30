@@ -47,9 +47,8 @@
 </div>
 
 <div style="background-color: red;" >
-    <div style="height: 100%; min-height: 300px; width: 100%; margin: 0 25%;">
-        <div style="background-color: purple; height: 100%; min-height: 300px; width: 25%; margin: 0;float:left;">
-
+    <div style="height: 100%; min-height: 300px; margin: 0 25%;">
+        <div style="background-color: purple; height: 100%; min-height: 300px; width: 50%; margin: 0;float:right;">
         </div>        
     
         <div style="background-color: orange; height: 100%; width: 50%; min-height: 300px; margin: 0;">

@@ -96,7 +96,7 @@ header {
     background-image: url("imagens/caminhao1.png");
     background-size: cover;
     background-position: center;
-}
+}/*
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -104,4 +104,4 @@ table, th, td {
   th, td {
     padding: 15px;
     text-align: left;
-}
+}*/
