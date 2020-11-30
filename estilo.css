@@ -97,4 +97,11 @@ header {
     background-size: cover;
     background-position: center;
 }
-
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+}
