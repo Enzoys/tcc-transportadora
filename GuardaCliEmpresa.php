@@ -1,7 +1,7 @@
 <?php
-include 'Confere_1.php';
+//include 'Confere_1.php'; excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
-$login = $_POST['login'];
+$usuario = $_POST['usuario'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
 $nome = $_POST['nome'];
@@ -12,47 +12,47 @@ $descricao = $_POST['descricao'];
 $estado = $_POST['estado'];
 $cidade = $_POST['cidade'];
 $bairro = $_POST['bairro'];
-$rua = $_POST['rua'];
+$endereco = $_POST['endereco'];
 $numero = $_POST['numero'];
 $complemento = $_POST['complemento'];
-$sql = "SELECT * FROM usuarios WHERE login = '$login'";
+$sql = "SELECT * FROM usuarios WHERE usuario = '$usuario'";
 $rowcount = mysqli_num_rows($mysqli->query($sql));
-$sqlcnpj = "SELECT * FROM empresas WHERE cnpj = '$cnpj'";
+$sqlcnpj = "SELECT * FROM clientesEmpresas WHERE cnpj = '$cnpj'";
 $rowcountcnpj = mysqli_num_rows($mysqli->query($sqlcnpj));
-if ($login == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj == "" || $telefone == "" || $descricao = "" ||
-    $email == "" || $estado == "" || $cidade == "" || $bairro == "" || $rua == "" || $numero == "" || $complemento == "") {
+if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj == "" || $telefone == "" || $descricao == "" || $email == "" || $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" || $complemento == "") {
     echo "<script language='javascript' type='text/javascript'>
     alert('Todos os campos devem ser preenchidos.');
     window.location.href='javascript:window.history.go(-1)'</script>";
+} elseif ($senha != $senha_conf) {
+    //SE AS NÃO CORRESPONDEREM
+    echo "<script language='javascript' type='text/javascript'>
+            alert('As senhas não coincidem.');window.location.
+            href='javascript:window.history.go(-1)'</script>";
+} elseif ($rowcount >= 1) {
+    echo "<script language='javascript' type='text/javascript'>
+        alert('Desculpe, este usuário já existe.');
+        window.location.href='javascript:window.history.go(-1)'</script>";
+} elseif ($rowcountcnpj == 1) {
+    echo "<script language='javascript' type='text/javascript'>
+        alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página do empresa ou entre em contato.');
+        window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
+    
 } else {
-    if ($rowcount >= 1) {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Esse login já existe!');window.location.
-        href='javascript:window.history.go(-1)'</script>";
-    }
-    if ($rowcountcnpj == 1) {
-        echo "<script language='javascript' type='text/javascript'>"
-        . "alert('Esse cnpj já foi cadastrado!');"
-        . "window.location.href='javascript:window.history.go(-1)'</script>";
+    $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) VALUES('$usuario','$senha','1');";
+    $mysqli->query($sql1);
+    $idCriado = $mysqli->insert_id;
+    $sql2 = "INSERT INTO clientesEmpresas (nome, cnpj, telefone, email, descricao, id_clienteEmpresa) values('$nome','$cnpj','$telefone','$email','$descricao','$idCriado');";
+    $sql3 = "INSERT INTO enderecos (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$idCriado')";
+    $mysqli->query($sql2);
+    $mysqli->query($sql3);
+    $rowcount = mysqli_num_rows($mysqli->query($sql));
+    echo $sql1;
+    echo $sql2;
+    echo $sql3;
+    echo $rowcount;
+    if ($rowcount == 1) {
+        echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
     } else {
-        $sql3 = "INSERT INTO usuarios (login,senha,niveis_acesso_id,atest) VALUES ('$login','$senha','1','$cnpj'); ";
-        $sql1 = "INSERT INTO empresas (nome, cnpj, telefone, email, descricao) values('$nome', '$cnpj', '$telefone','$email','$descricao');";
-        $sql2 = "INSERT INTO endereco (estado, cidade, bairro, rua, numero, complemento, id) values('$estado', '$cidade', '$bairro','$rua','$numero', '$complemento', '$cnpj')";
-        echo $sql3;
-        echo $sql1;
-        echo $sql2;
-        $mysqli->query($sql3);
-        $mysqli->query($sql1);
-        $mysqli->query($sql2);
-        $rowcount = mysqli_num_rows($mysqli->query($sql));
-        if ($rowcount == 1) {
-            echo "<script language='javascript' type='text/javascript'>"
-            . "alert('Usuário cadastrado com sucesso!');"
-            . "window.location.href='form_login.php'</script>";
-        } else {
-            echo "<script language='javascript' type='text/javascript'>"
-            . "alert('Não foi possível cadastrar esse usuário');"
-            . "window.location.href='javascript:window.history.go(-1)'</script>";
-        }
+        echo "<script language='javascript' type='text/javascript'>" . "alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
     }
 }

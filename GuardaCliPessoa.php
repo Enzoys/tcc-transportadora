@@ -18,51 +18,39 @@ $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario'"; // VERIFICA SE O USU
 $rowcount = mysqli_num_rows($mysqli->query($sql)); // SE HOUVER UM USUARIO IGUAL, RETORNA QUANTOS
 $sqlcpf = "SELECT * FROM clientesPessoas WHERE cpf = '$cpf'"; // VERIFICA SE O CPF COLOCADO JA FOI CADASTRADO
 $rowcountcpf = mysqli_num_rows($mysqli->query($sqlcpf)); // SE JÁ HOUVER CPF, RETORNA QUANTOS
-if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == "" || $telefone == "" || $email == "" ||
-    $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" || $complemento == "") {
+if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf == "" || $telefone == "" || $email == "" || $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" || $complemento == "") {
     //GARANTE QUE NENHUM CAMPO ESTEJA VAZIO
-    echo "<script language='javascript' type='text/javascript'>" .
-    "alert('Todos os campos devem ser preenchidos.');" .
-    "window.location.href='javascript:window.history.go(-1)'</script>";
-} else {
-    if ($rowcount >= 1) {
-        //SE A BUSCA POR USUARIO RETORNAR UMA LINHA OU MAIS
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Desculpe, este usuário já existe.');window.location.
-        href='javascript:window.history.go(-1)'</script>";
-    } else {
-        if ($senha != $senha_conf) {
-            //SE AS NÃO CORRESPONDEREM
-            echo "<script language='javascript' type='text/javascript'>
+    echo "<script language='javascript' type='text/javascript'>" . "alert('Todos os campos devem ser preenchidos.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
+} elseif ($senha != $senha_conf) {
+    //SE AS NÃO CORRESPONDEREM
+    echo "<script language='javascript' type='text/javascript'>
             alert('As senhas não coincidem.');window.location.
             href='javascript:window.history.go(-1)'</script>";
-        } else {
-            if ($rowcountcpf >= 1) {
-                //SE A BUSCA POR CPF RETORNAR UMA LINHA OU MAIS
-                echo "<script language='javascript' type='text/javascript'>" 
-                . "alert('Já foi cadastrado um usuário com este CPF.\nUtilize a opção para alterar ou excluir na página do usuário.');"//excecao funcionario
-                . "window.location.href='javascript:window.history.go(-1)'</script>";
-            } else {
-                //CADASTRA OS DADOS
-                $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) values('$usuario','$senha','1'); ";
-                $mysqli->query($sql1);
-                $idCriado = $mysqli->insert_id;
-                $sql2 = "INSERT INTO clientesPessoas (nome, cpf, telefone, email, id_clientePessoa) values('$nome','$cpf','$telefone','$email','$idCriado');";
-                $sql3 = "INSERT INTO enderecos (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$idCriado');";
-                $mysqli->query($sql2);
-                $mysqli->query($sql3);
-                $rowcount = mysqli_num_rows($mysqli->query($sql)); //NOVA BUSCA POR USUARIO, PARA VERIFICAR SE O USUARIO FOI INSERIDO
-                if ($rowcount == 1) {
-                    //SE AGORA, O BANCO RETORNAR 1 LINHA, O CADASTRO FOI EFETUADO
-                    echo "<script language='javascript' type='text/javascript'>" 
-                    . "alert('Usuário cadastrado com sucesso!');" 
-                    . "window.location.href='PagLogin.php'</script>";
-                } else {
-                    echo "<script language='javascript' type='text/javascript'>" 
-                    . "alert('Não foi possível cadastrar o usuário.');" 
-                    . "window.location.href='javascript:window.history.go(-1)'</script>";
-                }
-            }
-        }
+} elseif ($rowcount >= 1) {
+    //SE A BUSCA POR USUARIO RETORNAR UMA LINHA OU MAIS
+    echo "<script language='javascript' type='text/javascript'>
+        alert('Desculpe, este usuário já existe.');window.location.
+        href='javascript:window.history.go(-1)'</script>";
+} elseif ($rowcountcpf >= 1) {
+    //SE A BUSCA POR CPF RETORNAR UMA LINHA OU MAIS
+    echo "<script language='javascript' type='text/javascript'>
+                alert('Já foi cadastrado um usuário com este CPF.\\nUtilize a opção para alterar ou excluir na página do usuário ou entre em contato.');" .
+    //excecao funcionario
+    "window.location.href='javascript:window.history.go(-1)'</script>";
+} else {
+    //CADASTRA OS DADOS
+    $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) values('$usuario','$senha','1');";
+    $mysqli->query($sql1);
+    $idCriado = $mysqli->insert_id;
+    $sql2 = "INSERT INTO clientesPessoas (nome, cpf, telefone, email, id_clientePessoa) values('$nome','$cpf','$telefone','$email','$idCriado');";
+    $sql3 = "INSERT INTO enderecos (estado, cidade, bairro, endereco, numero, complemento, id_usuario) values('$estado','$cidade','$bairro','$endereco','$numero','$complemento','$idCriado');";
+    $mysqli->query($sql2);
+    $mysqli->query($sql3);
+    $rowcount = mysqli_num_rows($mysqli->query($sql)); //NOVA BUSCA POR USUARIO, PARA VERIFICAR SE O USUARIO FOI INSERIDO
+    if ($rowcount == 1) {
+        //SE AGORA, O BANCO RETORNAR 1 LINHA, O CADASTRO FOI EFETUADO
+        echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');" . "window.location.href='PagLogin.php'</script>";
+    } else {
+        echo "<script language='javascript' type='text/javascript'>" . "alert('Não foi possível cadastrar o usuário.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
     }
 }
