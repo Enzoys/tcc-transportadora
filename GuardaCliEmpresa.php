@@ -24,18 +24,18 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     alert('Todos os campos devem ser preenchidos.');
     window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($senha != $senha_conf) {
-    //SE AS NÃO CORRESPONDEREM
+    //SE AS SENHAS NÃO CORRESPONDEREM
     echo "<script language='javascript' type='text/javascript'>
-            alert('As senhas não coincidem.');window.location.
-            href='javascript:window.history.go(-1)'</script>";
+    alert('As senhas não coincidem.');window.location.
+    href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcount >= 1) {
     echo "<script language='javascript' type='text/javascript'>
-        alert('Desculpe, este usuário já existe.');
-        window.location.href='javascript:window.history.go(-1)'</script>";
+    alert('Desculpe, este usuário já existe.');
+    window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcountcnpj == 1) {
     echo "<script language='javascript' type='text/javascript'>
-        alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página da empresa ou entre em contato.');
-        window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
+    alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página da empresa ou entre em contato.');
+    window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
     
 } else {
     $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) VALUES('$usuario','$senha','1');";
