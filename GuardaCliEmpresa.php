@@ -34,7 +34,7 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
         window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcountcnpj == 1) {
     echo "<script language='javascript' type='text/javascript'>
-        alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página do empresa ou entre em contato.');
+        alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página da empresa ou entre em contato.');
         window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
     
 } else {
@@ -46,10 +46,6 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     $mysqli->query($sql2);
     $mysqli->query($sql3);
     $rowcount = mysqli_num_rows($mysqli->query($sql));
-    echo $sql1;
-    echo $sql2;
-    echo $sql3;
-    echo $rowcount;
     if ($rowcount == 1) {
         echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
     } else {
