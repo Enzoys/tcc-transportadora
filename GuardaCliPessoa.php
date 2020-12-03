@@ -1,5 +1,5 @@
 <?php
-//include 'Confere_1.php'; excecao impedir de digitar na pagina porem sem checar o usuario
+//excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
