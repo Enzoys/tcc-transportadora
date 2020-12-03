@@ -1,16 +1,14 @@
 <?php
-    include "confere_2.php";
-?>
-<?php
-    include ('cabecalho.php')
+    include "Confere_2.php";
+    include "cabecalho.php";
 ?>
 <title>Página Funcionário</title>
-    <CENTER>
-        <a href="PagFuncCliPessoas.php">CLIENTE</a><br>
-        <a href="PagFuncCliEmpresas.php">EMPRESA</a>
-    </CENTER>
-    <br>
+<center>
+    <a href="PagFuncCliPessoas.php">CLIENTE</a><br />
+    <a href="PagFuncCliEmpresas.php">EMPRESA</a>
+</center>
+<br />
 <a href="sairSessao.php">Sair</a>
 <?php
-    include ('rodape.php');
+    include "rodape.php";
 ?>

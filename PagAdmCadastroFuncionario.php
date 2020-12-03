@@ -1,5 +1,5 @@
 <?php
-    //include "confere_3.php";
+    include "confere_3.php";
     include "cabecalho.php";
 ?>
 <title>Cadastrar Funcionário</title>

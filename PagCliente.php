@@ -1,5 +1,5 @@
 <?php
-include "confere.php";
+include "Confere_1.php";
 include "cabecalho.php";
 ?>
 <title>Página Cliente</title>
@@ -12,7 +12,7 @@ include "cabecalho.php";
             <th>Status</th>
         </tr>
         <?php
-        $idlogin = $_SESSION['id_login'];
+        $idlogin = $_SESSION['usuarioId'];
         $sql = "SELECT * FROM pedidos where pedidos.id_cliente='$idlogin'";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
