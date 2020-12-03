@@ -3,7 +3,7 @@
     include "cabecalho.php";
 ?>
 <title>Login</title>
-<form method="POST" action="Login.php">
+<form method="POST" action="Login2.php">
     <label>Login:</label><input type="text" name="usuario" id="usuario" /><br />
     <label>Senha:</label><input type="password" name="senha" id="senha" /><br />
     <input type="submit" value="entrar" id="entrar" name="entrar" /><br />
