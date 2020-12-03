@@ -21,7 +21,7 @@
     <h1 style="color: yellow;">SEJA BEM-VINDO AO INVICTA-X!</h1>
 </div>
 <div class="buttons">
-    <button onclick="window.open('PagLogin.php')">JÁ POSSUO CADASTRO</button>
+    <button onclick="window.location.href = 'PagLogin.php'">JÁ POSSUO CADASTRO</button>
     <button onclick="window.location.href = 'PagClienteTipoCadastro.php'">QUERO ME CADASTRAR</button>
 </div>
 
