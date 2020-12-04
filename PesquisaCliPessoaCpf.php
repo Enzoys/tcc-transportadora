@@ -23,7 +23,7 @@
         ?>
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
-        <a href="PesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaCpf.php"><!-- ENVIA NOVAMENTE
         PARA A PESQUISA -->
         <table width="200" border="2">

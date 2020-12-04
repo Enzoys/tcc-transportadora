@@ -83,7 +83,7 @@
             <td><input type="text" name="numero" size="50" /></td>
         </tr>
         <tr>
-            <td align="right">complemento:</td>
+            <td align="right">Complemento:</td>
             <td><input type="text" name="complemento" size="50" /></td>
         </tr>
         <tr>
