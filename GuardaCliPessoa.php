@@ -51,8 +51,18 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
     $rowcount = mysqli_num_rows($mysqli->query($sql)); //NOVA BUSCA POR USUARIO, PARA VERIFICAR SE O USUARIO FOI INSERIDO
     if ($rowcount == 1) {
         //SE AGORA, O BANCO RETORNAR 1 LINHA, O CADASTRO FOI EFETUADO
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');" . "window.location.href='PagLogin.php'</script>";
+        if (isset($_SESSION['usuarioId'])){
+            if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+                if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagAdm.php'</script>";
+                } else {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagFuncCliEmpresas.php'</script>";
+                }
+            }
+        } else {
+            echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
+        }
     } else {
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Não foi possível cadastrar o usuário.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
+        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
     }
 }

@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html class="no-js" lang="pt-br">
-    <!--prefix="og: https://ogp.me/ns#" pesquisar prefix e og-->
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="description" content="        
-    Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
-        <meta name="keywords" content="transporte, carga, logistica, caminhao, rj, rio de janeiro, brasil, brazil" />
-        <!--<meta name="generator" content="Webnode 2">
+        <meta name="msapplication-tap-highlight" content="yes" />
+        <meta name="description" content="Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
+        <meta name="keywords" content="transporte, transportadora, carga, carregamento, caminhao, rj, rio de janeiro, brasil, brazil, entregas, invicta-x, caminhao" />
+        <meta name="generator" content="Apache NetBeans IDE 12.1">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="robots" content="noindex,nofollow">
-        <meta property="og:url" content="https://demo-template-07-contract-02-real-estate-pt-br.webnode.com/">
-        <meta property="og:title" content="demo-template-07-contract-02-real-estate-pt-br">
-        <meta property="og:type" content="article">
-        <meta property="og:site_name" content="demo-template-07-contract-02-real-estate-pt-br">-->
-        <!-- pesquisar meta tags e indexação-->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <!--<meta name="format-detection" content="telephone=yes">-->
 
-        <!--<link rel="canonical" href="https://demo-template-07-contract-02-real-estate-pt-br.webnode.com/">-->
+        <meta property="og:url" content="https://tcc-transportadora.herokuapp.com/" />
+        <meta property="og:title" content="Invicta-X Transportadora">
+        <meta property="og:type" content="company">
+        <meta property="og:site_name" content="Transportadora Invicta-X">
+
+        <link rel="canonical" href="https://tcc-transportadora.herokuapp.com/" />
         <link rel="icon" href="imagens\icon_invicta.png" />
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
-        <link rel="apple-touch-icon" href="imagens\icon_invicta.png" />
-
-        <link type="text/css" rel="stylesheet" href="estilo.css" />
-
-
+        <link rel="apple-touch-icon" href="imagens\icon_invicta_apple.png" />
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
     </head>
 
     <body>

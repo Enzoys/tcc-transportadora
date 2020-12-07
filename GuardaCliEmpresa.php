@@ -1,6 +1,7 @@
 <?php
 //excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
+session_start();
 $usuario = $_POST['usuario'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -47,8 +48,18 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     $mysqli->query($sql3);
     $rowcount = mysqli_num_rows($mysqli->query($sql));
     if ($rowcount == 1) {
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
+        if (isset($_SESSION['usuarioId'])){
+            if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+                if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagAdm.php'</script>";
+                } else {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagFuncCliEmpresas.php'</script>";
+                }
+            }
+        } else {
+            echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
+        }
     } else {
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
+        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
     }
 }
