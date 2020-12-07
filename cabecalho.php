@@ -21,6 +21,7 @@
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
         <link rel="apple-touch-icon" href="imagens\icon_invicta_apple.png" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content="MpORwmHSi-pgGvp8ePhPWEEMg0yV7MnpYV-wn7VIWPY" />
     </head>
 
