@@ -1,16 +1,19 @@
 <?php
-//include "Confere_2.php";
+include "Confere_2.php";
 include "cabecalho.php";
 include "conexao.php";
-$sql = mysqli_query($mysqli,
-        "Select * from (
-            (SELECT concat('(empresa) ',clientesEmpresas.nome,' ID:', clientesEmpresas.id_clienteEmpresa)
-            as Clientes FROM clientesEmpresas)
-            UNION
-            (SELECT concat('(pessoa física) ',clientesPessoas.nome, ' ID:', clientesPessoas.id_clientePessoa)
-            as Clientes FROM clientesPessoas)
-        ) as Clientes ORDER BY 1");
-$option = '';
+$sql1 = mysqli_query($mysqli,
+    "Select * from (
+        (SELECT concat('(empresa) ',clientesEmpresas.nome,' ID:', clientesEmpresas.id_clienteEmpresa)
+        as Clientes FROM clientesEmpresas)
+        UNION
+        (SELECT concat('(pessoa física) ',clientesPessoas.nome, ' ID:', clientesPessoas.id_clientePessoa)
+        as Clientes FROM clientesPessoas)
+    ) as Clientes ORDER BY 1");
+$sql2 = mysqli_query($mysqli,
+    "Select 
+        concat(nome,' ID:', id_motorista)
+        as Motoristas FROM motoristas ORDER BY 1");
 ?>
 <title>Criar Viagem</title>
 <form method="POST" action="GuardaViagem.php">
@@ -20,8 +23,8 @@ $option = '';
             <td>
                 <select name="cliente">
                     <?php
-                        while ($row = mysqli_fetch_array($sql)) {
-                            echo "<option value='" .strpos($row['Clientes'],'ID:'). "'>" .$row['Clientes']. "</option>";
+                        while ($row1 = mysqli_fetch_array($sql1)) {
+                            echo "<option value='" .strpos($row1['Clientes'],'ID:'). "'>" .$row1['Clientes']. "</option>";
                         }
                     ?>
                 </select>
@@ -29,7 +32,15 @@ $option = '';
         </tr>
         <tr>
             <td align="right">Motorista:</td>
-            <td><input type="password" name="motorista" size="40" /></td>
+            <td>
+                <select name="motorista">
+                    <?php
+                        while ($row2 = mysqli_fetch_array($sql2)) {
+                            echo "<option value='" .strpos($row2['Motoristas'],'ID:'). "'>" .$row2['Motoristas']. "</option>";
+                        }
+                    ?>
+                </select>
+            </td>
         </tr>
         <tr>
             <td align="right">Confirme sua senha:</td>

@@ -35,10 +35,10 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
         href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcountcpff >= 1 || $rowcountcpfc >= 1) {
     echo "<script language='javascript' type='text/javascript'>" . "alert('Já foi cadastrado um usuário com este CPF.\\nUtilize a opção para alterar ou excluir na página de Adm.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
-} elseif ($rowcountctps >= 1 || $rowcountctps != "") {
+} elseif ($rowcountctps >= 1 && $rowcountctps != "") {
     echo "<script language='javascript' type='text/javascript'>" . "alert('Já foi cadastrado um usuário com esta Carteira de Trabalho.\\nUtilize a opção para alterar ou excluir na página de Adm.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
 } else {
-    $sql1 = "INSERT INTO usuarios (usuario,senha,nivel_acesso) VALUES ('$usuario','$senha','2');";
+    $sql1 = "INSERT INTO usuarios (usuario,senha,nivel_acesso) VALUES('$usuario','$senha','2');";
     $mysqli->query($sql1);
     $idCriado = $mysqli->insert_id;
     $sql2 = "INSERT INTO funcionarios (nome, cpf, telefone, email, ctps, id_funcionario) values('$nome','$cpf','$telefone','$email','$ctps','$idCriado');";
