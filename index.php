@@ -18,7 +18,7 @@
 </div>
 
 <div class="button">
-    <h1 style="color: yellow;">SEJA BEM-VINDO AO INVICTA-X!</h1>
+    <h1>SEJA BEM-VINDO À INVICTA-X!</h1>
 </div>
 <div class="buttons">
     <button onclick="window.location.href = 'PagLogin.php'">JÁ POSSUO CADASTRO</button>

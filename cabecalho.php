@@ -9,6 +9,8 @@
         <meta name="generator" content="Apache NetBeans IDE 12.1">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="MpORwmHSi-pgGvp8ePhPWEEMg0yV7MnpYV-wn7VIWPY" />
         <!--<meta name="format-detection" content="telephone=yes">-->
 
         <meta property="og:url" content="https://tcc-transportadora.herokuapp.com/" />
@@ -21,8 +23,6 @@
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
         <link rel="apple-touch-icon" href="imagens\icon_invicta_apple.png" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
-        <meta name="robots" content="index, follow" />
-        <meta name="google-site-verification" content="MpORwmHSi-pgGvp8ePhPWEEMg0yV7MnpYV-wn7VIWPY" />
     </head>
 
     <body>
