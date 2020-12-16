@@ -3,7 +3,7 @@
     include "cabecalho.php";
 ?>
 <title>Cadastrar Funcionário</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
+<div style="background-color: #fffb99; width:70%; height: 664px; float:right">
 <h2>Cadastrar Funcionário</h2>
 <form method="post" action="GuardaFuncionario.php">
     <table width="200" border="3">
@@ -117,7 +117,7 @@
     </table>
 </form>
 </div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
+<div style="background-color: #ea8a82; width:30%; height: 664px; text-align: center;">
         TRANSPORTES<br />
         <a href="PagFuncPedidos.php">Pedidos</a><br />        
         <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
