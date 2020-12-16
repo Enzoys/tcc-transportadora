@@ -7,7 +7,7 @@
     <div style="text-align: center">
         <h2>Gerenciar Clientes - Pessoas Físicas</h2>        
         <br/><a href="PagClienteCadastroPessoa.php">CADASTRAR PESSOA FÍSICA</a><br>
-        <br><a href="http://localhost/tcc1/form_pesquisa_cliente.php">PESQUISAR PESSOA FÍSICA</a><br>
+        <br><a>PESQUISAR PESSOA FÍSICA</a><br>
     </div>
 </div>
 <div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
