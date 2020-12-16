@@ -17,8 +17,6 @@
     </div>
 </div>
 
-
-
 <div style="height: 100%; min-height: 600px; width: 100%; margin: 0;">
     <div style="background-color: #161500; height: 265px; width: 100%; margin: 0;">
         <div id="divImg1" style="background-color: aqua; height: 100%; width: 80%; margin: 0 10%;text-align: center">
