@@ -1,37 +1,48 @@
 <?php
+    session_start();
+    if (isset($_SESSION['usuarioId'])){
+    echo "Usuário: " . $_SESSION['usuarioNome'];
+    }
     include "cabecalho.php";
+    if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+        echo "<div style='background-color: #fffb99; width:70%; height: 100%; float:right'>";
+    }
 ?>
 <title>Cadastro Cliente Pessoa Física</title>
+<h2>Cadastro de Cliente Pessoa Física</h2>
 <form method="POST" action="GuardaCliPessoa.php">
     <table width="200" border="3px">
         <tr>
             <td align="right">Usuário:</td>
-            <td><input type="text" name="usuario" size="30" /></td>
+            <td><input type="text" name="usuario" size="30" maxlength="30"/></td>
         </tr>
         <tr>
             <td align="right">Senha:</td>
-            <td><input type="password" name="senha" size="40" /></td>
+            <td><input type="password" name="senha" size="40" maxlength="40"/></td>
         </tr>
         <tr>
             <td align="right">Confirme sua senha:</td>
-            <td><input type="password" name="senha1" size="40" /></td>
+            <td><input type="password" name="senha1" size="40" maxlength="40"/></td>
         </tr>
         <tr>
             <td align="right">Nome:</td>
-            <td><input type="text" name="nome" size="50" /></td>
+            <td><input type="text" name="nome" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">CPF:</td>
-            <td><input type="text" name="cpf" size="14" /></td>
+            <td><input type="text" id="cpf1" data-inputmask="'mask': '999.999.999-99'" name="cpf" size="14" /></td>
         </tr>
         <tr>
             <td align="right">Telefone:</td>
-            <td><input type="text" name="telefone" size="14" /></td>
+            <td><input type="text" id="tel1" data-inputmask="'mask': '(99) [9]9999-9999'" name="telefone" size="15" /></td>
         </tr>
         <tr>
             <td align="right">Email:</td>
-            <td><input type="text" name="email" size="50" /></td>
+            <td><input type="text" name="email" size="50" maxlength="50"/></td>
         </tr>
+        <tr>
+            <td colspan="2" align="center" style="width:100%">Endereço</td>
+        </tr>        
         <tr>
             <td align="right">Estado:</td>
             <td>
@@ -68,23 +79,23 @@
         </tr>
         <tr>
             <td align="right">Cidade:</td>
-            <td><input type="text" name="cidade" size="50" /></td>
+            <td><input type="text" name="cidade" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Bairro:</td>
-            <td><input type="text" name="bairro" size="50" /></td>
+            <td><input type="text" name="bairro" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Endereço:</td>
-            <td><input type="text" name="endereco" size="50" /></td>
+            <td><input type="text" name="endereco" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Número:</td>
-            <td><input type="text" name="numero" size="50" /></td>
+            <td><input type="text" id="num1" data-inputmask="'mask': '9[99999]'" name="numero" size="6" /></td>
         </tr>
         <tr>
             <td align="right">Complemento:</td>
-            <td><input type="text" name="complemento" size="50" /></td>
+            <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td></td>
@@ -92,6 +103,34 @@
         </tr>
     </table>
 </form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cpf1").inputmask("999.999.999-99", { removeMaskOnSubmit: false });
+        $("#tel1").inputmask("(99) [9]9999-9999", { removeMaskOnSubmit: false });
+        $("#num1").inputmask("9[99999]", { removeMaskOnSubmit: false });
+    });
+</script>
 <?php
+if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+    echo "
+        </div>
+        <div style='background-color: #ea8a82; width:30%; height: 100%; text-align: center;'>
+                TRANSPORTES<br />
+                <a href='PagFuncPedidos.php'>Pedidos</a><br />
+                <a href='PagFuncCriarViagem.php'>Novo transporte</a><br />
+                <a href='PagFuncCadastroMotorista.php'>Cadastrar Motorista</a><br />
+                <br />CLIENTES<br />
+                <a href='PagFuncCliPessoas.php'>Pessoas Físicas</a><br />
+                <a href='PagFuncCliEmpresas.php'>Empresas</a><br />
+            <br />
+            <a href='sairSessao.php'>Sair</a><br />";
+
+            if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
+            } else {
+                echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
+            }
+    echo "</div>";
+}
     include "rodape.php";
 ?>

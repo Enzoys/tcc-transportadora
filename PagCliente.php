@@ -3,7 +3,8 @@ include "Confere_1.php";
 include "cabecalho.php";
 ?>
 <title>Página Cliente</title>
-<div style="background-color: lightyellow; width:70%; height: 100%; float:right">
+<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
+    <h2>Meus Pedidos</h2>
     <table border="2">
         <tr>
             <th>Data de Solicitação</th>
@@ -37,8 +38,10 @@ include "cabecalho.php";
         ?>
     </table>
 </div>
-<div style="background-color: lightcoral; width:30%; height: 100%; text-align: center;">
+<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
+    PEDIDOS<br />
     <a href="PagClienteFazerPedido.php">Novo Pedido</a><br />
+    <br />CONTA<br />
     <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br />
     <br /><a href="sairSessao.php">Sair</a>
 </div>

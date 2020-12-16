@@ -1,0 +1,35 @@
+{
+  "name": "tcc-transportadora",
+  "version": "0.9.0",
+  "description": "Sistema web em PHP para empresa transportadora Invicta-X",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Enzoys@github.com/Enzoys/tcc-transportadora.git"
+  },
+  "keywords": [
+    "sistema",
+    "web",
+    "php",
+    "heroku",
+    "inputmask",
+    "mysql",
+    "transportadora",
+    "invicta-x",
+    "invicta",
+    "rj",
+    "brasil",
+    "brazil",
+    "ifrj",
+    "tcc"
+  ],
+  "author": "Enzo Paiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enzoys/tcc-transportadora/issues"
+  },
+  "homepage": "https://github.com/Enzoys/tcc-transportadora#readme"
+}

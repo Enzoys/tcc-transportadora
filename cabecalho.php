@@ -23,6 +23,8 @@
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
         <link rel="apple-touch-icon" href="imagens\icon_invicta_apple.png" />
         <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     </head>
 
     <body>
@@ -40,19 +42,19 @@
                         <div style="display: table; height: 100%; width: 62.5%; float: right;">
                             <div style="display: table-cell; height: 100%; vertical-align: middle;">
                                 <ul class="navegacao" style="float: right; height: 100%;">
-                                    <a>
-                                        <li style="color: #d23123;">Inicio</li>
+                                    <a href="index.php">
+                                        <li>Início</li><!-- style="color: #d23123;"-->
                                     </a>
-                                    <a>
+                                    <a href="index.php">
                                         <li>Serviços</li>
                                     </a>
-                                    <a>
+                                    <a href="index.php">
                                         <li>Empresa</li>
                                     </a>
-                                    <a>
+                                    <a href="index.php">
                                         <li>Contato</li>
                                     </a>
-                                    <a>
+                                    <a href="PagLogin.php">
                                         <li>Login</li>
                                     </a>
                                 </ul>

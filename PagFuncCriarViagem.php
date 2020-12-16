@@ -16,6 +16,8 @@ $sql2 = mysqli_query($mysqli,
         as Motoristas FROM motoristas ORDER BY 1");
 ?>
 <title>Criar Viagem</title>
+<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
+<h2>Registrar Novo Transporte</h2>
 <form method="POST" action="GuardaViagem.php">
     <table width="200" border="3px">
         <tr>
@@ -44,11 +46,11 @@ $sql2 = mysqli_query($mysqli,
         </tr>
         <tr>
             <td align="right">Descrição do transporte:</td>
-            <td><input type="text" name="descricao" size="50" /></td>
+            <td><input type="text" name="descricao" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Previsão de chegada:</td>
-            <td><input type="date" name="data" size="50" /></td>
+            <td><input type="date" name="data" size="10" /></td>
         </tr>
         <tr>
             <td colspan="2" align="center" style="width:100%">Endereço de origem</td>
@@ -89,23 +91,23 @@ $sql2 = mysqli_query($mysqli,
         </tr>
         <tr>
             <td align="right">Cidade:</td>
-            <td><input type="text" name="cidade" size="50" /></td>
+            <td><input type="text" name="cidade" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Bairro:</td>
-            <td><input type="text" name="bairro" size="50" /></td>
+            <td><input type="text" name="bairro" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Endereço:</td>
-            <td><input type="text" name="endereco" size="50" /></td>
+            <td><input type="text" name="endereco" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Número:</td>
-            <td><input type="text" name="numero" size="50" /></td>
+            <td><input type="text" id="num4" data-inputmask="'mask': '9[99999]'" name="numero" size="6" /></td>
         </tr>
         <tr>
             <td align="right">Complemento:</td>
-            <td><input type="text" name="complemento" size="50" /></td>
+            <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td colspan="2" align="center" style="width:100%">Endereço de destino</td>
@@ -146,23 +148,23 @@ $sql2 = mysqli_query($mysqli,
         </tr>
         <tr>
             <td align="right">Cidade:</td>
-            <td><input type="text" name="cidade2" size="50" /></td>
+            <td><input type="text" name="cidade2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Bairro:</td>
-            <td><input type="text" name="bairro2" size="50" /></td>
+            <td><input type="text" name="bairro2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Endereço:</td>
-            <td><input type="text" name="endereco2" size="50" /></td>
+            <td><input type="text" name="endereco2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">Número:</td>
-            <td><input type="text" name="numero2" size="50" /></td>
+            <td><input type="text" id="num5" data-inputmask="'mask': '9[99999]'" name="numero2" size="6" /></td>
         </tr>
         <tr>
             <td align="right">Complemento:</td>
-            <td><input type="text" name="complemento2" size="50" /></td>
+            <td><input type="text" name="complemento2" size="50" maxlength="50"/></td>
         </tr>        
         <tr>
             <td></td>
@@ -170,6 +172,31 @@ $sql2 = mysqli_query($mysqli,
         </tr>
     </table>
 </form>
+</div>
+<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
+        TRANSPORTES<br />
+        <a href="PagFuncPedidos.php">Pedidos</a><br />
+        <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
+        <a href="PagFuncCadastroMotorista.php">Cadastrar Motorista</a><br />
+        <br />CLIENTES<br />
+        <a href="PagFuncCliPessoas.php">Pessoas Físicas</a><br />
+        <a href="PagFuncCliEmpresas.php">Empresas</a><br />
+    <br />
+    <a href="sairSessao.php">Sair</a><br />
+<?php
+if ($_SESSION['usuarioNivelAcesso'] == "3") {
+    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
+} else {
+    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
+}
+?>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#num4").inputmask("9[99999]", { removeMaskOnSubmit: false });
+        $("#num5").inputmask("9[99999]", { removeMaskOnSubmit: false });
+    });
+</script>
 <?php
     include "rodape.php";
 ?>

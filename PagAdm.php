@@ -3,11 +3,12 @@
     include "cabecalho.php";
 ?>
 <title>Página ADM</title>
-<div style="background-color: lightyellow; width:70%; height: 100%; float:right">
+<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
+    <h2>Gerenciamento de Transportes</h2>
     <table border="2">
         <tr>
-            <th>ID do Transporte</th>
             <th>Previsão de Chegada</th>
+            <th>ID do Transporte</th>
             <th>ID do Cliente</th>
             <th>Descrição do Transporte</th>
             <th>Motorista</th>
@@ -25,8 +26,8 @@
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo '<tr>';
-                    echo '<td>' . $row['id_viagem'] . '</td>';    
-                    echo '<td>' . $row['data_chegada'] . '</td>';
+                    echo '<td>' . date("d/m/Y", strtotime($row['data_chegada'])) . '</td>';                
+                    echo '<td>' . $row['id_viagem'] . '</td>';
                     echo '<td>' . $row['id_cliente'] . '</td>';                    
                     echo '<td>' . $row['descricao_viagem'] . '</td>';
                     echo '<td>' . $row['motorista'] . '</td>';
@@ -39,15 +40,16 @@
         ?>
     </table>
 </div>
-<div style="background-color: lightcoral; width:30%; height: 100%; text-align: center;">
-        FUNCIONÁRIOS<br />
-        <a href="PagAdmFuncionarios.php">Funcionários</a><br>
-        <br />TRANSPORTES<br />
+<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
+        TRANSPORTES<br />
+        <a href="PagFuncPedidos.php">Pedidos</a><br />        
         <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
         <a href="PagFuncCadastroMotorista.php">Cadastrar Motorista</a><br />
         <br />CLIENTES<br />
         <a href="PagFuncCliPessoas.php">Pessoas Físicas</a><br />
         <a href="PagFuncCliEmpresas.php">Empresas</a><br />
+        <br />ADMINISTRADOR<br />
+        <a href="PagAdmFuncionarios.php">Funcionários</a><br>
     <br />
     <a href="sairSessao.php">Sair</a>
 </div>

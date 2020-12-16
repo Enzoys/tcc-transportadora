@@ -1,6 +1,9 @@
 <?php
-//excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
+session_start();
+if (isset($_SESSION['usuarioId'])){
+echo "Usuário: " . $_SESSION['usuarioNome'];
+}
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -56,7 +59,7 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
                 if ($_SESSION['usuarioNivelAcesso'] == "3") {
                     echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagAdm.php'</script>";
                 } else {
-                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagFuncCliEmpresas.php'</script>";
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagFuncCliPessoas.php'</script>";
                 }
             }
         } else {
