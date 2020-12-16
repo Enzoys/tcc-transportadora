@@ -11,7 +11,7 @@ include "cabecalho.php";
         </tr>
         <tr>
             <td colspan="2" align="center" style="width:100%">Endereço de origem</td>
-        </tr>         
+        </tr>
         <tr>
             <td align="right">Estado:</td>
             <td>
@@ -129,6 +129,14 @@ include "cabecalho.php";
         </tr>
     </table>
 </form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cpf2").inputmask("999.999.999-99", { removeMaskOnSubmit: false });
+        $("#ctps1").inputmask("*******[*********]", { removeMaskOnSubmit: false });
+        $("#tel3").inputmask("(99) [9]9999-9999", { removeMaskOnSubmit: false });
+        $("#num3").inputmask("9[99999]", { removeMaskOnSubmit: false });
+    });
+</script>
 <?php
     include "rodape.php";
 ?>
