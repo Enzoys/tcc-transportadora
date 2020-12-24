@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="no-js" lang="pt-br">
+    <!--prefix="og: https://ogp.me/ns#" pesquisar prefix e og-->
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <meta name="msapplication-tap-highlight" content="yes" />
-        <meta name="description" content="Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
-        <meta name="keywords" content="transporte, transportadora, carga, carregamento, caminhao, rj, rio de janeiro, brasil, brazil, entregas, invicta-x, caminhao" />
-        <meta name="generator" content="Apache NetBeans IDE 12.1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="description" content="        
+    Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
+        <meta name="keywords" content="transporte, carga, logistica, caminhao, rj, rio de janeiro, brasil, brazil" />
+        <!--<meta name="generator" content="Webnode 2">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="robots" content="index, follow" />
-        <meta name="google-site-verification" content="MpORwmHSi-pgGvp8ePhPWEEMg0yV7MnpYV-wn7VIWPY" />
-        <!--<meta name="format-detection" content="telephone=yes">-->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="robots" content="noindex,nofollow">
+        <meta property="og:url" content="https://demo-template-07-contract-02-real-estate-pt-br.webnode.com/">
+        <meta property="og:title" content="demo-template-07-contract-02-real-estate-pt-br">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="demo-template-07-contract-02-real-estate-pt-br">-->
+        <!-- pesquisar meta tags e indexação-->
 
-        <meta property="og:url" content="https://tcc-transportadora.herokuapp.com/" />
-        <meta property="og:title" content="Invicta-X Transportadora">
-        <meta property="og:type" content="company">
-        <meta property="og:site_name" content="Transportadora Invicta-X">
-
-        <link rel="canonical" href="https://tcc-transportadora.herokuapp.com/" />
+        <!--<link rel="canonical" href="https://demo-template-07-contract-02-real-estate-pt-br.webnode.com/">-->
         <link rel="icon" href="imagens\icon_invicta.png" />
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
-        <link rel="apple-touch-icon" href="imagens\icon_invicta_apple.png" />
-        <link rel="stylesheet" type="text/css" href="estilo.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
-    </head>
+        <link rel="apple-touch-icon" href="imagens\icon_invicta.png" />
 
+        <link type="text/css" rel="stylesheet" href="estilo.css" />
+
+
+    </head>
     <body>
         <div id="page-container">
             <div id="content-wrap">
-                <header style="width: 100%; height: 100px; display: block; background-color: #161500; position: sticky; top: 0;">
+                <header style="width: 100%; height: 100px; display: block; background-color: black; position: sticky; top: 0;">
                     <div style="width: 97.5%; height: 100%; display: block; margin-right: auto;">
                         <div style="display: table; height: 100%; width: 35%; float: left;">
                             <div style="display: table-cell; height: 100%; vertical-align: middle;">
@@ -42,19 +44,19 @@
                         <div style="display: table; height: 100%; width: 62.5%; float: right;">
                             <div style="display: table-cell; height: 100%; vertical-align: middle;">
                                 <ul class="navegacao" style="float: right; height: 100%;">
-                                    <a href="index.php">
-                                        <li>Início</li><!-- style="color: #d23123;"-->
+                                    <a>
+                                        <li style="color: #d23123;">Inicio</li>
                                     </a>
-                                    <a href="index.php">
+                                    <a>
                                         <li>Serviços</li>
                                     </a>
-                                    <a href="index.php">
+                                    <a>
                                         <li>Empresa</li>
                                     </a>
-                                    <a href="index.php">
+                                    <a>
                                         <li>Contato</li>
                                     </a>
-                                    <a href="PagLogin.php">
+                                    <a>
                                         <li>Login</li>
                                     </a>
                                 </ul>

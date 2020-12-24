@@ -21,7 +21,7 @@
             }
             include "desconecta.php";
         ?>
-        <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaNome.php">
         <table width="200" border="2">
             <tr>
