@@ -4,8 +4,6 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
@@ -30,9 +28,9 @@
         <link rel="icon" href="imagens\icon_invicta.png" />
         <link rel="shortcut icon" href="imagens\icon_invicta.png" />
         <link rel="apple-touch-icon" href="imagens\icon_invicta.png" />
-
+<!--
         <link type="text/css" rel="stylesheet" href="estilo.css" />
-
+-->
 
     </head>
 <!-- Sidebar/menu -->
