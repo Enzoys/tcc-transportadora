@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
-
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="description" content="        
     Transportadora confiável para todo território nacional, solicite agora um carregamento!" />
