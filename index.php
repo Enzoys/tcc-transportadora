@@ -11,11 +11,9 @@
    </div>
    </div>
    <div class="buttons">
-       <button onclick="window.open('PagLogin.php')">JÁ POSSUO CADASTRO</button>
-       <button onclick="window.location.href = 'PagClienteTipoCadastro.php'">QUERO ME CADASTRAR</button>
+       <button class="btn btn-primary btn-lg" onclick="window.open('PagLogin.php')">JÁ POSSUO CADASTRO</button>
+       <button class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagClienteTipoCadastro.php'">QUERO ME CADASTRAR</button>
    </div>
-   
-
 
    <!-- Header -->
 <div class="w3-container" style="margin-top:80px" id="invictax">
@@ -34,32 +32,32 @@
     <div class="carousel-item active">
       <img src="imagens/sede.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h5>Titulo1</h5>
+        <p>Descrição1</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="imagens/sede.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h5>Titulo2</h5>
+        <p>Descrição2</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="imagens/sede.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h5>Titulo3</h5>
+        <p>Descrição3</p>
       </div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only">Anterior</span>
   </a>
   <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="sr-only">Próximo</span>
   </a>
 </div>
 </div>
@@ -160,6 +158,7 @@
 </div>
 
 <!-- W3.CSS Container -->
+
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
    <p class="w3-right">mudaraqui <a href="" title="mudaraqui" target="_blank" class="w3-hover-opacity">mudaraqui</a></p>
 </div>
