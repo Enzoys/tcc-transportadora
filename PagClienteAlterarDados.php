@@ -1,5 +1,5 @@
 <?php
-include "Confere_1.php";
+include "confere.php";
 include 'cabecalho.php';
 ?>
 <title>Página Cliente Alterar Dados</title>

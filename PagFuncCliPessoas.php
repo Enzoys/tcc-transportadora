@@ -1,7 +1,7 @@
 <?php
     include "confere_2.php";
-    include "cabecalho.php";
 ?>
+<<<<<<< HEAD
 <title>Funcionário Página Cliente Pessoa Física</title>
 <div style="background-color: #fffb99; width:70%; height: 100%; float:right">
     <div style="text-align: center">
@@ -20,14 +20,19 @@
         <a href="PagFuncCliEmpresas.php">Empresas</a><br />
     <br />
     <a href="sairSessao.php">Sair</a><br />
+=======
+>>>>>>> d6d5cd10f02a735abe036c39f0e9d68d28d86620
 <?php
-if ($_SESSION['usuarioNivelAcesso'] == "3") {
-    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
-} else {
-    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
-}
+    include ('cabecalho.php')
 ?>
-</div>
+<title>Funcionário Página Cliente Pessoa Física</title>
+    <CENTER>
+        <a href="http://localhost/tcc1/form_cadastrar_cliente.php">CADASTRAR CLIENTE</a><br>
+        
+        <a href="http://localhost/tcc1/form_pesquisa_cliente.php">PESQUISAR CLIENTE</a><br><br>
+        
+        <a href="http://localhost/tcc1/adm.php">MENU ANTERIOR</a>
+    </CENTER>
 <?php
     include ('rodape.php');
 ?>

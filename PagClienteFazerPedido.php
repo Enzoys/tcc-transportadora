@@ -1,23 +1,25 @@
 <?php
-include "Confere_1.php";
-include "cabecalho.php";
+    include "confere.php";
 ?>
-<title>Novo Pedido</title>
-<div style="background-color: #fffb99; width:70%; height: 664px; float:right">
-<h2>Registrar Novo Pedido</h2>
-<form method="POST" action="GuardaPedido.php">
-    <table width="200" border="3px">
-        <tr>
-            <td align="right">Descrição da carga/transporte:</td>
-            <td><input type="text" name="descricao" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de origem</td>
-        </tr>
-        <tr>
-            <td align="right">Estado:</td>
-            <td>
-                <select name="estado">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    
+    <body>
+        <a href="http://localhost/tcc1/cliemp.php">MENU ANTERIOR</a><br><br>
+        <form method="post" action="FazPedido.php">
+            <input type="hidden" id="status" name="status" value="EM ANÁLISE">
+        <table width="200" border="0">                  
+            <tr>    
+                 <td></td>
+                 <td>ENDEREÇO ORIGEM:</td>
+            </tr>
+            <tr>    
+                 <td align="right">Estado:</td>
+                 <td><select name="estado_origem">
                     <option value="Acre">Acre</option>
                     <option value="Alagoas">Alagoas</option>
                     <option value="Amapá">Amapá</option>
@@ -45,36 +47,36 @@ include "cabecalho.php";
                     <option value="São Paulo">São Paulo</option>
                     <option value="Sergipe">Sergipe</option>
                     <option value="Tocantins">Tocantins</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Cidade:</td>
-            <td><input type="text" name="cidade" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Bairro:</td>
-            <td><input type="text" name="bairro" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Endereço:</td>
-            <td><input type="text" name="endereco" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Número:</td>
-            <td><input type="text" id="num5" data-inputmask="'mask': '9[99999]'" name="numero" size="6"/></td>
-        </tr>
-        <tr>
-            <td align="right">Complemento:</td>
-            <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de destino</td>
-        </tr>         
-        <tr>
-            <td align="right">Estado:</td>
-            <td>
-                <select name="estado2">
+                    </select>
+                 </td>
+            </tr>            
+            <tr>    
+                 <td align="right">Cidade:</td>
+                 <td><input type="text" name="cidade_origem" size="5" /></td>
+            </tr>           
+            <tr>    
+                 <td align="right">Bairro:</td>
+                 <td><input type="text" name="bairro_origem" size="5" /></td>
+            </tr>            
+            <tr>    
+                 <td align="right">Rua:</td>
+                 <td><input type="text" name="rua_origem" size="5" /></td>
+            </tr>            
+            <tr>    
+                 <td align="right">Numero:</td>
+                 <td><input type="text" name="numero_origem" size="5" /></td>
+            </tr>           
+            <tr>    
+                 <td align="right">Complemento:</td>
+                 <td><input type="text" name="complemento_origem" size="5" /></td>
+            </tr>            
+            <tr>    
+                 <td></td>
+                 <td>ENDEREÇO DESTINO:</td>
+            </tr>
+            <tr>    
+                 <td align="right">Estado:</td>
+                 <td><select name="estado_destino">
                     <option value="Acre">Acre</option>
                     <option value="Alagoas">Alagoas</option>
                     <option value="Amapá">Amapá</option>
@@ -102,50 +104,38 @@ include "cabecalho.php";
                     <option value="São Paulo">São Paulo</option>
                     <option value="Sergipe">Sergipe</option>
                     <option value="Tocantins">Tocantins</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Cidade:</td>
-            <td><input type="text" name="cidade2" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Bairro:</td>
-            <td><input type="text" name="bairro2" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Endereço:</td>
-            <td><input type="text" name="endereco2" size="50" maxlength="50"/></td>
-        </tr>
-        <tr>
-            <td align="right">Número:</td>
-            <td><input type="text" id="num6" data-inputmask="'mask': '9[99999]'" name="numero2" size="6"/></td>
-        </tr>
-        <tr>
-            <td align="right">Complemento:</td>
-            <td><input type="text" name="complemento2" size="50" maxlength="50"/></td>
-        </tr>        
-        <tr>
-            <td></td>
-            <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
-        </tr>
-    </table>
-</form>
-</div>
-<div style="background-color: #ea8a82; width:30%; height: 664px; text-align: center;">
-    PEDIDOS<br />
-    <a href="PagClienteFazerPedido.php">Novo Pedido</a><br />
-    <br />CONTA<br />
-    <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br />
-    <br /><a href="sairSessao.php">Sair</a><br />
-    <br /><a href='PagAdm.php'>VOLTAR</a>
-</div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#num5").inputmask("9[99999]", { removeMaskOnSubmit: false });
-        $("#num6").inputmask("9[99999]", { removeMaskOnSubmit: false });
-    });
-</script>
-<?php
-    include "rodape.php";
-?>
+                    </select>
+                 </td>
+            </tr>            
+            <tr>    
+                 <td align="right">Cidade:</td>
+                 <td><input type="text" name="cidade_destino" size="5" /></td>
+            </tr>           
+            <tr>    
+                 <td align="right">Bairro:</td>
+                 <td><input type="text" name="bairro_destino" size="5" /></td>
+            </tr>            
+            <tr>    
+                 <td align="right">Rua:</td>
+                 <td><input type="text" name="rua_destino" size="5" /></td>
+            </tr>            
+            <tr>    
+                 <td align="right">Numero:</td>
+                 <td><input type="text" name="numero_destino" size="5" /></td>
+            </tr>           
+            <tr>    
+                 <td align="right">Complemento:</td>
+                 <td><input type="text" name="complemento_destino" size="5" /></td>
+            </tr>
+            
+            <tr>
+                <td align="right"></td>
+                <td><input type="submit" value="Cadastrar" /></td>
+            </tr>
+       
+        </table>
+      </form>
+</body>
+
+</html>
+

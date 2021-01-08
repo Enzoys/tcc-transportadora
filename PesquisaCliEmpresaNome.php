@@ -22,8 +22,13 @@
                
             }
         ?>
+<<<<<<< HEAD
         <a href="PagFuncPesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliEmpresaNome.php">
+=======
+        <a href="PesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
+        <form method="post" action="PesquisaCliPessoaNome.php">
+>>>>>>> d6d5cd10f02a735abe036c39f0e9d68d28d86620
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>

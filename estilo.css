@@ -10,27 +10,8 @@ html,body {
     height: 100%;
 }
 
-html{
-    background-color: #fffcbb;
-}
-
-html *{
-   font-family: Helvetica, Arial, sans-serif !important;
-}
-
-body {
-    background-color: #fffb99;
-    min-width: 1011px;
-    width: auto;
-}
-
-table{
-    background-color: #fffa77;
-}
-
 a {
     cursor: pointer;
-    text-decoration: none;
 }
 
 header {
@@ -43,7 +24,7 @@ header {
     background: #ececec;
     z-index: 2;
 }
-
+/*
 .button {
     padding-top: 100px;
     padding-left: 35%;
@@ -55,8 +36,8 @@ header {
     padding-left: 40%;
     float: left;
 }
-
-.texto-claro {
+*/
+.branca {
     color: white;
 }
 
@@ -98,12 +79,12 @@ header {
 }
 
 #content-wrap {
-    padding-bottom: 375px;
+    padding-bottom: 350px;
     /*<--padding acima do footer, deve ser sempre maior que seu tamanho*/
 }
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 300px;
@@ -115,12 +96,5 @@ header {
     background-image: url("imagens/caminhao1.png");
     background-size: cover;
     background-position: center;
-}/*
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 15px;
-    text-align: left;
-}*/
+}
+

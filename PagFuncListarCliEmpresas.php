@@ -1,5 +1,7 @@
 <?php
     include "confere_2.php";
+?>
+<?php
     include ('cabecalho.php')
 ?>
 <title>Listar Empresas</title>
