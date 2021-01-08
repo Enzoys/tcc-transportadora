@@ -8,19 +8,18 @@
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
-            $sql="SELECT * FROM empresas where cnpj like '%$cliente%'";
+            $sql="SELECT * FROM clientesEmpresas where cnpj like '%$cliente%'";
             if($result=$mysqli->query($sql)){
-            /* fetch associative array */
+                echo "<br>";
                 while($row=$result->fetch_assoc()){
                     echo " Nome do Cliente: ".$row["nome"].
-                         " CPF: ".$row["cpf"].
+                         " CNPJ: ".$row["cnpj"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"].
-                         " Descrição: ".$row["desc"]."<br/>";
+                         " ID: ".$row["id_clienteEmpresa"].
+                         " Descrição: ".$row["descricao"]."<br/>";
                 }              
             }
-            include "desconecta.php";
         ?>
         <a href="PagFuncPesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliEmpresaCnpj.php">
@@ -38,9 +37,8 @@
  
         <form method="post" action="ApagaCompleto.php">
         <table width="200" border="2">
-            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="empresas">
-            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_emp">
-            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cnpj">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesEmpresas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clienteEmpresa">
             <tr>
                 <td align="right">ID da empresa:</td>
                 <td><input type="text" name="id" size="5"></td>

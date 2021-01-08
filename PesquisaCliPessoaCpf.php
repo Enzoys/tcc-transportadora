@@ -8,18 +8,18 @@
         <?php
             include "conexao.php";// CONECTA AO BANCO
             $cliente= $_REQUEST["txtcliente"];// RETOMA A VARIAVEL DE CONSULTA
-            $sql="SELECT * FROM clientes where cpf like '%$cliente%'";// SELECIONA OS CLIENTES 
+            $sql="SELECT * FROM clientesPessoas where cpf like '%$cliente%'";// SELECIONA OS CLIENTES 
             //DE ACORDO COM O METODO UTILIZADO 
             if($result=$mysqli->query($sql)){
+                echo "<br>";
                 while($row=$result->fetch_assoc()){
                     echo " Nome do Cliente: ".$row["nome"].
                          " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"]."<br/>";
+                         " ID: ".$row["id_clientePessoa"]."<br>";
                 }              
             }
-            include "desconecta.php";
         ?>
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->

@@ -1,12 +1,16 @@
 <?php
     session_start();
     if (isset($_SESSION['usuarioId'])){
-    echo "Usuário: " . $_SESSION['usuarioNome'];
-    }
+    echo "Usuário: " . $_SESSION['usuarioNome'];}
+    
     include "cabecalho.php";
+    
+    if (isset($_SESSION['usuarioId'])){
+    
     if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
         echo "<div style='background-color: #fffb99; width:70%; height: 100%; float:right'>";
-    }
+    }}
+    
 ?>
 <title>Cadastro Cliente Pessoa Física</title>
 <h2>Cadastro de Cliente Pessoa Física</h2>
@@ -111,6 +115,7 @@
     });
 </script>
 <?php
+if (isset($_SESSION['usuarioId'])){
 if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
     echo "
         </div>
@@ -130,7 +135,7 @@ if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] ==
             } else {
                 echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
             }
-    echo "</div>";
+echo "</div>";}
 }
     include "rodape.php";
 ?>

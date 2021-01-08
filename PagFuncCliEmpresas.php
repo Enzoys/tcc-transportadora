@@ -7,7 +7,7 @@
     <div style="text-align: center">
         <h2>Gerenciar Clientes - Empresas</h2>
         <br/><a href="PagClienteCadastroEmpresa.php">CADASTRAR EMPRESA</a><br>
-        <br><a>PESQUISAR EMPRESA</a><br>
+        <br><a href="PagFuncPesquisaCliEmpresa.php">PESQUISAR EMPRESA</a><br>
     </div>
 </div>
 <div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">

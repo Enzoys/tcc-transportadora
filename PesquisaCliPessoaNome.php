@@ -4,11 +4,11 @@
 <?php
     include ('cabecalho.php')
 ?>
-<title>Pesquisar Clientes por Nome</title>
+<title>Pesquisar Clientes por Nome</title><br>
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
-            $sql="SELECT * FROM clientes where nome like '%$cliente%'";
+            $sql="SELECT * FROM clientesPessoas where nome like '%$cliente%'";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
@@ -16,10 +16,10 @@
                          " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"]."<br/>";
+                         " ID: ".$row["id_clientePessoa"]."<br/>";
                 }              
             }
-            include "desconecta.php";
+            //include "desconecta.php";
         ?>
         <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaNome.php">
@@ -37,9 +37,8 @@
  
         <form method="post" action="ApagaCompleto.php">
         <table width="200" border="2">
-            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes">
-            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli">
-            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cpf">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesPessoas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clientePessoa">
             <tr>
                 <td align="right">ID do cliente:</td>
                 <td><input type="text" name="id" size="5"></td>

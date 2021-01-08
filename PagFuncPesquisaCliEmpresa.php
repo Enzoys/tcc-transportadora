@@ -5,7 +5,7 @@
     include ('cabecalho.php')
 ?>
 <title>Pesquisar Empresas</title>
-    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
+<a href="PagFuncCliEmpresas.php">MENU ANTERIOR</a><br><br>
         <center div="center"> 
             Escolha o metodo de busca:
 
@@ -19,8 +19,8 @@
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
-            <form method="post" action="PesquisaCliEmpresaEmail.php">
-                EMAIL:
+            <form method="post" action="PesquisaCliEmpresaID.php">
+                ID:
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>

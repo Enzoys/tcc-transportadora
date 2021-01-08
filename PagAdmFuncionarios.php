@@ -7,7 +7,7 @@
     <div style="text-align: center">
         <h2>Gerenciar Funcionários</h2>
         <br/><a href="PagAdmCadastroFuncionario.php">CADASTRAR FUNCIONÁRIO</a><br />
-        <br><a>PESQUISAR FUNCIONÁRIO</a><br />
+        <br><a href="PagAdmPesquisaFuncionario.php">PESQUISAR FUNCIONÁRIO</a><br />
     </div>
 </div>
 <div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">

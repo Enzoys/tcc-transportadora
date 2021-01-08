@@ -5,14 +5,14 @@
     include ('cabecalho.php')
 ?>
 <title>Listar Clientes</title>
-        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
+        <a href="PagFuncPesquisaCliPessoa.php">MENU ANTERIOR</a><br><br>
         <div style="text-align: center">
         
         <?php
             //LINK PARA A PAGINA QUE CONECTA AO BANCO
             include "conexao.php";
             //CODIGO SELECT TABELA CLIENTES
-            $sql="SELECT * FROM clientes";
+            $sql="SELECT * FROM clientesPessoas";
             //SE RECEBER RESULTADO DA QUERY, ENTRA NA ARRAY ASSOCIATIVA 
             //ENQUANTO HOUVER RESULTADOS E LISTA OS CLIENTES
             if($result=$mysqli->query($sql)){
@@ -21,12 +21,10 @@
                          " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_cli"]."<br/>";                        
+                         " ID: ".$row["id_clientePessoa"]."<br/>";                        
                 }
                
             }
-            //LINK PARA A PAGINA QUE ENCERRA CONEXÃO
-            include "desconecta.php";
         ?>
         </div>
 <?php

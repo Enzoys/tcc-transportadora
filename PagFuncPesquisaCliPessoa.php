@@ -5,7 +5,7 @@
     include ('cabecalho.php')
 ?>
 <title>Pesquisar Clientes</title>           
-        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
+        <a href="PagFuncCliPessoas.php">MENU ANTERIOR</a><br><br>
         <center div="center"> 
             Escolha o metodo de busca:
 
@@ -19,12 +19,12 @@
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
-            <form method="post" action="PesquisaCliPessoaEmail.php">
+            <form method="post" action="PesquisaCliPessoaID.php">
                 ID:
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
-            <button onclick="window.open('listarClientes.php')">LISTAR TODOS</button>
+            <button onclick="window.open('PagFuncListarCliPessoas.php')">LISTAR TODOS</button>
         </center>
 <?php
     include ('rodape.php');
