@@ -1,18 +1,16 @@
 <?php
     include "confere_2.php";
-?>
-<?php
     include ('cabecalho.php')
 ?>
 <title>Listar Empresas</title>
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
        
     </head>
-    <body><a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a>
-        
+    <body><a href="PagFuncPesquisaCliEmpresa.php">MENU ANTERIOR</a><br><br>
+        <div style="text-align: center">
         <?php
             include "conexao.php"; 
-            $sql="SELECT * FROM empresas";
+            $sql="SELECT * FROM clientesEmpresas";
             if($result=$mysqli->query($sql)){
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
@@ -20,13 +18,14 @@
                          " CNPJ: ".$row["cnpj"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_emp"].
+                         " ID: ".$row["id_clienteEmpresa"].
                          " Descrição: ".$row["descricao"]."<br/>";
                 }
                
             }
-            include "desconecta.php";
+            //include "desconectaBanco.php";
         ?>
+            </div>
 <?php
     include ('rodape.php');
 ?>

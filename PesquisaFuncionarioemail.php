@@ -2,8 +2,8 @@
 include "confere_3.php";
 include "cabecalho.php";
 include "conexao.php";
-$cpffunc = $_REQUEST["txtfuncionarioCpf"]; // RETOMA A VARIAVEL DE CONSULTA
-$sql = "SELECT * FROM funcionarios where email like '%email%'"; // SELECIONA OS FUNCIONARIOS
+$ctps = $_REQUEST["txtfuncionarioctps"]; // RETOMA A VARIAVEL DE CONSULTA
+$sql = "SELECT * FROM funcionarios where ctps like '%$ctps%'"; // SELECIONA OS FUNCIONARIOS
 // --> CRIAR JOIN COM ENDERECO <--
 //DE ACORDO COM O METODO UTILIZADO
 if ($result = $mysqli->query($sql)) {

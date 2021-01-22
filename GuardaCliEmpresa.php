@@ -1,6 +1,7 @@
 <?php
-//include 'Confere_1.php'; excecao impedir de digitar na pagina porem sem checar o usuario
+//excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
+session_start();
 $usuario = $_POST['usuario'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -24,18 +25,18 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     alert('Todos os campos devem ser preenchidos.');
     window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($senha != $senha_conf) {
-    //SE AS NÃO CORRESPONDEREM
+    //SE AS SENHAS NÃO CORRESPONDEREM
     echo "<script language='javascript' type='text/javascript'>
-            alert('As senhas não coincidem.');window.location.
-            href='javascript:window.history.go(-1)'</script>";
+    alert('As senhas não coincidem.');window.location.
+    href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcount >= 1) {
     echo "<script language='javascript' type='text/javascript'>
-        alert('Desculpe, este usuário já existe.');
-        window.location.href='javascript:window.history.go(-1)'</script>";
+    alert('Desculpe, este usuário já existe.');
+    window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcountcnpj == 1) {
     echo "<script language='javascript' type='text/javascript'>
-        alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página do empresa ou entre em contato.');
-        window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
+    alert('Já foi cadastrada uma empresa com este CNPJ.\\nUtilize a opção para alterar ou excluir na página da empresa ou entre em contato.');
+    window.location.href='javascript:window.history.go(-1)'</script>"; //excecao funcionario
     
 } else {
     $sql1 = "INSERT INTO usuarios (usuario, senha, nivel_acesso) VALUES('$usuario','$senha','1');";
@@ -46,13 +47,19 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     $mysqli->query($sql2);
     $mysqli->query($sql3);
     $rowcount = mysqli_num_rows($mysqli->query($sql));
-    echo $sql1;
-    echo $sql2;
-    echo $sql3;
-    echo $rowcount;
     if ($rowcount == 1) {
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
+        if (isset($_SESSION['usuarioId'])){
+            if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+                if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagAdm.php'</script>";
+                } else {
+                    echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagFuncCliEmpresas.php'</script>";
+                }
+            }
+        } else {
+            echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagLogin.php'</script>";
+        }
     } else {
-        echo "<script language='javascript' type='text/javascript'>" . "alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
+        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
     }
 }

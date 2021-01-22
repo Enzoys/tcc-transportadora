@@ -20,6 +20,7 @@ if ($result = $mysqli->query($sql)) {
 }
 
 ?>
+<br>
 
 <title>Pesquisar Funcionários por CPF</title>
 <!-- SABENDO O ID E OS DADOS DO FUNCIONÁRIO, O ADMINISTRADOR
@@ -57,6 +58,36 @@ if ($result = $mysqli->query($sql)) {
         </tr>
     </table>
 </form>
+<form method="post" action="AlteraDados.php">
+        <table width="200" border="2">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="funcionarios">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_funcionario">
+            <tr>
+                <td align="right">ID do funcionário:</td>
+                <td><input type="text" name="id" size="5"></td>               
+            </tr>
+            <tr>
+                <td align="right">Alterar dado:</td>
+            <td>
+                <select name="dado">
+                    <option value="nome">Nome</option>
+                    <option value="cpf">CPF</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="email">Email</option>
+                    <option value="ctps">Numero CNT</option>
+                </select>
+            </td>              
+            </tr>
+            <tr>
+                <td align="right">Novo dado:</td>
+                <td><input type="text" name="novodado"></td>              
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input type="submit" value="ALTERAR" /></td>
+            </tr>
+        </table>
+        </form>
 <?php 
     include "rodape.php";
 ?>

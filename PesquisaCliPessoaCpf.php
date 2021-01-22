@@ -20,10 +20,11 @@
                          " ID: ".$row["id_clientePessoa"]."<br>";
                 }              
             }
+            //include "desconecta.php";
         ?>
         <!-- SABENDO O ID E OS DADOS DO CLIENTE, O ADMINISTRADOR OU FUNCIONARIO 
         TEM A OPÇÃO DE EXCLUÍ-LO OU EFETUAR UMA NOVA BUSCA-->
-        <a href="PesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaCpf.php"><!-- ENVIA NOVAMENTE
         PARA A PESQUISA -->
         <table width="200" border="2">
@@ -38,11 +39,10 @@
         </table>
         </form>
  
-        <form method="post" action="ApagaCompleto.php"><!-- ENVIA PARA A EXCLUSÃO --> 
+        <form method="post" action="ApagaCompleto.php">
         <table width="200" border="2">
-            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientes"><!-- INDICA DE QUAL TABELA IRA APAGAR-->
-            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_cli"><!-- INDICA DE QUAL ATRIBUTO IRA APAGAR-->
-            <input type="hidden" id="cncpcnt" name="cncpcnt" value="cpf"><!-- INDICA DE QUAL ATRIBUTO DE COMPARAÇÃO IRA APAGAR-->
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesPessoas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clientePessoa">
             <tr>
                 <td align="right">ID do cliente:</td>
                 <td><input type="text" name="id" size="5"></td>
@@ -52,6 +52,35 @@
             <tr>
               <td align="right">&nbsp;</td>
               <td><input type="submit" value="APAGAR" /></td>
+            </tr>
+        </table>
+        </form>
+        <form method="post" action="AlteraDados.php">
+        <table width="200" border="2">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesPessoas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clientePessoa">
+            <tr>
+                <td align="right">ID da pessoa:</td>
+                <td><input type="text" name="id" size="5"></td>               
+            </tr>
+            <tr>
+                <td align="right">Alterar dado:</td>
+            <td>
+                <select name="dado">
+                    <option value="nome">Nome</option>
+                    <option value="cpf">CPF</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="email">Email</option>
+                </select>
+            </td>              
+            </tr>
+            <tr>
+                <td align="right">Novo dado:</td>
+                <td><input type="text" name="novodado"></td>              
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
         </form>

@@ -24,6 +24,7 @@
                 <input type="text" size="40" name="txtcliente">
                 <input type="submit" name="Enviar"> 
             </form>
+            <button onclick="window.open('PagFuncListarCliEmpresas.php')">LISTAR TODOS</button>
         </center>
 <?php
     include ('rodape.php');

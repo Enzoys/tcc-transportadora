@@ -1,25 +1,28 @@
 <?php
     include "confere_2.php";
-    include ('cabecalho.php');
 ?>
-<title>Pesquisar Clientes por ID</title>
+<?php
+    include ('cabecalho.php')
+?>
+<title>Pesquisar Clientes por e-mail</title>
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
-            $sql="SELECT * FROM clientesPessoas where id_clientePessoa like '%$cliente%'";
+            $sql="SELECT * FROM clientes where email like '%$cliente%'";
             if($result=$mysqli->query($sql)){
-                echo "<br>";
+            /* fetch associative array */
                 while($row=$result->fetch_assoc()){
                     echo " Nome do Cliente: ".$row["nome"].
                          " CPF: ".$row["cpf"].
                          " Telefone: ".$row["telefone"].
                          " Email: ".$row["email"].
-                         " ID: ".$row["id_clientePessoa"]."<br/>";
+                         " ID: ".$row["id_cli"]."<br/>";
                 }              
             }
+            include "desconecta.php";
         ?>
         <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaCliPessoaID.php">
+        <form method="post" action="PesquisaCliPessoaEmail.php">
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>

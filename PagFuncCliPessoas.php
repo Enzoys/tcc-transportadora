@@ -1,13 +1,13 @@
 <?php
     include "confere_2.php";
+    include "cabecalho.php";
 ?>
-<<<<<<< HEAD
 <title>Funcionário Página Cliente Pessoa Física</title>
 <div style="background-color: #fffb99; width:70%; height: 100%; float:right">
     <div style="text-align: center">
         <h2>Gerenciar Clientes - Pessoas Físicas</h2>        
         <br/><a href="PagClienteCadastroPessoa.php">CADASTRAR PESSOA FÍSICA</a><br>
-        <br><a href="PagFuncPesquisaCliPessoa.php">PESQUISAR PESSOA FÍSICA</a><br>
+         <br><a href="PagFuncPesquisaCliPessoa.php">PESQUISAR PESSOA FÍSICA</a><br>
     </div>
 </div>
 <div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
@@ -20,19 +20,14 @@
         <a href="PagFuncCliEmpresas.php">Empresas</a><br />
     <br />
     <a href="sairSessao.php">Sair</a><br />
-=======
->>>>>>> d6d5cd10f02a735abe036c39f0e9d68d28d86620
 <?php
-    include ('cabecalho.php')
+if ($_SESSION['usuarioNivelAcesso'] == "3") {
+    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
+} else {
+    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
+}
 ?>
-<title>Funcionário Página Cliente Pessoa Física</title>
-    <CENTER>
-        <a href="http://localhost/tcc1/form_cadastrar_cliente.php">CADASTRAR CLIENTE</a><br>
-        
-        <a href="http://localhost/tcc1/form_pesquisa_cliente.php">PESQUISAR CLIENTE</a><br><br>
-        
-        <a href="http://localhost/tcc1/adm.php">MENU ANTERIOR</a>
-    </CENTER>
+</div>
 <?php
     include ('rodape.php');
 ?>

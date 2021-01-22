@@ -22,13 +22,9 @@
                
             }
         ?>
-<<<<<<< HEAD
         <a href="PagFuncPesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliEmpresaNome.php">
-=======
-        <a href="PesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
-        <form method="post" action="PesquisaCliPessoaNome.php">
->>>>>>> d6d5cd10f02a735abe036c39f0e9d68d28d86620
+
         <table width="200" border="2">
             <tr>
                 <td align="right">Nova busca:</td>
@@ -54,6 +50,36 @@
             <tr>
               <td align="right">&nbsp;</td>
               <td><input type="submit" value="APAGAR" /></td>
+            </tr>
+        </table>
+        </form>
+        <form method="post" action="AlteraDados.php">
+        <table width="200" border="2">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesEmpresas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clienteEmpresa">
+            <tr>
+                <td align="right">ID da empresa:</td>
+                <td><input type="text" name="id" size="5"></td>               
+            </tr>
+            <tr>
+                <td align="right">Alterar dado:</td>
+            <td>
+                <select name="dado">
+                    <option value="nome">Nome</option>
+                    <option value="cnpj">CNPJ</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="email">Email</option>
+                    <option value="descricao">Descricao</option>
+                </select>
+            </td>              
+            </tr>
+            <tr>
+                <td align="right">Novo dado:</td>
+                <td><input type="text" name="novodado"></td>              
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
         </form>

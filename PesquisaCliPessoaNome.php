@@ -19,9 +19,9 @@
                          " ID: ".$row["id_clientePessoa"]."<br/>";
                 }              
             }
-            //include "desconecta.php";
+            //include "desconectaBanco.php";
         ?>
-        <a href="PesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
+        <a href="PagFuncPesquisaCliPessoa.php">ALTERAR MÉTODO DE BUSCA</a>
         <form method="post" action="PesquisaCliPessoaNome.php">
         <table width="200" border="2">
             <tr>
@@ -48,6 +48,35 @@
             <tr>
               <td align="right">&nbsp;</td>
               <td><input type="submit" value="APAGAR" /></td>
+            </tr>
+        </table>
+        </form>
+        <form method="post" action="AlteraDados.php">
+        <table width="200" border="2">
+            <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesPessoas">
+            <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clientePessoa">
+            <tr>
+                <td align="right">ID da pessoa:</td>
+                <td><input type="text" name="id" size="5"></td>               
+            </tr>
+            <tr>
+                <td align="right">Alterar dado:</td>
+            <td>
+                <select name="dado">
+                    <option value="nome">Nome</option>
+                    <option value="cpf">CPF</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="email">Email</option>
+                </select>
+            </td>              
+            </tr>
+            <tr>
+                <td align="right">Novo dado:</td>
+                <td><input type="text" name="novodado"></td>              
+            </tr>
+            <tr>
+              <td align="right">&nbsp;</td>
+              <td><input type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
         </form>

@@ -2,13 +2,6 @@
     include "cabecalho.php"
 ?>
 <title>Tipo de Cadastro para Cliente</title>
-<<<<<<< HEAD
-<BR><BR>
-<CENTER>
-<button onclick="window.location.href = 'PagClienteCadastroPessoa.php'">PESSOA FÍSICA(CPF)</button>
-<button onclick="window.location.href = 'PagClienteCadastroEmpresa.php'">EMPRESA(CNPJ)</button>
-</CENTER>
-=======
 
    <title>Login</title>
 <div id="bgimg" style="padding:30%;" id="invictax">
@@ -22,10 +15,10 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><label></label><button class="btn btn-primary btn-lg" onclick="window.location.href = 'PagCliPessoaCadastro.php'">PESSOA FÍSICA(CPF)</button><br></th>
+      <th scope="row"><label></label><button class="btn btn-primary btn-lg" onclick="window.location.href = 'PagClienteCadastroPessoa.php'">PESSOA FÍSICA(CPF)</button><br></th>
     </tr>
     <tr>
-      <th scope="row"><label></label><button class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagCliEmpresaCadastro.php'">EMPRESA(CNPJ)</button><br></th>
+      <th scope="row"><label></label><button class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagClienteCadastroEmpresa.php'">EMPRESA(CNPJ)</button><br></th>
     </tr>
   </tbody>
 </table>
@@ -70,7 +63,6 @@
 
 
 
->>>>>>> d6d5cd10f02a735abe036c39f0e9d68d28d86620
 <?php
     include "rodape.php";
 ?>
