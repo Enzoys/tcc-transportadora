@@ -32,22 +32,22 @@
     <div class="carousel-item active">
       <img src="imagens/sede.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo1</h5>
-        <p>Descrição1</p>
+        <h5>Sede</h5>
+        <p>Sede onde guardamos alguns veiculos.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="imagens/sede.png" class="d-block w-100" alt="...">
+      <img src="imagens/bgimg2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo2</h5>
-        <p>Descrição2</p>
+        <h5>Entregas</h5>
+        <p>A Invicta-X faz entregas por todo o Brasil.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="imagens/sede.png" class="d-block w-100" alt="...">
+      <img src="imagens/carro2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo3</h5>
-        <p>Descrição3</p>
+        <h5>Performace</h5>
+        <p>Os veiculos da invicta estão sempre no melhor estado possivel para atender nossos clientes.</p>
       </div>
     </div>
   </div>
@@ -130,8 +130,8 @@
       <div class="row">
         <div class="card col-sm">
           <div class="card-body">
-            <h5 class="card-title">Card</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">Localização</h5>
+            <p class="card-text">Abaixo você podera encontrar nossa localização no google maps.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.197240865866!2d-43.27703718441968!3d-22.83219104095501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997bbeedb6abbb%3A0x81d7347085e9cebe!2sR.%20Beliz%C3%A1rio%20Pena%2C%20450%20-%20Penha%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021020-010!5e0!3m2!1spt-BR!2sbr!4v1606514206032!5m2!1spt-BR!2sbr" width="540" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -139,8 +139,8 @@
 
         <div class="card col-sm">
           <div class="card-body">
-            <h5 class="card-title">Card</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">Imóvel</h5>
+            <p class="card-text">Abaixo você tem uma imagem de qual imóvel ir para nos encontrar.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
           <img src="imagens/sede.png" class="card-img-bottom" alt="...">
