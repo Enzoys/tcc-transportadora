@@ -130,18 +130,18 @@
       <div class="row">
         <div class="card col-sm">
           <div class="card-body">
-            <h5 class="card-title">Card</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title">Localização</h5>
+            <p class="card-text">Abaixo você pode checar nossa localização no google maps.</p>
+            <p class="card-text"><small class="text-muted">Last updated today</small></p>
           </div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.197240865866!2d-43.27703718441968!3d-22.83219104095501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997bbeedb6abbb%3A0x81d7347085e9cebe!2sR.%20Beliz%C3%A1rio%20Pena%2C%20450%20-%20Penha%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021020-010!5e0!3m2!1spt-BR!2sbr!4v1606514206032!5m2!1spt-BR!2sbr" width="540" height="355" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
 
         <div class="card col-sm">
           <div class="card-body">
-            <h5 class="card-title">Card</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <h5 class="card-title">Sede</h5>
+            <p class="card-text">Abaixo você pode ver nossa sede caso queira encontrar conosco pessoalmente.</p>
+            <p class="card-text"><small class="text-muted">Last updated today</small></p>
           </div>
           <img src="imagens/sede.png" class="card-img-bottom" alt="...">
         </div>
@@ -160,7 +160,8 @@
 <!-- W3.CSS Container -->
 
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-   <p class="w3-right">mudaraqui <a href="" title="mudaraqui" target="_blank" class="w3-hover-opacity">mudaraqui</a></p>
+   <p class="w3-right"> <a href="index.php" title="inicio" class="w3-hover-opacity">Inicio</a></p>
+    <!-- target="_blank" -->
 </div>
 <script>
    // Script to open and close sidebar
