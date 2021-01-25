@@ -3,9 +3,9 @@ include "Confere_1.php";
 include "cabecalho.php";
 $usuID = $_SESSION['usuarioId'];
 $sql2 = mysqli_query($mysqli,
-    "Select * FROM enderecos where id_usuario = $usuID");
+    "Select * FROM enderecoscad where id_usuario = $usuID");
 $sql3 = mysqli_query($mysqli,
-    "Select * FROM enderecos where id_usuario = $usuID");
+    "Select * FROM enderecoscad where id_usuario = $usuID");
 ?>
 <title>Novo Pedido</title>
 <div style="background-color: #fffb99; width:70%; height: 664px; float:right">

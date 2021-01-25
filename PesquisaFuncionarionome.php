@@ -50,7 +50,7 @@ if ($result = $mysqli->query($sql)) {
         <tr>
             <td align="right">ID do funcionário:</td>
             <td><input type="text" name="id" size="5" /></td>
-            <td align="right">(APAGA TODOS OS DADOS DO CLIENTE)</td>
+            <td align="right">(APAGA TODOS OS DADOS DO FUNCIONÁRIO)</td>
         </tr>
         <tr>
             <td align="right">&nbsp;</td>

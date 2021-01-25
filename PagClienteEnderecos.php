@@ -40,7 +40,7 @@ include "cabecalho.php";
                             . '<option value="descEnd">Descrição</option>'
                             . '</select>'
                             . '<input type="text" name="novodado">'
-                            . '<input type="submit" value="Alterar" name="Excluir"></form>';
+                            . '<input type="submit" value="Alterar" name="Alterar"></form>';
                     echo '</td>';
                 echo '</tr>';              
             }

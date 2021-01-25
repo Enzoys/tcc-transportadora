@@ -23,7 +23,7 @@ include "cabecalho.php";
                 FROM pedidos 
                 join enderecos as e1 on e1.id_endereco = pedidos.id_enderecoOrigem
                 join enderecos as e2 on e2.id_endereco = pedidos.id_enderecoDestino
-                order by 7,8 desc";
+                order by status_pedido";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
                 echo '<tr>';
@@ -34,6 +34,20 @@ include "cabecalho.php";
                     echo '<td>' . $row['origem'] . '</td>';
                     echo '<td>' . $row['destino'] . '</td>';
                     echo '<td>' . $row['status_pedido'] . '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                    echo '<td>';
+                    echo '<form method="post" action="AlteraStatus.php">'
+                            . '<input type="hidden" name="id_pedido" value="'.$row['id_pedido'].'">'
+                            . '<input type="hidden" value="Excluir" name="verifica">'
+                            . '<input type="submit" value="Excluir" name="Excluir"></form>';
+
+                    echo '<form method="post" action="AlteraStatus.php">'
+                            . '<input type="hidden" name="id_pedido" value="'.$row['id_pedido'].'">'
+                            . '<input type="hidden" value="'.$row['status_pedido'].'" name="status">'
+                            . '<input type="hidden" value="Alterar" name="verifica">'
+                            . '<input type="submit" value="PRÓXIMA FASE" name="PRÓXIMA FASE"></form>';
+                    echo '</td>';
                 echo '</tr>';
             }
         }

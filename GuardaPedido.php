@@ -41,7 +41,7 @@ if ($descricao == ""){
                     $idCriado2 = $mysqli->insert_id;
                     
                     $sql3 = "INSERT INTO pedidos (id_cliente, descricao_pedido, id_enderecoOrigem, id_enderecoDestino, status_pedido, data_pedido, hora_pedido) "
-                    . "values('$cliente','$descricao','$idCriado','$idCriado2','Em análise','$data','$hora');";
+                    . "values('$cliente','$descricao','$idCriado','$idCriado2','1. Em análise','$data','$hora');";
                     $mysqli->query($sql3);
                     $idCriado3 = $mysqli->insert_id;
                     $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
@@ -68,7 +68,7 @@ if ($descricao == ""){
             $idCriado2 = $mysqli->insert_id;
             
             $sql3 = "INSERT INTO pedidos (id_cliente, descricao_pedido, id_enderecoOrigem, id_enderecoDestino, status_pedido, data_pedido, hora_pedido) "
-            . "values('$cliente','$descricao','$idCriado','$idCriado2','Em análise','$data','$hora');";
+            . "values('$cliente','$descricao','$idCriado','$idCriado2','1. Em análise','$data','$hora');";
             $mysqli->query($sql3);
             $idCriado3 = $mysqli->insert_id;
             $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
@@ -106,7 +106,7 @@ if ($descricao == ""){
                     $idCriado2 = $mysqli->insert_id;
                     
                     $sql3 = "INSERT INTO pedidos (id_cliente, descricao_pedido, id_enderecoOrigem, id_enderecoDestino, status_pedido, data_pedido, hora_pedido) "
-                    . "values('$cliente','$descricao','$idCriado','$idCriado2','Em análise','$data','$hora');";
+                    . "values('$cliente','$descricao','$idCriado','$idCriado2','1. Em análise','$data','$hora');";
                     $mysqli->query($sql3);
                     $idCriado3 = $mysqli->insert_id;
                     $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
@@ -135,7 +135,7 @@ if ($descricao == ""){
             echo $idCriado2;
             
             $sql3 = "INSERT INTO pedidos (id_cliente, descricao_pedido, id_enderecoOrigem, id_enderecoDestino, status_pedido, data_pedido, hora_pedido) "
-            . "values('$cliente','$descricao','$idCriado','$idCriado2','Em análise','$data','$hora');";
+            . "values('$cliente','$descricao','$idCriado','$idCriado2','1. Em análise','$data','$hora');";
             $mysqli->query($sql3);
             $idCriado3 = $mysqli->insert_id;
             echo $idCriado3;
