@@ -25,11 +25,13 @@ include "cabecalho.php";
                 echo '</tr>';
                 echo '<tr>';
                     echo '<td>';
-                    echo '<form method="post" action="ApagaEndereco.php"><input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
+                    echo '<form method="post" action="ApagaEndereco.php">'
+                            . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
                             . '<input type="hidden" value="Excluir" name="verifica">'
                             . '<input type="submit" value="Excluir" name="Excluir"></form>';
 
-                    echo '<form method="post" action="ApagaEndereco.php"><input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
+                    echo '<form method="post" action="ApagaEndereco.php">'
+                            . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
                             . '<input type="hidden" value="Alterar" name="verifica">'
                             . '<select name="dado">'
                             . '<option value="endereco">Rua</option>'
@@ -123,6 +125,7 @@ include "cabecalho.php";
     <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br />
     <a href="PagClienteEnderecos.php">Meus endereços</a><br>
     <br /><a href="sairSessao.php">Sair</a>
+    <br /><a href="PagCliente.php">VOLTAR</a>
 </div>
 <?php 
 include "rodape.php";

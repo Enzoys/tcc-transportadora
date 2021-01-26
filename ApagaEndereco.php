@@ -27,12 +27,14 @@ if ($verifica == 'Excluir'){
     
 }elseif($verifica=='Alterar'){
     
-    $sql5="UPDATE enderecoscad SET $dado=$novodado WHERE id_endereço='$id'";
+    $sql5="UPDATE enderecoscad SET $dado='$novodado' WHERE id_endereco='$id'";
     $mysqli->query($sql5);
+    echo $sql5;
     
-    $sqlvalor = "SELECT * FROM enderecoscad WHERE id_endereco = '$id' and $dado=$novodado";
+    $sqlvalor = "SELECT * FROM enderecoscad WHERE id_endereco = '$id'";
+    echo $sqlvalor;
     $rowcount = mysqli_num_rows($mysqli->query($sqlvalor)); //VERIFICA SE OS DADOS AINDA EXISTEM
-    if ($rowcount >= 1) {
+    if ($rowcount == 0) {
     //SE OS DADOS AINDA EXISTIREM NO SISTEMA, EXECUTA:
     echo "<script language='javascript' type='text/javascript'>
         alert('O endereço não foi alterado!');window.location.

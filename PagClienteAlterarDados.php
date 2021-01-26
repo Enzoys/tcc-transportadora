@@ -6,7 +6,19 @@
     $selecionador = mysqli_num_rows($mysqli->query($sqlpagina));
     ?><div style="background-color: #fffb99; width:70%; height: 100%; float:right"><?php
     if ($selecionador=='1'){
-?>
+        $sql = "SELECT * from clientesPessoas where id_usuario='$idlogin'";
+        if ($result = $mysqli->query($sql)) {
+            while ($row = $result->fetch_assoc()) {
+               
+                echo '<tr>';
+                    echo '<td>'.'Nome: '.$row['nome'].'</td>';
+                    echo '<td>'.'CPF: '.$row['cpf'].'</td>';
+                    echo '<td>'.'Telefone: '.$row['telefone'].'</td>';
+                    echo '<td>'.'Email: '.$row['email'].'</td>';
+                    echo '</tr>';
+                    }                  
+            }
+?>  
     <form method="post" action="AlteraDados.php">
         <table width="200" border="2">
             <input type="hidden" id="id" name="id" value="<?php echo $idlogin;?>">
@@ -35,6 +47,18 @@
     </form>
 <?php 
     }else{
+        $sql = "SELECT * from clientesEmpresas where id_usuario='$idlogin'";
+        if ($result = $mysqli->query($sql)) {
+            while ($row = $result->fetch_assoc()) {
+               
+                echo '<tr>';
+                    echo '<td>'.'Nome: '.$row['nome'].'</td>';
+                    echo '<td>'.'CNPJ: '.$row['cnpj'].'</td>';
+                    echo '<td>'.'Telefone: '.$row['telefone'].'</td>';
+                    echo '<td>'.'Email: '.$row['email'].'</td>';
+                    echo '</tr>';
+                    }                  
+            }
 ?>
         <form method="post" action="AlteraDados.php">
         <table width="200" border="2">
