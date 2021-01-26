@@ -41,17 +41,36 @@
 <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Invicta-X <br>Transportes</b></h3>
+    <h3 class="w3-padding-64" style="text-align:center;padding-top:10px;"><b>Invicta-X <br>Transportes</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Inicio</a> 
-    <a href="#invictax" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Invicta-X</a> 
-    <a href="#historia" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Historia</a> 
-    <a href="#veiculos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Veiculos</a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h3 style="text-align:center;padding-top:10px;">Inicio</h3></a> 
+    <a href="#invictax" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Invicta-X</h5></a> 
+    <a href="#historia" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Historia</h5></a> 
+    <a href="#veiculos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Veiculos</h5></a> 
     <!--
     <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
     -->
-    <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+    <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Contato</h5></a>
+    <?php
+if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNivelAcesso']) == "3") {
+    echo "
+                <h4 style='padding-top:10px; text-align:center;'>TRANSPORTES</h4>
+                <a href='PagFuncPedidos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>
+                <a href='PagFuncCriarViagem.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Novo transporte</h5></a>
+                <a href='PagFuncCadastroMotorista.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Cadastrar Motorista</h5></a>
+                <h4 style='padding-bottom:0px; text-align:center;'>CLIENTES</h4>
+                <a href='PagFuncCliPessoas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pessoas Físicas</h5></a>
+                <a href='PagFuncCliEmpresas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Empresas</h5></a><br>
+            <a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a>";
+
+            if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina ADM</h5></a>";
+            } else {
+                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina Funcionario</h5></a>";
+            }
+}
+?>
   </div>
 </nav>
 
@@ -63,4 +82,4 @@
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
     <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+    <div class="w3-main" style=";margin-left:340px;margin-right:40px">

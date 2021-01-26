@@ -1,6 +1,6 @@
 <?php
 include "Confere_2.php";
-include "cabecalho.php";
+include "cabecalho2.php";
 include "conexao.php";
 $sql1 = mysqli_query($mysqli,
     "Select * from (
@@ -16,10 +16,10 @@ $sql2 = mysqli_query($mysqli,
         as Motoristas FROM motoristas ORDER BY 1");
 ?>
 <title>Criar Viagem</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-<h2>Registrar Novo Transporte</h2>
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+<h2 style="color:white; padding-left:32%">Registrar Novo Transporte</h2>
 <form method="POST" action="GuardaViagem.php">
-    <table width="200" border="3px">
+    <table style="text-align:left;" class="table table-hover table-dark" width="200" border="1">
         <tr>
             <td align="right">Cliente:</td>
             <td>
@@ -53,7 +53,7 @@ $sql2 = mysqli_query($mysqli,
             <td><input type="date" name="data" size="10" /></td>
         </tr>
         <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de origem</td>
+            <td colspan="2" style="width:100%"><h3 style="padding-left:32%;">Endereço de origem</h3></td>
         </tr>         
         <tr>
             <td align="right">Estado:</td>
@@ -110,7 +110,7 @@ $sql2 = mysqli_query($mysqli,
             <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de destino</td>
+            <td colspan="2" style="width:100%" ><h3 style="padding-left:32%;">Endereço de destino</h5></td>
         </tr>         
         <tr>
             <td align="right">Estado:</td>
@@ -168,28 +168,10 @@ $sql2 = mysqli_query($mysqli,
         </tr>        
         <tr>
             <td></td>
-            <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
+            <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>
 </form>
-</div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
-        TRANSPORTES<br />
-        <a href="PagFuncPedidos.php">Pedidos</a><br />
-        <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
-        <a href="PagFuncCadastroMotorista.php">Cadastrar Motorista</a><br />
-        <br />CLIENTES<br />
-        <a href="PagFuncCliPessoas.php">Pessoas Físicas</a><br />
-        <a href="PagFuncCliEmpresas.php">Empresas</a><br />
-    <br />
-    <a href="sairSessao.php">Sair</a><br />
-<?php
-if ($_SESSION['usuarioNivelAcesso'] == "3") {
-    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
-} else {
-    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
-}
-?>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {

@@ -1,20 +1,20 @@
 <?php
     include "Confere_2.php";
-    include "cabecalho.php";
+    include "cabecalho2.php";
 ?>
 <title>Página Funcionário</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-    <h2>Gerenciamento de Transportes</h2>
-    <table border="2">
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <h2 style="color:white; text-align:center;">Gerenciamento de Transportes</h2>
+    <table class="table table-hover table-dark" border="1">
         <tr>
-            <th>Previsão de Chegada</th>
-            <th>ID do Transporte</th>
-            <th>ID do Cliente</th>
-            <th>Descrição do Transporte</th>
-            <th>Motorista</th>
-            <th>Origem</th>
-            <th>Destino</th>
-            <th>Status</th>
+            <th style="color:white; text-align:center;">Previsão de Chegada</th>
+            <th style="color:white; text-align:center;">ID do Transporte</th>
+            <th style="color:white; text-align:center;">ID do Cliente</th>
+            <th style="color:white; text-align:center;">Descrição do Transporte</th>
+            <th style="color:white; text-align:center;">Motorista</th>
+            <th style="color:white; text-align:center;">Origem</th>
+            <th style="color:white; text-align:center;">Destino</th>
+            <th style="color:white; text-align:center;">Status</th>
         </tr>
         <?php
         $sql = "SELECT viagens.*, 

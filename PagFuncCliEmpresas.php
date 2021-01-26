@@ -1,32 +1,15 @@
 <?php
     include "confere_2.php";
-    include "cabecalho.php";
+    include "cabecalho2.php";
 ?>
 <title>Funcionário Página Cliente Empresa</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-    <div style="text-align: center">
-        <h2>Gerenciar Clientes - Empresas</h2>
-        <br/><a href="PagClienteCadastroEmpresa.php">CADASTRAR EMPRESA</a><br>
-        <br><a href="PagFuncPesquisaCliEmpresa.php">PESQUISAR EMPRESA</a><br>
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <div style="text-align: center;padding:20%;">
+        <h2 style="color:white;">Gerenciar Clientes - Empresas</h2>
+        <br/><a class="btn btn-primary btn-lg" href="PagClienteCadastroEmpresa.php">CADASTRAR EMPRESA</a><br>
+        <br><a class="btn btn-secondary btn-lg" href="PagFuncPesquisaCliEmpresa.php">PESQUISAR EMPRESA</a><br>
     </div>
 </div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
-        TRANSPORTES<br />
-        <a href="PagFuncPedidos.php">Pedidos</a><br />
-        <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
-        <a href="PagFuncCadastroMotorista.php">Cadastrar Motorista</a><br />
-        <br />CLIENTES<br />
-        <a href="PagFuncCliPessoas.php">Pessoas Físicas</a><br />
-        <a href="PagFuncCliEmpresas.php">Empresas</a><br />
-    <br />
-    <a href="sairSessao.php">Sair</a><br />
-<?php
-if ($_SESSION['usuarioNivelAcesso'] == "3") {
-    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
-} else {
-    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
-}
-?>
 </div>
 <?php
     include ('rodape.php');

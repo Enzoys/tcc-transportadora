@@ -12,11 +12,10 @@
 
     
     <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:340px;margin-right:40px">
 <div id="bgimg" style="padding:0%;" id="invictax">
 <title style="text-color:white">Cadastro Cliente Pessoa Física</title>
 <body >
-<div style="padding:20%;">
+<div style="padding-left:25%;padding-right:25%;padding-top:5%;">
 <h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >Cadastro de Cliente Pessoa Física</h1>
 <form method="POST" action="GuardaCliPessoa.php">
     <table id="bgtxt" class="table table-striped table-dark">

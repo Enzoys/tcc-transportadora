@@ -1,19 +1,19 @@
 <?php
 include "Confere_2.php";
-include "cabecalho.php";
+include "cabecalho2.php";
 ?>
 <title>Página Pedidos</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-    <h2>Gerenciamento de Pedidos de Clientes</h2>
-    <table border="2">
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <h2 style="color:white; text-align:center;">Gerenciamento de Pedidos de Clientes</h2>
+    <table class="table table-hover table-dark" border="1">
         <tr>
-            <th>Data de Solicitação</th>
-            <th>Número do pedido</th>
-            <th>ID do cliente</th>
-            <th>Descrição</th>
-            <th>Origem</th>
-            <th>Destino</th>
-            <th>Status</th>
+            <th style="color:white; text-align:center;">Data de Solicitação</th>
+            <th style="color:white; text-align:center;">Número do pedido</th>
+            <th style="color:white; text-align:center;">ID do cliente</th>
+            <th style="color:white; text-align:center;">Descrição</th>
+            <th style="color:white; text-align:center;">Origem</th>
+            <th style="color:white; text-align:center;">Destino</th>
+            <th style="color:white; text-align:center;">Status</th>
         </tr>
         <?php
         $idlogin = $_SESSION['usuarioId'];
@@ -39,14 +39,14 @@ include "cabecalho.php";
                     echo '<td>';
                     echo '<form method="post" action="AlteraStatus.php">'
                             . '<input type="hidden" name="id_pedido" value="'.$row['id_pedido'].'">'
-                            . '<input type="hidden" value="Excluir" name="verifica">'
-                            . '<input type="submit" value="Excluir" name="Excluir"></form>';
+                            . '<input class="btn btn-primary btn-lg" type="hidden" value="Excluir" name="verifica">'
+                            . '<input class="btn btn-secondary btn-lg" type="submit" value="Excluir" name="Excluir"></form>';
 
                     echo '<form method="post" action="AlteraStatus.php">'
                             . '<input type="hidden" name="id_pedido" value="'.$row['id_pedido'].'">'
                             . '<input type="hidden" value="'.$row['status_pedido'].'" name="status">'
-                            . '<input type="hidden" value="Alterar" name="verifica">'
-                            . '<input type="submit" value="PRÓXIMA FASE" name="PRÓXIMA FASE"></form>';
+                            . '<input class="btn btn-primary btn-lg" type="hidden" value="Alterar" name="verifica">'
+                            . '<input class="btn btn-primary btn-lg" type="submit" value="PRÓXIMA FASE" name="PRÓXIMA FASE"></form>';
                     echo '</td>';
                 echo '</tr>';
             }
@@ -54,24 +54,7 @@ include "cabecalho.php";
         ?>
     </table>
 </div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
-        TRANSPORTES<br />
-        <a href="PagFuncPedidos.php">Pedidos</a><br />
-        <a href="PagFuncCriarViagem.php">Novo transporte</a><br />
-        <a href="PagFuncCadastroMotorista.php">Cadastrar Motorista</a><br />
-        <br />CLIENTES<br />
-        <a href="PagFuncCliPessoas.php">Pessoas Físicas</a><br />
-        <a href="PagFuncCliEmpresas.php">Empresas</a><br />
-    <br />
-    <a href="sairSessao.php">Sair</a><br />
-<?php
-if ($_SESSION['usuarioNivelAcesso'] == "3") {
-    echo "<br /><a href='PagAdm.php'>VOLTAR</a>";
-} else {
-    echo "<br /><a href='PagFunc.php'>VOLTAR</a>";
-}
-?>
-</div>
+
 <?php 
 include "rodape.php";
 ?>
