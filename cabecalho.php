@@ -44,7 +44,7 @@
     <h3 class="w3-padding-64" style="text-align:center;padding-top:10px;"><b>Invicta-X <br>Transportes</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h3 style="text-align:center;padding-top:10px;">Inicio</h3></a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h3 style="text-align:center;padding-top:0px;">Inicio</h3></a> 
     <a href="#invictax" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Invicta-X</h5></a> 
     <a href="#historia" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Historia</h5></a> 
     <a href="#veiculos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Veiculos</h5></a> 
@@ -52,6 +52,25 @@
     <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> 
     -->
     <a href="#contato" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style="text-align:center;padding-top:10px;">Contato</h5></a>
+    <?php
+if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNivelAcesso']) == "3") {
+    echo "
+                <h4 style='padding-top:10px; text-align:center;'>TRANSPORTES</h4>
+                <a href='PagFuncPedidos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>
+                <a href='PagFuncCriarViagem.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Novo transporte</h5></a>
+                <a href='PagFuncCadastroMotorista.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Cadastrar Motorista</h5></a>
+                <h4 style='padding-bottom:0px; text-align:center;'>CLIENTES</h4>
+                <a href='PagFuncCliPessoas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pessoas Físicas</h5></a>
+                <a href='PagFuncCliEmpresas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Empresas</h5></a><br>
+            <a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a>";
+
+            if ($_SESSION['usuarioNivelAcesso'] == "3") {
+                echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina ADM</h5></a>";
+            } else {
+                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>";
+            }
+}
+?>
   </div>
 </nav>
 

@@ -58,14 +58,14 @@ if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNiv
                 <h4 style='padding-bottom:0px; text-align:center;'>CLIENTES</h4>
                 <a href='PagFuncCliPessoas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pessoas Físicas</h5></a>
                 <a href='PagFuncCliEmpresas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Empresas</h5></a><br>
-            <a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a>";
-
+                <a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a><br>";
             if ($_SESSION['usuarioNivelAcesso'] == "3") {
                 echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina ADM</h5></a>";
             } else {
-                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina Funcionario</h5></a>";
+                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>";
             }
 }
+
 ?>
     
     <a href="javascript:window.history.go(-1)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h5 style='text-align:center;'>Voltar</h5></a> 

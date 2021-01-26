@@ -1,18 +1,18 @@
 <?php
 include "Confere_1.php";
-include "cabecalho.php";
+include "cabecalho2.php";
 ?>
 <title>Página Cliente</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-    <h2>Meus Pedidos</h2>
-    <table border="2">
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <h2 style="color:white; text-align:center;">Meus Pedidos</h2>
+    <table class="table table-hover table-dark" border="1">
         <tr>
-            <th>Data de Solicitação</th>
-            <th>Número do pedido</th>
-            <th>Descrição</th>
-            <th>Origem</th>
-            <th>Destino</th>
-            <th>Status</th>
+            <th style="color:white; text-align:center;">Data de Solicitação</th>
+            <th style="color:white; text-align:center;">Número do pedido</th>
+            <th style="color:white; text-align:center;">Descrição</th>
+            <th style="color:white; text-align:center;">Origem</th>
+            <th style="color:white; text-align:center;">Destino</th>
+            <th style="color:white; text-align:center;">Status</th>
         </tr>
         <?php
         $idlogin = $_SESSION['usuarioId'];
@@ -37,14 +37,6 @@ include "cabecalho.php";
         }
         ?>
     </table>
-</div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
-    PEDIDOS<br />
-    <a href="PagClienteFazerPedido.php">Novo Pedido</a><br />
-    <br />CONTA<br />
-    <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br />
-    <a href="PagClienteEnderecos.php">Meus endereços</a><br>
-    <br /><a href="sairSessao.php">Sair</a>
 </div>
 <?php 
 include "rodape.php";

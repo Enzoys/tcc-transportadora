@@ -1,4 +1,7 @@
 <?php
+session_start();// INICIA SESSAO
+?>
+<?php
    include "cabecalho.php";
    ?>
 <title>Invicta-X Transportes</title>
