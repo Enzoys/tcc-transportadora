@@ -1,5 +1,4 @@
 <?php
-   include "Confere_2.php";
    include "cabecalho.php";
    ?>
 <title>Invicta-X Transportes</title>
@@ -13,7 +12,7 @@
    </div>
    <div class="buttons">
        <button class="btn btn-primary btn-lg" onclick="window.open('PagLogin.php')">JÁ POSSUO CADASTRO</button>
-       <button class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagClienteTipoCadastro.php'">QUERO ME CADASTRAR</button>
+       <button class="btn btn-secondary btn-lg" onclick="window.open ('PagClienteTipoCadastro.php')">QUERO ME CADASTRAR</button>
    </div>
 
    <!-- Header -->

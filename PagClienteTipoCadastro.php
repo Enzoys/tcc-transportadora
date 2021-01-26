@@ -1,12 +1,14 @@
 <?php
-    include "Confere_2.php";
-    include "cabecalho2.php"
+session_start();// INICIA SESSAO
+?>
+<?php
+    include ('cabecalho2.php')
 ?>
 <title>Tipo de Cadastro para Cliente</title>
     
 
    <title>Login</title>
-<div id="bgimg" style="padding-left:33%;padding-right:33%;padding-top:15%;" id="invictax">
+<div id="bgimg" style="padding-left:33%;padding-right:33%;padding-top:15%;padding-bottom:20%;" id="invictax">
 <h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >Cadastro</h1>
 <div id="bgtxt">
 <div  class="buttons">
@@ -17,10 +19,10 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><label></label><button style="margin-left:20%" class="btn btn-primary btn-lg" onclick="window.location.href = 'PagClienteCadastroPessoa.php'">PESSOA FÍSICA(CPF)</button><br></th>
+      <th scope="row"><label></label><button style="margin-left:0%" class="btn btn-primary btn-lg" onclick="window.location.href = 'PagClienteCadastroPessoa.php'">PESSOA FÍSICA(CPF)</button><br></th>
     </tr>
     <tr>
-      <th scope="row"><label></label><button style="margin-left:25%" class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagClienteCadastroEmpresa.php'">EMPRESA(CNPJ)</button><br></th>
+      <th scope="row"><label></label><button style="margin-left:0%" class="btn btn-secondary btn-lg" onclick="window.location.href = 'PagClienteCadastroEmpresa.php'">EMPRESA(CNPJ)</button><br></th>
     </tr>
   </tbody>
 </table>
