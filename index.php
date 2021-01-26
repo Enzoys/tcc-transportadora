@@ -33,24 +33,24 @@ session_start();// INICIA SESSAO
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="imagens/sede.png" class="d-block w-100" alt="...">
+      <img src="imagens/carro2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo1</h5>
-        <p>Descrição1</p>
+        <h5></h5>
+        <p></p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="imagens/sede.png" class="d-block w-100" alt="...">
+      <img src="imagens/caminhao3.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo2</h5>
-        <p>Descrição2</p>
+        <h5></h5>
+        <p></p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="imagens/sede.png" class="d-block w-100" alt="...">
+      <img src="imagens/bgimg2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Titulo3</h5>
-        <p>Descrição3</p>
+        <h5></h5>
+        <p></p>
       </div>
     </div>
   </div>
