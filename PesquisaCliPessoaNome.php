@@ -19,7 +19,8 @@
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
             $sql="SELECT * FROM clientesPessoas where nome like '%$cliente%'";
-            if($result=$mysqli->query($sql)){
+            if($result=$mysqli->query($sql))
+            {
             /* fetch associative array */
                 while($row=$result->fetch_assoc()){
                 echo '<tr>';

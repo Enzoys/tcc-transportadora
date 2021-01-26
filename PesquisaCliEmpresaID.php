@@ -1,64 +1,76 @@
 <?php
     include "confere_2.php";
-    include ('cabecalho.php');
+    include ('cabecalho2.php');
 ?>
 <title>Pesquisar Empresas por e-mail</title>
+<div style="background-color: #343a40; width:100%; height: 100%;">
+        <h2 style="color:white; text-align:center;">Pesquisar Clientes por ID</h2>
+        <table class="table table-hover table-dark" border="1">
+            <tr>
+                <th style="color:white; text-align:center;">Nome da Empresa</th>
+                <th style="color:white; text-align:center;">CNPJ</th>
+                <th style="color:white; text-align:center;">Telefone</th>
+                <th style="color:white; text-align:center;">Email</th>
+                <th style="color:white; text-align:center;">ID</th>
+                <th style="color:white; text-align:center;">Descrição</th>
+            </tr>
         <?php
             include "conexao.php";
             $cliente= $_REQUEST["txtcliente"];
             $sql="SELECT * FROM clientesEmpresas where id_clienteEmpresa like '%$cliente%'";
             if($result=$mysqli->query($sql)){
-            echo "<br>";
                 while($row=$result->fetch_assoc()){
-                    echo " Nome do Cliente: ".$row["nome"].
-                         " CNPJ: ".$row["cnpj"].
-                         " Telefone: ".$row["telefone"].
-                         " Email: ".$row["email"].
-                         " ID: ".$row["id_clienteEmpresa"].
-                         " Descrição: ".$row["descricao"]."<br/>";
+                    echo '<tr>';
+                    echo '<td>' .$row['nome']. '</td>';
+                    echo '<td>' .$row['cnpj']. '</td>';
+                    echo '<td>' .$row['telefone']. '</td>';
+                    echo '<td>' .$row['email']. '</td>';
+                    echo '<td>' .$row["id_clienteEmpresa"]. '</td>';
+                    echo '<td>' .$row["descricao"]. '<td>';
+                echo '</tr>'; 
                 }              
             }
         ?>
-        <a href="PagFuncPesquisaCliEmpresa.php">ALTERAR MÉTODO DE BUSCA</a>
+        </table>
+
         <form method="post" action="PesquisaCliEmpresaID.php">
-        <table width="200" border="2">
+        <table class="table table-hover table-dark" border="1">
             <tr>
-                <td align="right">Nova busca:</td>
+                <td style="text-align:right">Nova busca:</td>
                 <td><input type="text" name="txtcliente" size="40" /></td>
             </tr>
             <tr>
-              <td align="right">&nbsp;</td>
+              <td style="text-align:right">&nbsp;</td>
               <td><input type="submit" value="PESQUISAR" /></td>
             </tr>
-        </table>
         </form>
  
         <form method="post" action="ApagaCompleto.php">
-        <table width="200" border="2">
+        
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesEmpresas">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clienteEmpresa">
             <tr>
-                <td align="right">ID da Empresa:</td>
+                <td style="text-align:right">ID da Empresa:</td>
                 <td><input type="text" name="id" size="5"></td>
-                <td align="right">(APAGA TODOS OS DADOS DA EMPRESA!)</td>
+
                 
             </tr>
             <tr>
-              <td align="right">&nbsp;</td>
+              <td style="text-align:right">&nbsp;</td>
               <td><input type="submit" value="APAGAR" /></td>
             </tr>
-        </table>
+        
         </form>
         <form method="post" action="AlteraDados.php">
-        <table width="200" border="2">
+        
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesEmpresas">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clienteEmpresa">
             <tr>
-                <td align="right">ID da empresa:</td>
+                <td style="text-align:right">ID da empresa:</td>
                 <td><input type="text" name="id" size="5"></td>               
             </tr>
             <tr>
-                <td align="right">Alterar dado:</td>
+                <td style="text-align:right">Alterar dado:</td>
             <td>
                 <select name="dado">
                     <option value="nome">Nome</option>
@@ -70,15 +82,16 @@
             </td>              
             </tr>
             <tr>
-                <td align="right">Novo dado:</td>
+                <td style="text-align:right">Novo dado:</td>
                 <td><input type="text" name="novodado"></td>              
             </tr>
             <tr>
-              <td align="right">&nbsp;</td>
+              <td style="text-align:right">&nbsp;</td>
               <td><input type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
         </form>
+        </div>
 <?php
     include ('rodape.php');
 ?>
