@@ -49,7 +49,8 @@
     <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h3 style="text-align:center;">Inicio</h3></a>
     
     <?php
-if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNivelAcesso']) == "3") {
+if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
+    echo $_SESSION['usuarioNivelAcesso'];
     echo "
                 <h4 style='padding-top:10px; text-align:center;'>TRANSPORTES</h4>
                 <a href='PagFuncPedidos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>
@@ -61,9 +62,19 @@ if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNiv
                 <a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a><br>";
             if ($_SESSION['usuarioNivelAcesso'] == "3") {
                 echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pagina ADM</h5></a>";
+                echo "<a href='pagcriarADM.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Criar ADM</h5></a>";
+                echo "<a href='PagAdmFuncionarios.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Funcionários</h5></a>";
             } else {
                 echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>";
             }
+}elseif ($_SESSION['usuarioNivelAcesso'] == "1"){
+    echo $_SESSION['usuarioNivelAcesso'];
+    echo "<a href='PagClienteAlterarDados.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Alterar dados</h5></a>";
+    echo "<a href='PagClienteEnderecos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Endereços</h5></a>";
+    echo "<a href='PagClienteFazerPedido.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Fazer Pedido</h5></a>";
+    
+    
+    
 }
 
 ?>
