@@ -8,16 +8,16 @@ $sql3 = mysqli_query($mysqli,
     "Select * FROM enderecoscad where id_usuario = $usuID");
 ?>
 <title>Novo Pedido</title>
-<div style="background-color: #343a40; width:100%; height: 100%;padding-top:1%;padding-left:15%;padding-right:15%;">
+<div style="background-color: #343a40; width:100%; height: 100%;padding-top:0%;padding-left:15%;padding-right:15%;">
 <h2 style="color:white; text-align:center;">Registrar Novo Pedido</h2>
 <form method="POST" action="GuardaPedido.php">
 <table class="table table-hover table-dark" border="1">
         <tr>
-            <td align="right">Descrição da carga/transporte:</td>
+            <td style="color:white; text-align:center;">Descrição da carga/transporte:</td>
             <td><input type="text" name="descricao" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de origem</td>
+            <td colspan="2" style="color:white; text-align:center;" style="width:100%"><h5>Endereço de origem</h5></td>
         </tr>
         <tr>
             <td></td>
@@ -31,7 +31,7 @@ $sql3 = mysqli_query($mysqli,
                 </select></td>
         </tr>
         <tr>
-            <td align="right">Estado:</td>
+            <td style="color:white; text-align:center;">Estado:</td>
             <td>
                 <select name="estado">
                     <option value="Acre">Acre</option>
@@ -65,27 +65,27 @@ $sql3 = mysqli_query($mysqli,
             </td>
         </tr>
         <tr>
-            <td align="right">Cidade:</td>
+            <td style="color:white; text-align:center;">Cidade:</td>
             <td><input type="text" name="cidade" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Bairro:</td>
+            <td style="color:white; text-align:center;">Bairro:</td>
             <td><input type="text" name="bairro" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Endereço:</td>
+            <td style="color:white; text-align:center;">Endereço:</td>
             <td><input type="text" name="endereco" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Número:</td>
+            <td style="color:white; text-align:center;">Número:</td>
             <td><input type="text" id="num5" data-inputmask="'mask': '9[99999]'" name="numero" size="6"/></td>
         </tr>
         <tr>
-            <td align="right">Complemento:</td>
+            <td style="color:white; text-align:center;">Complemento:</td>
             <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td colspan="2" align="center" style="width:100%">Endereço de destino</td>
+            <td colspan="2" style="color:white; text-align:center;" style="width:100%"><h5>Endereço de destino</h5></td>
         </tr>
         <tr>
             <td></td>
@@ -99,7 +99,7 @@ $sql3 = mysqli_query($mysqli,
                 </select></td>
         </tr>
         <tr>
-            <td align="right">Estado:</td>
+            <td style="color:white; text-align:center;">Estado:</td>
             <td>
                 <select name="estado2">
                     <option value="Acre">Acre</option>
@@ -133,23 +133,23 @@ $sql3 = mysqli_query($mysqli,
             </td>
         </tr>
         <tr>
-            <td align="right">Cidade:</td>
+            <td style="color:white; text-align:center;">Cidade:</td>
             <td><input type="text" name="cidade2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Bairro:</td>
+            <td style="color:white; text-align:center;">Bairro:</td>
             <td><input type="text" name="bairro2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Endereço:</td>
+            <td style="color:white; text-align:center;">Endereço:</td>
             <td><input type="text" name="endereco2" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Número:</td>
+            <td style="color:white; text-align:center;">Número:</td>
             <td><input type="text" id="num6" data-inputmask="'mask': '9[99999]'" name="numero2" size="6"/></td>
         </tr>
         <tr>
-            <td align="right">Complemento:</td>
+            <td style="color:white; text-align:center;">Complemento:</td>
             <td><input type="text" name="complemento2" size="50" maxlength="50"/></td>
         </tr>        
         <tr>

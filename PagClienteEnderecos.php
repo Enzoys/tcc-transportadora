@@ -7,9 +7,9 @@ include "cabecalho2.php";
     <h2 style="color:white; text-align:center;">Meus Endereços</h2>
     <table class="table table-hover table-dark" border="1">
         <tr>
-            <th>Endereço</th>        
-            <th>ID</th>
-            <th>Descrição</th>
+            <th style="color:white; text-align:center;">Endereço</th>        
+            <th style="color:white; text-align:center;">ID</th>
+            <th style="color:white; text-align:center;">Descrição</th>
         </tr>
         <?php
         $idlogin = $_SESSION['usuarioId'];
@@ -18,17 +18,17 @@ include "cabecalho2.php";
             while ($row = $result->fetch_assoc()) {
                
                 echo '<tr>';
-                    echo '<td>'.$row['endereco'].', '.$row['numero'].' | '.$row['bairro'].' | '.$row['cidade'].' - '.$row['estado'].'</td>';
-                    echo '<td>' . $row['id_endereco'] . '</td>';
-                    echo '<td>  ' . $row['descEnd'] . ' </td>';
-                    echo '<td>';
+                    echo '<td style="color:white; text-align:center;">'.$row['endereco'].', '.$row['numero'].' | '.$row['bairro'].' | '.$row['cidade'].' - '.$row['estado'].'</td>';
+                    echo '<td style="color:white; text-align:center;">' . $row['id_endereco'] . '</td>';
+                    echo '<td style="color:white; text-align:center;">  ' . $row['descEnd'] . ' </td>';
+                    echo '<td style="color:white; text-align:center;">';
                 echo '</tr>';
                 echo '<tr>';
                     echo '<td>';
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
                             . '<input type="hidden" value="Excluir" name="verifica">'
-                            . '<input class="btn btn-secondary btn-lg" type="submit" value="Excluir" name="Excluir"></form>';
+                            . '<input class="btn btn-secondary btn-lg" Style="margin-left:37%" type="submit" value="Excluir" name="Excluir"></form>';
 
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
@@ -53,31 +53,31 @@ include "cabecalho2.php";
     <form method="POST" action="GuardaEndereco.php">
         <table class="table table-hover table-dark" border="1">
         <tr>
-            <td align="right">Descrição:</td>
+            <td style="color:white; text-align:center;">Descrição:</td>
             <td><input type="text" name="descricao" size="30" maxlength="30"/></td>
         </tr>
         <tr>
-            <td align="right">Rua:</td>
+            <td style="color:white; text-align:center;">Rua:</td>
             <td><input type="text" name="rua" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Número:</td>
+            <td style="color:white; text-align:center;">Número:</td>
             <td><input type="text" id="num5" data-inputmask="'mask': '9[99999]'" name="numero" size="6"/></td>
         </tr>
         <tr>
-            <td align="right">Bairro:</td>
+            <td style="color:white; text-align:center;">Bairro:</td>
             <td><input type="text" name="bairro" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Complemento:</td>
+            <td style="color:white; text-align:center;">Complemento:</td>
             <td><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>       
         <tr>
-            <td align="right">Cidade:</td>
+            <td style="color:white; text-align:center;">Cidade:</td>
             <td><input type="text" name="cidade" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Estado:</td>
+            <td style="color:white; text-align:center;">Estado:</td>
             <td>
                 <select name="estado">
                     <option value="Acre">Acre</option>

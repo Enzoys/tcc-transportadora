@@ -29,7 +29,7 @@
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesPessoas">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clientePessoa">                                  
             <tr>
-                <td align="right">Alterar dado:</td>
+                <td style="color:white; text-align:center;">Alterar dado:</td>
             <td>
                 <select name="dado">
                     <option value="nome">Nome</option>
@@ -40,11 +40,11 @@
             </td>              
             </tr>
             <tr>
-                <td align="right">Novo dado:</td>
+                <td style="color:white; text-align:center;">Novo dado:</td>
                 <td><input type="text" name="novodado"></td>              
             </tr>
             <tr>
-              <td align="right">&nbsp;</td>
+              <td style="color:white; text-align:center;">&nbsp;</td>
               <td><input class="btn btn-primary btn-lg" type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
@@ -71,7 +71,7 @@
             <input type="hidden" id="tabcliempfun" name="tabcliempfun" value="clientesEmpresas">
             <input type="hidden" id="idcliempfun" name="idcliempfun" value="id_clienteEmpresa">                                  
             <tr>
-                <td align="right">Alterar dado:</td>
+                <td style="color:white; text-align:center;">Alterar dado:</td>
             <td>
                 <select name="dado">
                     <option value="nome">Nome</option>
@@ -82,11 +82,11 @@
             </td>              
             </tr>
             <tr>
-                <td align="right">Novo dado:</td>
+                <td style="color:white; text-align:center;">Novo dado:</td>
                 <td><input type="text" name="novodado"></td>              
             </tr>
             <tr>
-              <td align="right">&nbsp;</td>
+              <td style="color:white; text-align:center;">&nbsp;</td>
               <td><input class="btn btn-primary btn-lg" type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
