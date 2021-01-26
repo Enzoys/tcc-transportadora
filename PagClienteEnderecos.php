@@ -1,11 +1,11 @@
 <?php
 include "Confere_1.php";
-include "cabecalho.php";
+include "cabecalho2.php";
 ?>
 <title>Página Endereços do Cliente</title>
-<div style="background-color: #fffb99; width:70%; height: 100%; float:right">
-    <h2>Meus Endereços</h2>
-    <table border="2">
+<div style="background-color: #343a40; width:100%; height: 100%;padding-bottom:0%;padding-left:15%;padding-right:15%;">
+    <h2 style="color:white; text-align:center;">Meus Endereços</h2>
+    <table class="table table-hover table-dark" border="1">
         <tr>
             <th>Endereço</th>        
             <th>ID</th>
@@ -28,7 +28,7 @@ include "cabecalho.php";
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
                             . '<input type="hidden" value="Excluir" name="verifica">'
-                            . '<input type="submit" value="Excluir" name="Excluir"></form>';
+                            . '<input class="btn btn-secondary btn-lg" type="submit" value="Excluir" name="Excluir"></form>';
 
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
@@ -42,16 +42,16 @@ include "cabecalho.php";
                             . '<option value="descEnd">Descrição</option>'
                             . '</select>'
                             . '<input type="text" name="novodado">'
-                            . '<input type="submit" value="Alterar" name="Alterar"></form>';
+                            . '<input class="btn btn-primary btn-lg" style="margin-left:20px" type="submit" value="Alterar" name="Alterar"></form>';
                     echo '</td>';
                 echo '</tr>';              
             }
         }
         ?>
     </table><br />
-    <h3>Novo Endereço</h3>
+    <h3 style="color:white; text-align:center;">Novo Endereço</h3>
     <form method="POST" action="GuardaEndereco.php">
-        <table width="200" border="3px">
+        <table class="table table-hover table-dark" border="1">
         <tr>
             <td align="right">Descrição:</td>
             <td><input type="text" name="descricao" size="30" maxlength="30"/></td>
@@ -112,20 +112,10 @@ include "cabecalho.php";
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
+            <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
         </table>
     </form>
-    
-</div>
-<div style="background-color: #ea8a82; width:30%; height: 100%; text-align: center;">
-    PEDIDOS<br />
-    <a href="PagClienteFazerPedido.php">Novo Pedido</a><br />
-    <br />CONTA<br />
-    <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br />
-    <a href="PagClienteEnderecos.php">Meus endereços</a><br>
-    <br /><a href="sairSessao.php">Sair</a>
-    <br /><a href="PagCliente.php">VOLTAR</a>
 </div>
 <?php 
 include "rodape.php";

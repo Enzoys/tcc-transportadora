@@ -1,6 +1,6 @@
 <?php
 include "Confere_1.php";
-include "cabecalho.php";
+include "cabecalho2.php";
 $usuID = $_SESSION['usuarioId'];
 $sql2 = mysqli_query($mysqli,
     "Select * FROM enderecoscad where id_usuario = $usuID");
@@ -8,10 +8,10 @@ $sql3 = mysqli_query($mysqli,
     "Select * FROM enderecoscad where id_usuario = $usuID");
 ?>
 <title>Novo Pedido</title>
-<div style="background-color: #fffb99; width:70%; height: 664px; float:right">
-<h2>Registrar Novo Pedido</h2>
+<div style="background-color: #343a40; width:100%; height: 100%;padding-top:1%;padding-left:15%;padding-right:15%;">
+<h2 style="color:white; text-align:center;">Registrar Novo Pedido</h2>
 <form method="POST" action="GuardaPedido.php">
-    <table width="200" border="3px">
+<table class="table table-hover table-dark" border="1">
         <tr>
             <td align="right">Descrição da carga/transporte:</td>
             <td><input type="text" name="descricao" size="50" maxlength="50"/></td>
@@ -154,19 +154,10 @@ $sql3 = mysqli_query($mysqli,
         </tr>        
         <tr>
             <td></td>
-            <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
+            <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>
 </form>
-</div>
-<div style="background-color: #ea8a82; width:30%; height: 664px; text-align: center;">
-    PEDIDOS<br />
-    <a href="PagClienteFazerPedido.php">Novo Pedido</a><br>
-    <br />CONTA<br />
-    <a href="PagClienteAlterarDados.php">Alterar Dados Cadastrais</a><br>
-    <a href="PagClienteEnderecos.php">Meus endereços</a><br>
-    <br /><a href="sairSessao.php">Sair</a><br />
-    <br /><a href='PagCliente.php'>VOLTAR</a>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
