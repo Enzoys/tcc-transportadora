@@ -4,6 +4,21 @@ session_start();
 if (isset($_SESSION['usuarioId'])){
 echo "Usuário: " . $_SESSION['usuarioNome'];
 }
+
+require_once "recaptchalib.php";
+
+$secret = "6Lex8ykaAAAAAHEZAkpmKknjQ93ORPiMLF-KOYS-";
+
+$response = null;
+$reCaptcha = new ReCaptcha($secret);
+
+if ($_POST["g-recaptcha-response"]) {
+    $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
+}
+
+if ($response != null && $response->success) {
+    
+}
 $usuario = $_POST['usuario'];
 $senha = MD5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);

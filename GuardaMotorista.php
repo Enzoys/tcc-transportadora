@@ -6,11 +6,13 @@ $cpf = $_POST['cpf'];
 $ctps = $_POST['ctps'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
+
 $sqlcpfmot = "SELECT * FROM motoristas WHERE cpf = '$cpf'";
 $rowcountcpfmot = mysqli_num_rows($mysqli->query($sqlcpfmot));
+
 $sqlctps = "SELECT * FROM motoristas WHERE ctps = '$ctps'";
 $rowcountctps = mysqli_num_rows($mysqli->query($sqlctps));
-if ($nome == "" || $telefone == "") {
+if ($nome == "" || $telefone == "" || $cpf ==""|| $ctps=="") {
     echo "<script language='javascript' type='text/javascript'>" . "alert('Atenção aos campos que devem ser preenchidos.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
 } elseif ($rowcountcpfmot >= 1 && $rowcountctps != "") {
     echo "<script language='javascript' type='text/javascript'>" . "alert('Já foi cadastrado um motorista com este CPF.\\nUtilize a opção para alterar ou excluir na página de funcionário.');" . "window.location.href='javascript:window.history.go(-1)'</script>";

@@ -12,7 +12,7 @@
         $sql = "SELECT * from clientesPessoas where id_clientePessoa='$idlogin'";
         if ($result = $mysqli->query($sql)) {
             while ($row = $result->fetch_assoc()) {
-                echo'<table border="2">';
+                echo'<table border="2" style="color:white">';
                     echo '<tr>';
                     echo '<td>'.'Nome: '.$row['nome'].'</td>';
                     echo '<td>'.'CPF: '.$row['cpf'].'</td>';
@@ -22,7 +22,7 @@
                 echo'</table>';
                     }                  
             }
-?>  
+?>  <br />
     <form method="post" action="AlteraDados.php">
         <table class="table table-hover table-dark" border="1">
             <input type="hidden" id="id" name="id" value="<?php echo $idlogin;?>">

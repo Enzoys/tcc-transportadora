@@ -37,6 +37,13 @@
                     echo '<td>' . $row['origem'] . '</td>';
                     echo '<td>' . $row['destino'] . '</td>';
                     echo '<td>' . $row['status_viagem'] . '</td>';
+                    echo '<td>' . '<form method="post" action="AlteraStatus.php">'
+                            . '<input type="hidden" name="id_pedido" value="'. $row['id_viagem'].'">'
+                            . '<input type="hidden" name="status" value="'. $row['status_viagem'].'">'
+                            . '<input type="hidden" name="pedido" value="'. $row['id_pedido'] .'">'
+                            . '<input type="hidden" name="verifica" value="transporte">'
+                            . '<input type="submit" name="atualizar" value="atualizar">'
+                            . '</form>' . '</td>';
                 echo '</tr>';
             }
         }

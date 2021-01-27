@@ -17,6 +17,9 @@
         <input type="text" size="40" name="txtfuncionarioNome" />
         <input style="margin-top:20px;" class="btn btn-secondary btn-lg" type="submit" name="Enviar" />
     </form>
+    <form method="post" action="PagAdmListarFuncionarios.php">
+        <input style="margin-top:20px;" class="btn btn-secondary btn-lg" type="submit" value="Listar Funcionários" name="Listar funcionários" />
+    </form>
 
 <?php 
     include "rodape.php";

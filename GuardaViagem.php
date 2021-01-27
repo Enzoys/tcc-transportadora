@@ -1,6 +1,8 @@
 <?php
 include "Confere_2.php";
 include "conexao.php";
+$direcionador = $_POST['direcionador'];
+$pedido = $_POST['pedido'];
 $cliente = $_POST['cliente'];
 $motorista = $_POST['motorista'];
 $descricao = $_POST['descricao'];
@@ -17,6 +19,22 @@ $bairro2 = $_POST['bairro2'];
 $endereco2 = $_POST['endereco2'];
 $numero2 = $_POST['numero2'];
 $complemento2 = $_POST['complemento2'];
+
+if($direcionador == "1"){    
+    $sql3 = "INSERT INTO viagens (id_cliente, descricao_viagem, id_enderecoOrigem, id_enderecoDestino, status_viagem, motorista, data_chegada,id_pedido) "
+            . "values('$cliente','$descricao','$endereco','$endereco2','Previsto','$motorista','$data','$pedido');";
+    $mysqli->query($sql3);
+    $idCriado3 = $mysqli->insert_id;
+    $sqlatual = "UPDATE pedidos SET status_pedido = '3. Em andamento' WHERE id_pedido='$pedido' ";
+    $mysqli->query($sqlatual);
+    $sql = "SELECT * FROM viagens WHERE id_viagem = '$idCriado3'";    
+    $rowcount = mysqli_num_rows($mysqli->query($sql));
+    if ($rowcount == 1) {
+        echo "<script language='javascript' type='text/javascript'>alert('Transporte registrado com sucesso!');window.location.href='javascript:window.history.go(-2)'</script>";
+    } else {
+        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o transporte.');window.location.href='javascript:window.history.go(-1)'</script>";
+    }   
+}else{
 if ($cliente == "" || $motorista == "" || $descricao == "" || $data == "" || $estado == "" || $cidade == "" || $bairro == "" || $endereco == "" || $numero == "" ||
     $complemento == "" || $estado2 == "" || $cidade2 == "" || $bairro2 == "" || $endereco2 == "" || $numero2 == "" || $complemento2 == "") {
     echo "<script language='javascript' type='text/javascript'>" . "alert('Atenção aos campos que devem ser preenchidos.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
@@ -38,4 +56,4 @@ if ($cliente == "" || $motorista == "" || $descricao == "" || $data == "" || $es
     } else {
         echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o transporte.');window.location.href='javascript:window.history.go(-1)'</script>";
     }
-}
+}}

@@ -16,15 +16,15 @@
             <td><input type="text" id="tel4" data-inputmask="'mask': '(99) [9]9999-9999'" name="telefone" size="15" /></td>
         </tr>        
         <tr>
-            <td align="right">CPF (Opcional):</td>
+            <td align="right">CPF:</td>
             <td><input type="text" id="cpf3" data-inputmask="'mask': '999.999.999-99'" name="cpf" size="14" /></td>
         </tr>
         <tr>
-            <td align="right">Email (Opcional):</td>
+            <td align="right">Email(opcional):</td>
             <td><input type="text" name="email" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td align="right">Carteira de Trabalho (Opcional):</td>
+            <td align="right">Carteira de Trabalho:</td>
             <td><input type="text" id="ctps2" data-inputmask="'mask': '*******[*********]'" name="ctps" size="16" /></td>
         </tr>
         <tr>

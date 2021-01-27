@@ -20,18 +20,16 @@ $sql = "SELECT * FROM funcionarios";
 if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()) {
         echo '<tr>';
-        echo '<td>' . $row["nome"] . '</td>'
-        echo '<td>' . $row["cpf"] . '</td>'
-        echo '<td>' . $row["telefone"] . '</td>'
-        echo '<td>' . $row["email"] . '</td>'
-        echo '<td>' . $row["ctps"] . '</td>'
-        echo '<td>' . $row["id_funcionario"] . '</td>'
-        echo '<tr>' 
+        echo '<td>' . $row["nome"] . '</td>';
+        echo '<td>' . $row["cpf"] . '</td>';
+        echo '<td>' . $row["telefone"] . '</td>';
+        echo '<td>' . $row["email"] . '</td>';
+        echo '<td>' . $row["ctps"] . '</td>';
+        echo '<td>' . $row["id_funcionario"] . '</td>';
+        echo '<tr>' ;
 
     }
 }
-
-include "desconecta.php";
 include "rodape.php";
  ?>
  <table>

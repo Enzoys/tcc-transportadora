@@ -9,8 +9,8 @@
     }
     
 ?>
-
-
+<head>
+<script src='https://www.google.com/recaptcha/api.js?hl=pt'> </script> </head>
     <!-- !PAGE CONTENT! -->
 <div id="bgimg" style="padding:0%;" id="invictax">
 <title style="text-color:white">Cadastro Cliente Empresa</title>
@@ -108,7 +108,7 @@
             <td align="left"><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td></td>
+            <td><div class="g-recaptcha" data-sitekey="6Lex8ykaAAAAAD29clFCchMvbKaQsJIsJzd19xvU "></div></td>
             <td style="padding-right:25%"><input input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>
