@@ -30,11 +30,11 @@
         </tr>
         <tr>
             <td align="right">CNPJ:</td>
-            <td><input type="text" name="cnpj" size="18" /></td>
+            <td><input type="text" id="cnpj1" data-inputmask="'mask': '99.999.999/9999-99'" name="cnpj" size="18" /></td>
         </tr>
         <tr>
             <td align="right">Telefone:</td>
-            <td><input type="text" name="telefone" size="14" /></td>
+            <td><input type="text" id="tel2" data-inputmask="'mask': '(99) [9]9999-9999'" name="telefone" size="15" /></td>
         </tr>
         <tr>
             <td align="right">Email:</td>
@@ -96,7 +96,7 @@
         </tr>
         <tr>
             <td align="right">Número:</td>
-            <td><input type="text" name="numero" size="50" /></td>
+            <td><input type="text" id="num2" data-inputmask="'mask': '9[99999]'" name="numero" size="6" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right">complemento:</td>
@@ -110,6 +110,13 @@
     </table>
 </form>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cnpj1").inputmask("99.999.999/9999-99", { removeMaskOnSubmit: false });
+        $("#tel2").inputmask("(99) [9]9999-9999", { removeMaskOnSubmit: false });
+        $("#num2").inputmask("9[99999]", { removeMaskOnSubmit: false });
+    });
+</script>
 <?php
     include "rodape.php";
 ?>

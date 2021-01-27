@@ -6,6 +6,9 @@
 ?>
 <title>Cadastrar Pessoa</title>
 <div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <br />
+    <br />
+    <br />
 <h2 style="color:white; padding-left:40%;">Cadastrar Empresa</h2>
 <form method="post" action="GuardaCliPessoa.php">
     <table class="table table-hover table-dark" border="1">
@@ -27,11 +30,11 @@
         </tr>
         <tr>
             <td align="right">CPF:</td>
-            <td><input type="text" name="cpf" size="14" /></td>
+            <td><input type="text" id="cpf1" data-inputmask="'mask': '999.999.999-99'" name="cpf" size="14" /></td>
         </tr>
         <tr>
             <td align="right">Telefone:</td>
-            <td><input type="text" name="telefone" size="14" /></td>
+            <td><input type="text" id="tel2" data-inputmask="'mask': '(99) [9]9999-9999'" name="telefone" size="15" /></td>
         </tr>
         <tr>
             <td align="right">Email:</td>
@@ -85,7 +88,7 @@
         </tr>
         <tr>
             <td align="right">Número:</td>
-            <td><input type="text" name="numero" size="50" /></td>
+            <td><input type="text" id="num1" data-inputmask="'mask': '9[99999]'" name="numero" size="6" /></td>
         </tr>
         <tr>
             <td align="right">complemento:</td>
@@ -100,6 +103,14 @@
         </tr>
     </table>
 </form>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#cpf1").inputmask("999.999.999-99", { removeMaskOnSubmit: false });
+        $("#tel1").inputmask("(99) [9]9999-9999", { removeMaskOnSubmit: false });
+        $("#num1").inputmask("9[99999]", { removeMaskOnSubmit: false });
+    });
+</script>
 <?php
     include "rodape.php";
 ?>
