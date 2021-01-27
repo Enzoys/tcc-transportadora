@@ -6,6 +6,9 @@
 ?>
 <title>Cadastrar Empresa</title>
 <div style="background-color: #343a40; width:100%; height: 100%; float:right">
+    <br />
+    <br />
+    <br />
 <h2 style="color:white; padding-left:40%;">Cadastrar Empresa</h2>
 <form method="post" action="GuardaCliEmpresa.php">
     <table class="table table-hover table-dark" border="1">
