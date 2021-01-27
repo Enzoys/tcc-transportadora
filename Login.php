@@ -53,7 +53,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     //SE OS CAMPOS NAO FOREM PREENCHIDOS
     $_SESSION['loginErro'] = '<script language="javascript">alert("Os campos devem ser preenchidos.")</script>';
     header("window.location.href: PagLogin.php");
-}}}else {
+}}else {
 	echo"<script language='javascript' type='text/javascript'>alert('Verifique o Captcha!');window.history.go(-1);</script>";
-	}
+	}}
 ?> 
