@@ -1,5 +1,5 @@
 <?php
-    include"Confere_1.php";
+    include('Confere_1.php');
     include('cabecalho2.php');
     $idlogin = $_SESSION['usuarioId'];
     $sqlpagina="SELECT * FROM clientesPessoas where id_clientePessoa like '$idlogin'";

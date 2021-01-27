@@ -44,7 +44,7 @@
             </tr>
             <tr>
               <td style="text-align:right">&nbsp;</td>
-              <td><input type="submit" value="PESQUISAR" /></td>
+              <td><input class="btn btn-primary btn-lg" type="submit" value="PESQUISAR" /></td>
             </tr>
         
         </form>
@@ -61,7 +61,7 @@
             </tr>
             <tr>
               <td style="text-align:right">&nbsp;</td>
-              <td><input type="submit" value="APAGAR" /></td>
+              <td><input class="btn btn-primary btn-lg" type="submit" value="APAGAR" /></td>
             </tr>
         </table>
         </form>

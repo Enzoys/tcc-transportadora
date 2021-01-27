@@ -1,6 +1,6 @@
 <?php
 include "Confere_1.php";
-include 'cabecalho.php';
+include 'cabecalho2.php';
 ?>
 <title>Página Alterar Dados</title>
 

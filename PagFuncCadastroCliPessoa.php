@@ -2,12 +2,13 @@
     include "confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('cabecalho2.php')
 ?>
-<title>Funcionario Cadastrar Cliente Pessoa Física</title>
-        <a href="http://localhost/tcc1/pagCliente.php">MENU ANTERIOR</a><br><br>
-        <form method="post" action="GuardaCliPessoa.php">
-        <table width="200" border="0">
+<title>Cadastrar Pessoa</title>
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+<h2 style="color:white; padding-left:40%;">Cadastrar Pessoa</h2>
+<form method="post" action="GuardaCliPessoa.php">
+    <table class="table table-hover table-dark" border="1">
            
             <tr>  
                 <td align="right">Nome:</td>
@@ -98,7 +99,7 @@
                   
             <tr>
                 <td align="right"></td>
-                <td><input type="submit" value="Cadastrar" /></td>
+                <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" /></td>
             </tr>
        
         </table>

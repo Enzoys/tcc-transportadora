@@ -2,29 +2,36 @@
     include "confere_2.php";
 ?>
 <?php
-    include ('cabecalho.php')
+    include ('cabecalho2.php')
 ?>
-<title>Pesquisar Empresas</title>
-    <a href="http://localhost/tcc1/pagEmpresa.php">MENU ANTERIOR</a><br><br>
-        <center div="center"> 
-            Escolha o metodo de busca:
 
-            <form method="post" action="PesquisaCliEmpresaNome.php">
-                NOME:
-                <input type="text" size="40" name="txtcliente">
-                <input type="submit" name="Enviar"> 
-            </form>
-            <form method="post" action="PesquisaCliEmpresaCnpj.php">
-                CNPJ:
-                <input type="text" size="40" name="txtcliente">
-                <input type="submit" name="Enviar"> 
-            </form>
-            <form method="post" action="PesquisaCliEmpresaEmail.php">
-                EMAIL:
-                <input type="text" size="40" name="txtcliente">
-                <input type="submit" name="Enviar"> 
-            </form>
-        </center>
+<title>Pesquisar Empresas</title>
+
+<div id="bgimg" style="padding-left:30%;padding-right:30%;padding-top:5%;padding-bottom:10%;" id="invictax">
+<h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >Escolha o metodo de busca:</h1>
+<div id="bgtxt">
+<form method="post" action="PesquisaCliEmpresaNome.php">
+<table style="color:#4287f5; width:100%;" class="table">
+<thead class="thead-dark">
+  <tr>
+    </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <th style="color:white; text-align:center;" scope="row"><label>NOME:   </label><input type="text" size="40" name="txtcliente"><br><input style="margin-top:20px;" class="btn btn-primary btn-lg" type="submit" name="Enviar">  </th>
+    </tr>
+</form>
+<form method="post" action="PesquisaCliEmpresaCnpj.php">
+<tr>
+      <th style="color:white; text-align:center;" scope="row"><label>CNPJ:   </label><input type="text" size="40" name="txtcliente"><br><input style="margin-top:20px;" class="btn btn-secondary btn-lg" type="submit" name="Enviar"> </th>
+    </tr>
+</form>
+<form method="post" action="PesquisaCliEmpresaID.php">
+<tr>
+      <th style="color:white; text-align:center;" scope="row"><label>ID:   </label><input  type="text" size="40" name="txtcliente"><br><input style="margin-top:20px;" class="btn btn-primary btn-lg" type="submit" name="Enviar"> </th>
+    </tr>             
+</form>
+            <button style="margin-bottom:20px;" class="btn btn-secondary btn-lg" onclick="window.open('PagFuncListarCliEmpresas.php')">LISTAR TODOS</button>
 <?php
     include ('rodape.php');
 ?>

@@ -1,9 +1,14 @@
 <?php
-    include "cabecalho.php";
+    include "confere_2.php";
 ?>
-<title>Cadastro Cliente Empresa</title>
-<form method="POST" action="GuardaCliEmpresa.php">
-    <table width="200" border="3px">
+<?php
+    include "cabecalho2.php";
+?>
+<title>Cadastrar Empresa</title>
+<div style="background-color: #343a40; width:100%; height: 100%; float:right">
+<h2 style="color:white; padding-left:40%;">Cadastrar Empresa</h2>
+<form method="post" action="GuardaCliEmpresa.php">
+    <table class="table table-hover table-dark" border="1">
         <tr>
             <td align="right">Usuário:</td>
             <td><input type="text" name="usuario" size="30" /></td>
@@ -96,7 +101,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
+            <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>
 </form>

@@ -4,7 +4,7 @@
 <?php
     include ('cabecalho2.php')
 ?>
-<title>Pesquisar Clientes por Nome</title><br>
+<title>Pesquisar Clientes por Nome</title>
     <div style="background-color: #343a40; width:100%; height: 100%;">
         <h2 style="color:white; text-align:center;">Pesquisar Clientes por Nome</h2>
         <table class="table table-hover table-dark" border="1">
@@ -44,7 +44,7 @@
             </tr>
             <tr>
               <td >&nbsp;</td>
-              <td><input type="submit" value="PESQUISAR" /></td>
+              <td><input class="btn btn-primary btn-lg" type="submit" value="PESQUISAR" /></td>
             </tr>
         
         </form>
@@ -60,7 +60,7 @@
             </tr>
             <tr>
               <td >&nbsp;</td>
-              <td><input type="submit" value="APAGAR" /></td>
+              <td><input class="btn btn-primary btn-lg" type="submit" value="APAGAR" /></td>
             </tr>
         
         </form>
@@ -89,7 +89,7 @@
             </tr>
             <tr>
               <td >&nbsp;</td>
-              <td><input type="submit" value="ALTERAR" /></td>
+              <td><input class="btn btn-primary btn-lg" type="submit" value="ALTERAR" /></td>
             </tr>
         </table>
         </form>
