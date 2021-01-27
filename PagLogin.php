@@ -5,7 +5,7 @@ session_start();// INICIA SESSAO
     include ('cabecalho2.php')
 ?>
 <title>Login</title>
-<head><script src='https://www.google.com/recaptcha/api.js?hl=pt' > </script> </head>
+<!-- <head><script src='https://www.google.com/recaptcha/api.js?hl=pt' > </script> </head> -->
     <!-- !PAGE CONTENT! -->
 
 <div id="bgimg" style="padding-left:30%;padding-right:30%;padding-top:20%;padding-bottom:20%;" id="invictax">
@@ -25,7 +25,7 @@ session_start();// INICIA SESSAO
       <th style="color:white; text-align:center;" scope="row"><label>Senha :</label><input type="password" name="senha" id="senha"><br></th>
     </tr>
     <tr>
-        <td><div class="g-recaptcha" data-sitekey="6LcQ7ykaAAAAAPB4ZFJ4ygwie6GtAF4fbxHy8AMZ  "> </div>  </td>
+        <!--<td><div class="g-recaptcha" data-sitekey="6LcQ7ykaAAAAAPB4ZFJ4ygwie6GtAF4fbxHy8AMZ  "> </div>  </td>-->
     </tr>
     <tr>
       <th scope="row"><input class="btn btn-primary btn-lg" type="submit" value="Entrar" id="entrar" name="entrar"><br></th>

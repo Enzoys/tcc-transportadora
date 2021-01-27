@@ -2,21 +2,21 @@
 session_start();
 include "conexao.php";
 
-require_once "recaptchalib.php";
+//require_once "recaptchalib.php";
 
-$secret = "6LcQ7ykaAAAAAJGb2xLEZgPT89JBdKQ4c_FX99o8";
+//$secret = "6LcQ7ykaAAAAAJGb2xLEZgPT89JBdKQ4c_FX99o8";
 
 // verificar a chave secreta
-$response = null;
-$reCaptcha = new ReCaptcha($secret);
+//$response = null;
+//$reCaptcha = new ReCaptcha($secret);
 
-if ($_POST["g-recaptcha-response"]) {
-    $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
-}
+//if ($_POST["g-recaptcha-response"]) {
+//    $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
+//}
 
-if ($response != null && $response->success) {
+//if ($response != null && $response->success) {
     
-}
+//}
 
 
 if (isset($_POST['usuario']) && isset($_POST['senha'])) {
