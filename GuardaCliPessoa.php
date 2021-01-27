@@ -89,4 +89,4 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
     }
 }}else{
     echo"<script language='javascript' type='text/javascript'>alert('Verifique o Captcha!');window.history.go(-1);</script>";
-}}
+}}?>

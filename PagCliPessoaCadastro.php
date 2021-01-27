@@ -2,12 +2,12 @@
     include "confere_2.php";
 ?>
 <?php
-    include "cabecalho2.php";
+    include ('cabecalho2.php');
 ?>
 <title>Cadastrar Pessoa</title>
 <div style="background-color: #343a40; width:100%; height: 100%; float:right">
 <h2 style="color:white; padding-left:40%;">Cadastrar Empresa</h2>
-<form method="POST" action="GuardaCliPessoa.php">
+<form method="post" action="GuardaCliPessoa.php">
     <table class="table table-hover table-dark" border="1">
         <tr>
             <td align="right">Usuário:</td>

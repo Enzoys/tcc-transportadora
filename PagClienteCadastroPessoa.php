@@ -3,14 +3,12 @@
     if (isset($_SESSION['usuarioId'])){
     echo "Usuário: " . $_SESSION['usuarioNome'];
     }
-    include "cabecalho2.php";
+    include ('cabecalho2.php');
     if (isset($_SESSION['usuarioNivelAcesso']) == "2" || isset($_SESSION['usuarioNivelAcesso']) == "3") {
         
         //echo "<div style='background-color: #fffb99; width:70%; height: 100%; float:right'>";   
     }
 ?>
-<head>
-<script src='https://www.google.com/recaptcha/api.js?hl=pt'> </script> </head>
 
     
     <!-- !PAGE CONTENT! -->
@@ -104,7 +102,10 @@
             <td align="left"><input type="text" name="complemento" size="50" maxlength="50"/></td>
         </tr>
         <tr>
-            <td><div class="g-recaptcha" data-sitekey="6Lex8ykaAAAAAD29clFCchMvbKaQsJIsJzd19xvU "> </div>  </td>
+        <td><div class="g-recaptcha" data-sitekey="6LcYyT4aAAAAANL9Bxw6yy5WTGrk6OpSa2waQyJz"> </div>  </td>
+    </tr>
+        <tr>
+            <td></td>
             <td style="padding-right:25%"><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>
