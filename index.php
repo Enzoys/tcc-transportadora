@@ -74,20 +74,20 @@ session_start();// INICIA SESSAO
 </div>
 <!-- historia -->
 <div class="w3-container" id="historia" style="margin-top:75px">
-   <h1 class="w3-xxxlarge w3-text-red"><b>Historia.</b></h1>
-   <hr style="width:12%;border:5px solid red" class="w3-round">
-   <h3>A Invicta surgiu, devido a uma sociedade desfeita em outra empresa na qual a mesma também era do ramo de transportes, visto isto, para dar seguimento ao trabalho dentro da mesma área, surgiu a Invicta X Transportes Ltda, na qual hoje atuamos em todo o território do Brasil, realizamos desembaraços de DTAS, trabalhamos com armazenagens de cargas e etc...</h3>
-   <h3>Trabalhamos com transporte de cargas aéreas e marítimas. Contamos com uma equipe de 15 funcionários e uma frota de 20 carros entre fiorinos, sprinters, 710, cavalos mecânicos, muncks e carretas!!
+   <h1 class="w3-xxxlarge w3-text-red"><b>História.</b></h1>
+   <hr style="text-align: justify;width:12%;border:5px solid red" class="w3-round">
+   <h3 style="text-align: justify;">    A Invicta surgiu, devido a uma sociedade desfeita em outra empresa na qual a mesma também era do ramo de transportes, visto isto, para dar seguimento ao trabalho dentro da mesma área, surgiu a Invicta X Transportes Ltda, na qual hoje atuamos em todo o território do Brasil, realizamos desembaraços de DTAS, trabalhamos com armazenagens de cargas e etc...</h3>
+   <h3 style="text-align: justify;">    Trabalhamos com transporte de cargas aéreas e marítimas. Contamos com uma equipe de 15 funcionários e uma frota de 20 carros entre fiorinos, sprinters, 710, cavalos mecânicos, muncks e carretas!!
    </h3>
 </div>
 <!-- Veiculos -->
 <div class="w3-container" id="veiculos" style="margin-top:75px">
 <div>
-   <h1 class="w3-xxxlarge w3-text-red"><b>Veiculos.</b></h1>
-   <hr style="width:13%;border:5px solid red" class="w3-round">
+   <h1 class="w3-xxxlarge w3-text-red"><b>Veículos.</b></h1>
+   <hr style="text-align: justify;width:13%;border:5px solid red" class="w3-round">
    <div>
-   <h3>Nossa equipe</h3>
-   <h3>Temos uma equipe muito bem treinada para oferecer a melhor experiência aos clientes. Nossos motoristas estão preparados para qualquer situação que possa acontecer e nossa marca sempre visa a excelência no atendimento a nossos clientes.
+   <h3 style="text-align: justify;">    Nossa equipe</h3>
+   <h3 style="text-align: justify;">    Temos uma equipe muito bem treinada para oferecer a melhor experiência aos clientes. Nossos motoristas estão preparados para qualquer situação que possa acontecer e nossa marca sempre visa a excelência no atendimento a nossos clientes.
    </h3>
    <h3><b>Nossos veiculos</b>:</h3>
 </div>
@@ -96,7 +96,7 @@ session_start();// INICIA SESSAO
    <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
          <img src="imagens/constellation.jpg" alt="Constellation" style="width:100%">
-         <div class="w3-container">
+         <div style="text-align: justify" class="w3-container">
             <h3>Tractor Constellation</h3>
             <p class="w3-opacity">Caminhão</p>
             <p>Volkswagen Constellation é uma linha de caminhões de médio e de grande porte, fabricada pela Volkswagen, com peso bruto de 13-57 toneladas</p>
@@ -106,7 +106,7 @@ session_start();// INICIA SESSAO
    <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
          <img src="imagens/fiorino.jpg" alt="Fiorino" style="width:100%">
-         <div class="w3-container">
+         <div style="text-align: justify;" class="w3-container">
             <h3>Fiat Fiorino</h3>
             <p class="w3-opacity">Furgão Van</p>
             <p>Fiorino é uma linha de automóveis comerciais leves fabricados pela montadora italiana Fiat desde 1977, e são usados para entregas ate hoje.</p>
@@ -116,7 +116,7 @@ session_start();// INICIA SESSAO
    <div class="w3-col m4 w3-margin-bottom">
       <div class="w3-light-grey">
          <img src="imagens/sprinter.jpg" alt="Sprinter" style="width:100%">
-         <div class="w3-container">
+         <div style="text-align: justify;" class="w3-container">
             <h3>Mercedes-Benz Sprinter</h3>
             <p class="w3-opacity">Furgão Van</p>
             <p>Sprinter é um veículo utilitário leve produzido pela Daimler AG na Argentina e Alemanha e comercializado por suas marcas Mercedes-Benz.</p>

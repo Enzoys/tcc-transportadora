@@ -93,4 +93,6 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cpf =
     } else {
         echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário.');" . "window.location.href='javascript:window.history.go(-1)'</script>";
     }
-}}}
+}}else{
+    echo"<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!');window.location.href='PagClienteTipoCadastro.php'</script>";
+}}
