@@ -1,22 +1,27 @@
 <?php
 session_start();
+allow_url_fopen;
 include "conexao.php";
 
-require_once "recaptchalib.php";
+$secret_key = '|*6LcYyT4aAAAAADQMxJuY1modDkWLLUvdr6jxownY*|';
 
-$secret = "6LcQ7ykaAAAAAJGb2xLEZgPT89JBdKQ4c_FX99o8";
+//Pego a validação do Captcha feita pelo usuário
+$recaptcha_response = $_POST['g-recaptcha-response'];
 
-//verificar a chave secreta
-$response = null;
-$reCaptcha = new ReCaptcha($secret);
+// Verifico se foi feita a postagem do Captcha 
+if(isset($recaptcha_response)){
+		
+	// Valido se a ação do usuário foi correta junto ao google
+	$answer = 
+		json_decode(
+			file_get_contents(
+				'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.
+				'&response='.$_POST['g-recaptcha-response']
+			)
+		);
 
-if ($_POST["g-recaptcha-response"]) {
-    $response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
-}
-
-if ($response != null && $response->success) {
-    
-}
+	// Se a ação do usuário foi correta executo o restante do meu formulário
+	if($answer->success) {
 
 
 if (isset($_POST['usuario']) && isset($_POST['senha'])) {
@@ -48,5 +53,7 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     //SE OS CAMPOS NAO FOREM PREENCHIDOS
     $_SESSION['loginErro'] = '<script language="javascript">alert("Os campos devem ser preenchidos.")</script>';
     header("window.location.href: PagLogin.php");
-}
+}}}else {
+		echo "Por favor faça a verificação do captcha abaixo";
+	}
 ?> 

@@ -35,7 +35,7 @@
 -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js?hl=pt"> </script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
     
