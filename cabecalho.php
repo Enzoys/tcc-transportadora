@@ -55,7 +55,7 @@
     <?php
     if(isset($_SESSION['usuarioNivelAcesso'])){
 if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
-    echo "      <h4 style='padding-top:10px; text-align:center; background-color:white; color:red;'>TRANSPORTES</h4>
+    echo "      <h4 style='padding-top:10px; text-align:center; class='w3-bar-item w3-button w3-hover-white'>TRANSPORTES</h4>
                 <a href='PagFuncPedidos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pedidos</h5></a>
                 <a href='PagFuncCriarViagem.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Novo transporte</h5></a>
                 <a href='PagFuncCadastroMotorista.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Cadastrar Motorista</h5></a>
