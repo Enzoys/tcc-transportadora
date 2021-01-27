@@ -49,6 +49,7 @@
     <a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white"><h3 style="text-align:center;">Inicio</h3></a>
     
     <?php
+    if(isset($_SESSION['usuarioNivelAcesso'])){
 if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] == "3") {
     echo $_SESSION['usuarioNivelAcesso'];
     echo "
@@ -71,11 +72,8 @@ if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] ==
     echo $_SESSION['usuarioNivelAcesso'];
     echo "<a href='PagClienteAlterarDados.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Alterar dados</h5></a>";
     echo "<a href='PagClienteEnderecos.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Endereços</h5></a>";
-    echo "<a href='PagClienteFazerPedido.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Fazer Pedido</h5></a>";
-    
-    
-    
-}
+    echo "<a href='PagClienteFazerPedido.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Fazer Pedido</h5></a>";   
+    }}
 
 ?>
     
