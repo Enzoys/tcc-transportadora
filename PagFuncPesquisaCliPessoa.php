@@ -34,8 +34,4 @@
                 </th>
                 </tr>
             </form>
-            <button  style="margin-bottom:20px;" class="btn btn-secondary btn-lg" onclick="window.open('PagFuncListarCliPessoas.php')">LISTAR TODOS</button>
-        </center>
-<?php
-    include ('rodape.php');
-?>
+            <button  style="margin-bottom:20px;" class="btn btn-secondary btn-lg" onclick="window.location.href="PagFuncListarCliPessoas.php">LISTAR TODOS</button>

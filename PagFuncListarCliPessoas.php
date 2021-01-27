@@ -37,6 +37,3 @@
         ?>
         </table>
         </div>
-<?php
-    include ('rodape.php');
-?>

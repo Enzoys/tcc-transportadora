@@ -95,9 +95,6 @@
             <td><input type="text" name="complemento" size="50" /></td>
         </tr>
         <tr>
-        <td><div class="g-recaptcha" data-sitekey="6LcYyT4aAAAAANL9Bxw6yy5WTGrk6OpSa2waQyJz"> </div>  </td>
-    </tr>
-        <tr>
             <td></td>
             <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
@@ -111,6 +108,3 @@
         $("#num1").inputmask("9[99999]", { removeMaskOnSubmit: false });
     });
 </script>
-<?php
-    include "rodape.php";
-?>

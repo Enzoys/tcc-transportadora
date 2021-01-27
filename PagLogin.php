@@ -25,7 +25,7 @@ session_start();// INICIA SESSAO
       <th style="color:white; text-align:center;" scope="row"><label>Senha :</label><input type="password" name="senha" id="senha"><br></th>
     </tr>
    <tr>
-        <td><div class="g-recaptcha" data-sitekey="6LcYyT4aAAAAANL9Bxw6yy5WTGrk6OpSa2waQyJz"> </div>  </td>
+        <td style="align-content: center;"><div class="g-recaptcha" data-sitekey="6LcYyT4aAAAAANL9Bxw6yy5WTGrk6OpSa2waQyJz"> </div>  </td>
     </tr>
     <tr>
       <th scope="row"><input class="btn btn-primary btn-lg" type="submit" value="Entrar" id="entrar" name="entrar"><br></th>
