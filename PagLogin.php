@@ -9,7 +9,7 @@ session_start();// INICIA SESSAO
     <!-- !PAGE CONTENT! -->
 
 <div id="bgimg" style="padding-left:30%;padding-right:30%;padding-top:20%;padding-bottom:20%;" id="invictax">
-<h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >Cadastro de Cliente Pessoa Física</h1>
+<h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >LOGIN</h1>
 <div id="bgtxt">
 <form method="POST" action="Login.php">
 <table style="color:#4287f5; width:100%;" class="table">
