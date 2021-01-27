@@ -1,8 +1,7 @@
 <?php
-//excecao impedir de digitar na pagina porem sem checar o usuario
-include "conexao.php";
-allow_url_fopen;
 session_start();
+allow_url_fopen;
+include "conexao.php";
 
 $secret_key = '6LcYyT4aAAAAADQMxJuY1modDkWLLUvdr6jxownY';
 
@@ -23,10 +22,7 @@ if(isset($recaptcha_response)){
 
 	// Se a ação do usuário foi correta executo o restante do meu formulário
 	if($answer->success) {
-
-if ($response != null && $response->success) {
-    
-}
+            
 $usuario = $_POST['usuario'];
 $senha = md5($_POST['senha']);
 $senha_conf = MD5($_POST['senha1']);
@@ -87,5 +83,7 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     } else {
         echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
     }
-}}}
+}}else{
+    echo"<script language='javascript' type='text/javascript'>alert('Verifique o Captcha!');window.history.go(-1);</script>";
+}}
 ?>

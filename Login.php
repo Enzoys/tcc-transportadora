@@ -54,6 +54,6 @@ if (isset($_POST['usuario']) && isset($_POST['senha'])) {
     $_SESSION['loginErro'] = '<script language="javascript">alert("Os campos devem ser preenchidos.")</script>';
     header("window.location.href: PagLogin.php");
 }}}else {
-		echo "Por favor faça a verificação do captcha abaixo";
+	echo"<script language='javascript' type='text/javascript'>alert('Verifique o Captcha!');window.history.go(-1);</script>";
 	}
 ?> 
