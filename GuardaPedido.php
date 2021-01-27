@@ -47,9 +47,9 @@ if ($descricao == ""){
                     $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
                     $rowcount = mysqli_num_rows($mysqli->query($sql));
                     if ($rowcount == 1) {
-                        echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-0)'</script>";
+                        echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-1)'</script>";
                         } elseif ($rowcount == 0) {
-                        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-0)'</script>";
+                        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-1)'</script>";
                         }                
             }
             
@@ -74,9 +74,9 @@ if ($descricao == ""){
             $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
             $rowcount = mysqli_num_rows($mysqli->query($sql));
             if ($rowcount == 1) {
-            echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-0)'</script>";
+            echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-1)'</script>";
             } elseif ($rowcount == 0) {
-            echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-0)'</script>";
+            echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-1)'</script>";
             } 
             
         }
@@ -112,9 +112,9 @@ if ($descricao == ""){
                     $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
                     $rowcount = mysqli_num_rows($mysqli->query($sql));
                     if ($rowcount == 1) {
-                        echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-0)'</script>";
+                        echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-1)'</script>";
                         } elseif ($rowcount == 0) {
-                        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-0)'</script>";
+                        echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-1)'</script>";
                         } 
                 
             }
@@ -142,9 +142,9 @@ if ($descricao == ""){
             $sql = "SELECT * FROM pedidos WHERE id_pedido = '$idCriado3'";    
             $rowcount = mysqli_num_rows($mysqli->query($sql));
             if ($rowcount == 1) {
-            echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-0)'</script>";
+            echo "<script language='javascript' type='text/javascript'>alert('Pedido registrado com sucesso!\\nA Invicta-X entrará em contato para confirmação.');window.location.href='javascript:window.history.go(-1)'</script>";
             } elseif ($rowcount == 0) {
-            echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-0)'</script>";
+            echo "<script language='javascript' type='text/javascript'>alert('Não foi possível registrar o pedido.');window.location.href='javascript:window.history.go(-1)'</script>";
             } 
             
         }

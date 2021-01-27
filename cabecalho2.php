@@ -61,12 +61,12 @@ if ($_SESSION['usuarioNivelAcesso'] == "2" || $_SESSION['usuarioNivelAcesso'] ==
                 <a href='PagFuncCliPessoas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pessoas Físicas</h5></a>
                 <a href='PagFuncCliEmpresas.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Empresas</h5></a><br>";
             if ($_SESSION['usuarioNivelAcesso'] == "3") {
-                echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pag Inicial</h5></a>";
+                echo "<a href='PagAdm.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Gerenciamento de Transportes</h5></a>";
                 echo "<a href='pagcriarADM.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Criar ADM</h5></a>";
                 echo "<a href='PagAdmFuncionarios.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Funcionários</h5></a>";
                 echo "<a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a><br>";               
             } else {
-                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Pag Inicial</h5></a>";
+                echo "<a href='PagFunc.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Gerenciamento de Transportes</h5></a>";
                 echo "<a href='sairSessao.php' onclick='w3_close()' class='w3-bar-item w3-button w3-hover-white'><h5 style='text-align:center;'>Sair</h5></a><br>";                
             }
 

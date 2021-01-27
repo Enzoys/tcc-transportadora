@@ -28,7 +28,9 @@ include "cabecalho2.php";
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'
                             . '<input type="hidden" value="Excluir" name="verifica">'
-                            . '<input class="btn btn-secondary btn-lg" Style="margin-left:37%" type="submit" value="Excluir" name="Excluir"></form>';
+                            . '<input class="btn btn-secondary btn-lg" Style="margin-left:37%" type="submit" value="Excluir" name="Excluir"></form>'
+                            . '</td>'
+                            . '<td>';
 
                     echo '<form method="post" action="ApagaEndereco.php">'
                             . '<input type="hidden" name="id_endereco" value="'.$row['id_endereco'].'">'

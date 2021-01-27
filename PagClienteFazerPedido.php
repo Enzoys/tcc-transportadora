@@ -30,6 +30,9 @@ $sql3 = mysqli_query($mysqli,
                     ?>               
                 </select></td>
         </tr>
+        <tr>           
+            <td>OUTRO ENDEREÇO:</td>
+        </tr>
         <tr>
             <td style="color:white; text-align:center;">Estado:</td>
             <td>
@@ -97,7 +100,8 @@ $sql3 = mysqli_query($mysqli,
                         }
                     ?>               
                 </select></td>
-        </tr>
+        </tr><tr>
+        <td>OUTRO ENDEREÇO:</td></tr>
         <tr>
             <td style="color:white; text-align:center;">Estado:</td>
             <td>
