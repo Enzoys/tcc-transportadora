@@ -92,7 +92,7 @@
             <td><input type="text" name="complemento" size="50" /></td>
         </tr>
         <tr>
-            <td></td>
+            <td><div class="g-recaptcha" data-sitekey="6LcYyT4aAAAAANL9Bxw6yy5WTGrk6OpSa2waQyJz"> </div>  </td>
             <td><input class="btn btn-primary btn-lg" type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" size="50" /></td>
         </tr>
     </table>

@@ -1,18 +1,28 @@
 <?php
 //excecao impedir de digitar na pagina porem sem checar o usuario
 include "conexao.php";
+allow_url_fopen;
 session_start();
 
-//require_once "recaptchalib.php";
+$secret_key = '6LcYyT4aAAAAADQMxJuY1modDkWLLUvdr6jxownY';
 
-//$secret = "6Lex8ykaAAAAAHEZAkpmKknjQ93ORPiMLF-KOYS-";
+//Pego a validação do Captcha feita pelo usuário
+$recaptcha_response = $_POST['g-recaptcha-response'];
 
-//$response = null;
-//$reCaptcha = new ReCaptcha($secret);
+// Verifico se foi feita a postagem do Captcha 
+if(isset($recaptcha_response)){
+		
+	// Valido se a ação do usuário foi correta junto ao google
+	$answer = 
+		json_decode(
+			file_get_contents(
+				'https://www.google.com/recaptcha/api/siteverify?secret='.$secret_key.
+				'&response='.$_POST['g-recaptcha-response']
+			)
+		);
 
-//if ($_POST["g-recaptcha-response"]) {
-    //$response = $reCaptcha->verifyResponse($_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]);
-//}
+	// Se a ação do usuário foi correta executo o restante do meu formulário
+	if($answer->success) {
 
 if ($response != null && $response->success) {
     
@@ -77,4 +87,5 @@ if ($usuario == "" || $senha == "" || $senha_conf == "" || $nome == "" || $cnpj 
     } else {
         echo "<script language='javascript' type='text/javascript'>alert('Não foi possível cadastrar o usuário');window.location.href='javascript:window.history.go(-1)'</script>";
     }
-}
+}}}
+?>
