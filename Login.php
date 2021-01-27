@@ -3,7 +3,7 @@ session_start();
 allow_url_fopen;
 include "conexao.php";
 
-$secret_key = '|*6LcYyT4aAAAAADQMxJuY1modDkWLLUvdr6jxownY*|';
+$secret_key = '6LcYyT4aAAAAADQMxJuY1modDkWLLUvdr6jxownY';
 
 //Pego a validação do Captcha feita pelo usuário
 $recaptcha_response = $_POST['g-recaptcha-response'];
