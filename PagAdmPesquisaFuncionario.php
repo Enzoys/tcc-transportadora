@@ -3,7 +3,7 @@
     include "cabecalho2.php";
 ?>
 <title>Pesquisar Funcionário</title>
-<div id="bgimg" style="padding-left:30%;padding-right:30%;padding-top:12.5%;padding-bottom:0%;" id="invictax">
+<div id="bgimg" style="padding-left:30%;padding-right:30%;padding-top:12.5%;padding-bottom:100%;" id="invictax">
 <h1 style="color:white; text-align:center;" class="badge-primary text-wrap" >Pesquisa Funcionário:</h1>
 <div id="bgtxt">
 
