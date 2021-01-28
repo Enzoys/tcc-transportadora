@@ -130,7 +130,7 @@ if ($verifica == 'Excluir'){
     // SENÃO, EXECUTA:
     echo "<script language='javascript' type='text/javascript'>
         alert('Status não atualizado!');window.history.go(-1);</script>";
-    }}elseif($status=='transportando'){
+    }}elseif($status=='Transportando'){
         
         
     $sql5="UPDATE viagens SET status_viagem='Transporte concluído' WHERE id_viagem='$id'";
@@ -151,6 +151,9 @@ if ($verifica == 'Excluir'){
         alert('Status não atualizado!');window.history.go(-1);</script>";
     }
         
-    } 
+    }elseif($status=='Transporte concluído'){
+        echo "<script language='javascript' type='text/javascript'>
+        alert('O TRANSPORTE JÁ FOI CONCLUÍDO!');window.history.go(-1);</script>";
+    }
 }
 ?>
