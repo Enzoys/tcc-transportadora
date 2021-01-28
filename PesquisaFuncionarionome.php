@@ -46,7 +46,7 @@ if ($result = $mysqli->query($sql)) {
     <class="table table-hover table-dark" border="1">
         <tr>
             <td style="text-align:right">Nova busca:</td>
-            <td><input type="text" name="txtfuncionarioNome" size="40" /></td>
+            <td><input type="text" name="txtfuncionarionome" size="40" /></td>
         </tr>
         <tr>
             <td style="text-align:right">&nbsp;</td>
