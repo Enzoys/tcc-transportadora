@@ -10,7 +10,7 @@
     <br />
     <br />
 <h2 style="color:white; padding-left:40%;">Cadastrar Empresa</h2>
-<form method="post" action="GuardaCliEmpresa.php">
+<form method="post" action="GuardaCliEmpresa_1.php">
     <table class="table table-hover table-dark" border="1">
         <tr>
             <td align="right">Usuário:</td>
