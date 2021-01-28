@@ -1,6 +1,6 @@
 <?php
     include "confere_2.php";
-    include "cabecalho2.php";
+    include ('cabecalho2.php');
 ?>
 <title>Funcionário Página Cliente Pessoa Física</title>
 <div style="background-color: #343a40; width:100%; height: 100%; float:right">
