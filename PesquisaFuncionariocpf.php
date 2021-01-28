@@ -38,7 +38,7 @@ if ($result = $mysqli->query($sql)) {
 
 
 
-<form method="post" action="PesquisaFuncionarioCpf.php">
+<form method="post" action="PesquisaFuncionariocpf.php">
     <!-- ENVIA NOVAMENTE PARA A PESQUISA -->
     <table class="table table-hover table-dark" border="1">
         <tr>
