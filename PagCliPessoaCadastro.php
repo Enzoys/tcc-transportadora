@@ -1,5 +1,5 @@
 <?php
-    include "confere_2.php";
+    include "Confere_2.php";
 ?>
 <?php
     include ('cabecalho2.php');

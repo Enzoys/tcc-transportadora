@@ -1,5 +1,5 @@
 <?php
-    include "confere_3.php";
+    include "Confere_3.php";
     include "cabecalho2.php";
 ?>
 <title>Pesquisar Funcionário</title>

@@ -1,5 +1,5 @@
 <?php
-include "confere_2.php";
+include "Confere_2.php";
 include 'conexao.php';
 
 $id = $_POST['id_pedido'];

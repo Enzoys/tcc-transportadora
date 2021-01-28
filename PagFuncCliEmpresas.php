@@ -10,6 +10,7 @@
         <br><a class="btn btn-secondary btn-lg" href="PagFuncPesquisaCliEmpresa.php">PESQUISAR EMPRESA</a><br>
     </div>
 </div>
+</div>
 <?php
     include ('rodape.php');
 ?>

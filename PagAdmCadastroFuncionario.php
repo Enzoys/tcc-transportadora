@@ -1,5 +1,5 @@
 <?php
-    include "confere_3.php";
+    include "Confere_3.php";
     include "cabecalho2.php";
 ?><div id="bgimg" style="padding:0%;" id="invictax">
 <title style="text-color:white">Cadastro Cliente Pessoa Física</title>
