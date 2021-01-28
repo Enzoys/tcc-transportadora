@@ -43,7 +43,7 @@ if ($result = $mysqli->query($sql)) {
     <table class="table table-hover table-dark" border="1">
         <tr>
             <td style="text-align:right">Nova busca:</td>
-            <td><input type="text" name="txtfuncionarioCpf" size="40" /></td>
+            <td><input type="text" name="txtfuncionariocpf" size="40" /></td>
         </tr>
         <tr>
             <td style="text-align:right">&nbsp;</td>
